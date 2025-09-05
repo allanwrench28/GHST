@@ -1,0 +1,66 @@
+# FANTOM Requirements
+# Core dependencies for AI-driven 3D printing slicer
+# ⚠️ Install at your own risk - verify all packages
+
+# GUI Framework
+PyQt5>=5.15.0
+PyQt5-Qt5>=5.15.0
+
+# 3D Processing and Geometry
+trimesh>=3.15.0
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Image Processing
+Pillow>=9.0.0
+opencv-python>=4.5.0
+
+# Configuration Management  
+PyYAML>=6.0
+
+# AI and Machine Learning (FOSS alternatives)
+# mistral-ai>=0.1.0  # FOSS LLM - uncomment when available
+# scikit-learn>=1.0.0  # For ML features
+# torch>=1.12.0  # PyTorch for AI models
+
+# Networking and APIs
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Development and Testing
+pytest>=7.0.0
+pytest-qt>=4.0.0
+black>=22.0.0
+flake8>=4.0.0
+pyinstaller>=5.0.0  # For executable compilation
+
+# Logging and Monitoring
+psutil>=5.9.0
+
+# File I/O and Utilities
+pathlib-mate>=1.0.0
+click>=8.0.0
+
+# Optional: C++ Integration
+# pybind11>=2.9.0  # For C++ kernel integration
+# cmake>=3.18.0    # Build system
+
+# Development Tools (Optional)
+# jupyter>=1.0.0   # For data analysis
+# matplotlib>=3.5.0  # Visualization
+# pandas>=1.4.0    # Data manipulation
+
+# ⚠️ IMPORTANT DISCLAIMERS:
+# - All packages installed at user's own risk
+# - SlicerGPT assumes no liability for package security or functionality  
+# - Verify all dependencies before installation
+# - Some packages may require compilation and additional system dependencies
+# - AI packages may have specific hardware requirements (GPU, etc.)
+
+# Installation notes:
+# pip install -r requirements.txt
+# 
+# For development:
+# pip install -r requirements.txt -e .
+#
+# ⚠️ Remember: Use virtual environment and verify all packages!
