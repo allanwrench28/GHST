@@ -183,11 +183,11 @@ class GHSTWindow(QMainWindow):
         # Chat input
         self.chat_input = QTextEdit()
         self.chat_input.setMaximumHeight(60)
-        self.chat_input.setPlaceholderText("Ask the AI experts anything...")
+        self.chat_input.setPlaceholderText("Talk to the ghosts in the machine...")
         layout.addWidget(self.chat_input)
 
         # Send button
-        send_button = QPushButton("Send to Experts")
+        send_button = QPushButton("Talk to the Ghosts in the Machine")
         send_button.clicked.connect(self.send_chat_message)
         layout.addWidget(send_button)
 
@@ -305,12 +305,14 @@ class GHSTWindow(QMainWindow):
         if self.expert_manager:
             status = self.expert_manager.get_experts_status()
             QMessageBox.information(
-                self, "Expert Status", "Active Experts: {
-                    status['active_experts']}/{
-                    status['total_experts']}")
+                self,
+                "Expert Status",
+                f"Active Experts: {status['active_experts']}/{status['total_experts']}")
         else:
             QMessageBox.information(
-                self, "Expert Status", "Expert manager not initialized.")
+                self,
+                "Expert Status",
+                "Expert manager not initialized.")
 
     def configure_experts(self):
         """Configure AI experts."""
