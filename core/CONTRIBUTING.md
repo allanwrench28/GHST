@@ -1,16 +1,16 @@
 # Contributing to GHST
 
-Welcome to the GHST AI-driven AI coding assistance platform! We're excited to have you contribute to the GHST Agent collective.
+Welcome to the GHST AI coding engine! We're excited to have you contribute to the GHST Expert Collective.
 
 ## 🤖 AI-Human Collaboration
 
-GHST features a unique AI GHST Agent collective that collaborates with human developers. All contributions go through both automated AI analysis and human review.
+GHST features a unique AI Expert Collective that collaborates with human developers. All contributions go through both automated AI analysis and human review.
 
-### 👻 GHST Agent Collective Overview
+### 👻 GHST Expert Collective Overview
 
-Our 26 PhD-level AI Ghosts provide:
+Our Expert AI agents provide:
 
-⚠️ **Important**: Human approval is always the final authority. Ghosts provide analysis and suggestions, but humans make all final decisions.
+⚠️ **Important**: Human approval is always the final authority. Expert agents provide analysis and suggestions, but humans make all final decisions.
 
 ## 📋 Repository Ruleset
 
@@ -32,8 +32,8 @@ For AI-related code:
 ### 1. Fork and Clone
 
 ```bash
-git clone https://github.com/yourusername/Clockwork.git
-cd Clockwork
+git clone https://github.com/yourusername/GHST.git
+cd GHST
 ```
 
 ### 2. Set Up Development Environment

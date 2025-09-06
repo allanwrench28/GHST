@@ -20,12 +20,16 @@ class GHSTWindow(QMainWindow):
         super().__init__()
         self.expert_manager = None
         self.config_manager = None
+        self.ss_manager = None  # Syntax Supervisors Manager
         self.init_ui()
         
     def init_ui(self):
         """Initialize the user interface."""
         self.setWindowTitle("GHST - AI Coding Engine")
         self.setGeometry(100, 100, 1400, 900)
+        
+        # Apply GHST theme
+        self.apply_ghst_theme()
         
         # Create central widget
         central_widget = QWidget()
@@ -318,6 +322,67 @@ class GHSTWindow(QMainWindow):
                          "Designed for coding, debugging, and creative problem solving.\n\n" +
                          "Version: 0.1.0-alpha\n" +
                          "License: MIT")
+    
+    def apply_ghst_theme(self):
+        """Apply professional GHST theme with subtle ghost references."""
+        ghost_theme = """
+        QMainWindow {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        QTextEdit {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border: 1px solid #404040;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        QPushButton {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        QPushButton:hover {
+            background-color: #106ebe;
+        }
+        QLabel {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        QListWidget {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border: 1px solid #404040;
+        }
+        QTabWidget::pane {
+            border: 1px solid #404040;
+        }
+        QTabBar::tab {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            padding: 8px 16px;
+            margin-right: 2px;
+        }
+        QTabBar::tab:selected {
+            background-color: #0078d4;
+        }
+        """
+        self.setStyleSheet(ghost_theme)
+        
+    def update_ss_status(self, status_info):
+        """Update Syntax Supervisors status display."""
+        if hasattr(self, 'ss_status_label'):
+            status_text = f"🔍 SS: {status_info.get('active', 0)} active"
+            self.ss_status_label.setText(status_text)
+    
+    def add_ss_status_widget(self):
+        """Add Syntax Supervisors status to the status bar."""
+        if hasattr(self, 'statusBar'):
+            self.ss_status_label = QLabel("🔍 SS: Initializing...")
+            self.statusBar().addPermanentWidget(self.ss_status_label)
 
 if __name__ == "__main__":
     from PyQt5.QtWidgets import QApplication

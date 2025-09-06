@@ -14,7 +14,7 @@ VSVersionInfo(
       StringTable(
         u'040904B0',
         [StringStruct(u'CompanyName', u'GHST Open Source'),
-         StringStruct(u'FileDescription', u'AI-Driven 3D Printing Slicer'),
+         StringStruct(u'FileDescription', u'GHST - AI Coding Engine'),
          StringStruct(u'FileVersion', u'1.0.0.4988'),
          StringStruct(u'InternalName', u'GHST'),
          StringStruct(u'LegalCopyright', u'MIT License - No Liability Assumed'),

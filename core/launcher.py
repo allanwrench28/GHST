@@ -15,8 +15,16 @@ import os
 from pathlib import Path
 
 # Add project root to path
-project_root = Path(__file__).parent.parent.parent
+project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
+
+# Import GHST components
+try:
+    from src.syntax_supervisors import SyntaxSupervisorManager
+    SYNTAX_SUPERVISORS_AVAILABLE = True
+except ImportError:
+    SYNTAX_SUPERVISORS_AVAILABLE = False
+    print("⚠️ Syntax Supervisors not available")
 
 
 def launch_ghst():
@@ -61,6 +69,15 @@ def launch_ghst():
         from src.utils.config_manager import ConfigManager
         config_manager = ConfigManager()
         print("✅ Configuration loaded")
+        
+        # Initialize Syntax Supervisors
+        if SYNTAX_SUPERVISORS_AVAILABLE:
+            print("🔄 Starting Syntax Supervisors...")
+            ss_manager = SyntaxSupervisorManager(str(project_root))
+            ss_manager.start_monitoring()
+            print("✅ Syntax Supervisors active - monitoring in background")
+        else:
+            print("⚠️ Syntax Supervisors unavailable")
         
         print("🔄 Starting GUI...")
         from src.ui_components.main import GHSTWindow
