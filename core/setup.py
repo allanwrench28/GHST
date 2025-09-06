@@ -1,4 +1,4 @@
-# FANTOM Studio - AI-Driven 3D Printing Development Environment
+# GHST Studio - AI-Driven 3D Printing Development Environment
 # Setup script for development environment
 # ⚠️ Run at your own risk - verify all operations
 
@@ -9,10 +9,10 @@ from pathlib import Path
 
 # ⚠️ DISCLAIMER: This setup script is provided without warranty
 print("=" * 60)
-print("⚠️  FANTOM Studio Setup - NO WARRANTY")
+print("⚠️  GHST Studio Setup - NO WARRANTY")
 print("=" * 60)
-print("This script will set up FANTOM Studio development environment.")
-print("FANTOM Studio assumes NO LIABILITY for any issues that may occur.")
+print("This script will set up GHST Studio development environment.")
+print("GHST Studio assumes NO LIABILITY for any issues that may occur.")
 print("User assumes ALL RISK when running this setup.")
 print("By continuing, you acknowledge and accept these terms.")
 print("=" * 60)
@@ -39,12 +39,12 @@ def run_command(cmd, description):
 
 def main():
     """Main setup routine."""
-    print("\n🚀 Starting FANTOM Studio setup...")
+    print("\n🚀 Starting GHST Studio setup...")
     
     # Verify we're in the right directory
     if not Path("src").exists():
-        print("❌ Error: Not in FANTOM Studio root directory")
-        print("Please run this script from the FANTOM Studio project root.")
+        print("❌ Error: Not in GHST Studio root directory")
+        print("Please run this script from the GHST Studio project root.")
         sys.exit(1)
     
     # Create virtual environment
@@ -87,7 +87,7 @@ def main():
         shutil.copy("config/default.yaml", config_path)
         print("📄 Created user configuration file")
     
-    print("\n✅ FANTOM Studio setup complete!")
+    print("\n✅ GHST Studio setup complete!")
     print("\n🎉 Next steps:")
     print("1. Activate the virtual environment:")
     if os.name == 'nt':
@@ -99,8 +99,8 @@ def main():
     print("3. Or run the plugin system demo:")
     print("   python demo_plugin_system.py")
     print("\n⚠️ Remember: Always review AI-generated code before use!")
-    print("⚠️ FANTOM Studio assumes no liability for any issues.")
-    print("⚠️ This version excludes slicer functionality.")
+    print("⚠️ GHST Studio assumes no liability for any issues.")
+    print("⚠️ This version excludes coding engine functionality.")
     
     return True
 

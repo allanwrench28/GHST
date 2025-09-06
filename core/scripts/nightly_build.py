@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FANTOM Nightly Build Script
-Automates the build process with Ghost collective oversight
+GHST Nightly Build Script
+Automates the build process with GHST Agent collective oversight
 
 ⚠️ DISCLAIMER: This build script assumes NO LIABILITY
 Use at your own risk - verify all outputs before use!
@@ -24,7 +24,7 @@ def print_banner(message):
 
 def print_disclaimer():
     """Print the liability disclaimer."""
-    print_banner("FANTOM NIGHTLY BUILD")
+    print_banner("GHST NIGHTLY BUILD")
     print("⚠️  CRITICAL DISCLAIMER:")
     print("   - This build assumes NO LIABILITY")
     print("   - Use at your own risk")
@@ -51,21 +51,21 @@ def run_command(cmd, description, check=True):
             print(f"Error: {e.stderr}")
         return False
 
-def ghost_analysis():
-    """Run Ghost collective analysis."""
+def ghst_analysis():
+    """Run GHST Agent collective analysis."""
     print_banner("GHOST COLLECTIVE ANALYSIS")
     
     try:
-        # Import and run Ghost analysis
+        # Import and run GHST Agent analysis
         sys.path.insert(0, 'src')
-        from ai_collaboration.ghost_manager import GhostManager
+        from ai_collaboration.ghst_manager import ExpertManager
         from ai_collaboration.error_handler import ErrorHandler
         
-        print("👻 Initializing Ghost collective...")
-        ghost_manager = GhostManager()
+        print("👻 Initializing GHST Agent collective...")
+        ghst_manager = ExpertManager()
         error_handler = ErrorHandler()
         
-        print("🔍 Ghost collective scanning codebase...")
+        print("🔍 GHST Agent collective scanning codebase...")
         
         # Simulate comprehensive analysis
         issues_found = 0
@@ -81,15 +81,15 @@ def ghost_analysis():
                             content = f.read()
                             if 'TODO' in content or 'FIXME' in content:
                                 issues_found += 1
-                                print(f"📝 Ghost found TODO/FIXME in {filepath}")
+                                print(f"📝 GHST Agent found TODO/FIXME in {filepath}")
                     except Exception as e:
-                        print(f"⚠️ Ghost could not analyze {filepath}: {e}")
+                        print(f"⚠️ GHST Agent could not analyze {filepath}: {e}")
         
-        print(f"✅ Ghost analysis complete: {issues_found} issues found")
+        print(f"✅ GHST Agent analysis complete: {issues_found} issues found")
         return issues_found, fixes_generated
         
     except Exception as e:
-        print(f"❌ Ghost analysis failed: {e}")
+        print(f"❌ GHST Agent analysis failed: {e}")
         return 0, 0
 
 def create_version_info():
@@ -110,13 +110,13 @@ VSVersionInfo(
     StringFileInfo([
       StringTable(
         u'040904B0',
-        [StringStruct(u'CompanyName', u'FANTOM Open Source'),
+        [StringStruct(u'CompanyName', u'GHST Open Source'),
          StringStruct(u'FileDescription', u'AI-Driven 3D Printing Slicer'),
          StringStruct(u'FileVersion', u'1.0.0.{int(time.time()) % 10000}'),
-         StringStruct(u'InternalName', u'FANTOM'),
+         StringStruct(u'InternalName', u'GHST'),
          StringStruct(u'LegalCopyright', u'MIT License - No Liability Assumed'),
-         StringStruct(u'OriginalFilename', u'FANTOM.exe'),
-         StringStruct(u'ProductName', u'FANTOM Slicer'),
+         StringStruct(u'OriginalFilename', u'GHST.exe'),
+         StringStruct(u'ProductName', u'GHST Slicer'),
          StringStruct(u'ProductVersion', u'1.0.0.{int(time.time()) % 10000}')])
     ]),
     VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
@@ -146,7 +146,7 @@ def build_executable():
     if os.path.exists('fantom.spec'):
         cmd = 'pyinstaller fantom.spec'
     else:
-        cmd = 'pyinstaller --name=FANTOM --onefile --console fantom.py'
+        cmd = 'pyinstaller --name=GHST --onefile --console ghst.py'
     
     success = run_command(cmd, "Building executable with PyInstaller")
     
@@ -169,7 +169,7 @@ def run_tests():
     print_banner("RUNNING TESTS")
     
     # Run main tests
-    test_files = ['test_fantom.py', 'test_gui.py', 'test_plugins.py']
+    test_files = ['test_ghst.py', 'test_gui.py', 'test_plugins.py']
     
     for test_file in test_files:
         if os.path.exists(test_file):
@@ -187,16 +187,16 @@ def create_build_report():
     build_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
     
     report = f"""
-# FANTOM Nightly Build Report
+# GHST Nightly Build Report
 
 **Build Date:** {build_time}
 **Build Number:** {int(time.time()) % 10000}
 **Git Commit:** {subprocess.getoutput('git rev-parse --short HEAD')}
 
-## Ghost Collective Analysis
+## GHST Agent Collective Analysis
 - Issues scanned and analyzed by AI collective
 - Automated fixes prepared for human review
-- Ethics Ghost approval: ✅ APPROVED
+- Ethics GHST Agent approval: ✅ APPROVED
 
 ## Build Status
 - Executable compilation: ✅ SUCCESS
@@ -220,7 +220,7 @@ def create_build_report():
 - Always review AI-generated code before use
 - Verify all operations before execution
 
-**Ghost Collective Status:** 👻 ACTIVE AND MONITORING
+**GHST Agent Collective Status:** 👻 ACTIVE AND MONITORING
 """
     
     with open('build_report.md', 'w') as f:
@@ -235,8 +235,8 @@ def main():
     start_time = time.time()
     
     try:
-        # 1. Ghost Analysis
-        issues_found, fixes_generated = ghost_analysis()
+        # 1. GHST Agent Analysis
+        issues_found, fixes_generated = ghst_analysis()
         
         # 2. Run tests
         run_tests()
@@ -256,7 +256,7 @@ def main():
         print(f"🔧 Fixes generated: {fixes_generated}")
         print(f"📦 Executable: {'✅ SUCCESS' if build_success else '❌ FAILED'}")
         print("\n⚠️ Remember: Always review AI-generated code before use!")
-        print("⚠️ FANTOM assumes no liability for any issues!")
+        print("⚠️ GHST assumes no liability for any issues!")
         
         return 0 if build_success else 1
         
