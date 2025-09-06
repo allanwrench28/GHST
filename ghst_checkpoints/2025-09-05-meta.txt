@@ -1,7 +1,0 @@
-GHST Meta-Meta Prompt for Grok
-
-[2025-09-06]
-
-See ghst/prompts/GHST_Meta_Prompt.md for full prompt and meta instructions.
-
-This file is used for ML training and Copilot indexing.
