@@ -10,8 +10,8 @@ Created by: The GHST Expert Collective
 Version: 0.1.0-alpha - AI Coding Engine Edition
 """
 
-import sys
 import os
+import sys
 from pathlib import Path
 
 # Add project root to path
@@ -24,14 +24,14 @@ def launch_ghst():
     print("🚀 Starting GHST - Open Source AI Coding Engine")
     print("=" * 60)
     print()
-    
+
     print("🧠 AI EXPERT COLLECTIVE STATUS")
     print("✅ Human oversight enabled")
     print("✅ Transparency enforced")
     print("✅ Human authority maintained")
     print("✅ Expert agents ready")
     print()
-    
+
     print("�‍💻 AI EXPERT AGENTS ONLINE")
     print("� Code Analysis & Debugging specialists ready")
     print("�️ Problem Solving & Optimization ready")
@@ -41,7 +41,7 @@ def launch_ghst():
     print("⚡ Performance & Security ready")
     print("🤖 AI Collaboration Framework active")
     print()
-    
+
     print("🤝 HUMAN-CENTERED DESIGN PRINCIPLES")
     print("• You maintain ultimate authority over all decisions")
     print("• All AI recommendations require your validation")
@@ -49,22 +49,22 @@ def launch_ghst():
     print("• Minimum viable human interaction maintained")
     print("• Emergency human override always available")
     print()
-    
+
     # Try to launch the main application
     try:
         print("🔄 Loading AI expert collective...")
         from src.ai_collaboration.expert_manager import ExpertManager
         expert_manager = ExpertManager()
         print("✅ AI expert collective initialized")
-        
+
         print("🔄 Loading configuration...")
         from src.utils.config_manager import ConfigManager
         config_manager = ConfigManager()
         print("✅ Configuration loaded")
-        
+
         print("🔄 Starting GUI...")
         from src.ui_components.main import GHSTWindow
-        
+
         # Initialize PyQt5 application
         try:
             from PyQt5.QtWidgets import QApplication
@@ -72,43 +72,43 @@ def launch_ghst():
             print("❌ PyQt5 not found. Installing...")
             os.system("pip install PyQt5")
             from PyQt5.QtWidgets import QApplication
-        
+
         app = QApplication(sys.argv)
         app.setApplicationName("GHST")
         app.setApplicationVersion("0.1.0-alpha")
-        
+
         # Create main window
         main_window = GHSTWindow()
         main_window.expert_manager = expert_manager
         main_window.config_manager = config_manager
         main_window.show()
-        
+
         print("✅ GHST GUI launched successfully!")
         print()
         print("🎯 Ready for AI-assisted coding and problem solving!")
         print("💬 Use the interface to interact with expert AI agents")
         print("⚖️ Remember: You have final authority over all decisions")
         print()
-        
+
         # Run the application
         sys.exit(app.exec_())
-        
+
     except ImportError as e:
         print(f"❌ Import error: {e}")
         print("🔧 Attempting to install missing dependencies...")
-        
+
         dependencies = [
             "PyQt5",
             "PyYAML",
             "numpy"
         ]
-        
+
         for dep in dependencies:
             print(f"📦 Installing {dep}...")
             os.system(f"pip install {dep}")
-        
+
         print("✅ Dependencies installed. Please restart the launcher.")
-        
+
     except Exception as e:
         print(f"❌ Error launching GHST: {e}")
         print("🔍 Please check the error above and try again.")

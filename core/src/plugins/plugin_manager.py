@@ -7,16 +7,17 @@ Modeled after the GHST Agent Manager architecture.
 ⚠️ DISCLAIMER: Plugin loading involves code execution - use at your own risk!
 """
 
-import os
-import sys
 import importlib
 import importlib.util
 import inspect
-from typing import Dict, List, Optional, Any
-from pathlib import Path
 import logging
+import os
+import sys
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 from .base_plugin import BasePlugin, PluginMetadata
+
 
 class PluginManager:
     """Manages GHST plugins and their lifecycle."""

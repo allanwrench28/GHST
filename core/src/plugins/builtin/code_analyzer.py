@@ -33,6 +33,7 @@ except ImportError:
         def deactivate(self):
             return True
 
+
 class CodeAnalyzer(BasePlugin):
     """GHST code analysis plugin."""
 
@@ -73,6 +74,7 @@ class CodeAnalyzer(BasePlugin):
         }
 
         return analysis
+
 
 def create_plugin():
     """Create and return plugin instance."""

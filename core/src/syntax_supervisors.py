@@ -16,13 +16,14 @@ Features:
 """
 
 import ast
-import logging
-import time
-import threading
-from pathlib import Path
-from typing import Dict, List, Optional, Any
 import json
+import logging
+import threading
+import time
 from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
 
 class SyntaxSupervisor:
     """Individual Syntax Supervisor for specific file types and tasks."""
@@ -177,6 +178,7 @@ class SyntaxSupervisor:
                     'line': func_node.body[i + 1].lineno,
                     'suggestion': 'Code after return statement is unreachable'
                 })
+
 
 class SyntaxSupervisorManager:
     """Manages the GHST Syntax Supervisor collective."""

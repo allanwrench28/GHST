@@ -6,10 +6,11 @@ Automated ethical review for AI-related code changes.
 ⚠️ AI-generated analysis - human oversight required
 """
 
-import sys
 import os
 import re
-from typing import List, Dict, Any
+import sys
+from typing import Any, Dict, List
+
 
 class GhostEthicalReviewer:
     """GHST Agent collective ethical review system."""

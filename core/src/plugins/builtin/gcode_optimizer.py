@@ -4,7 +4,7 @@ G-code Optimizer Plugin
 An experimental plugin that optimizes G-code for better print quality.
 """
 
-from typing import Dict, Any, List
+from typing import Any, Dict, List
 
 # Simple approach - try to import BasePlugin from different possible locations
 BasePlugin = None
@@ -30,6 +30,7 @@ for import_path in [
 # If we still don't have BasePlugin, we can't proceed
 if not BasePlugin or not PluginMetadata:
     raise ImportError("Could not import BasePlugin and PluginMetadata")
+
 
 class GcodeOptimizerPlugin(BasePlugin):
     """Plugin for optimizing G-code output."""

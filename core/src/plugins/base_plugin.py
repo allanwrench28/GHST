@@ -7,10 +7,11 @@ Modeled after the GHST Agent system architecture for consistency.
 ⚠️ DISCLAIMER: Plugin execution involves system access - use at your own risk!
 """
 
-from abc import ABC, abstractmethod
-from typing import Dict, Any, List, Optional
 import logging
+from abc import ABC, abstractmethod
 from dataclasses import dataclass
+from typing import Any, Dict, List, Optional
+
 
 @dataclass
 class PluginMetadata:
@@ -27,6 +28,7 @@ class PluginMetadata:
     def __post_init__(self):
         if self.safety_notes is None:
             self.safety_notes = []
+
 
 class BasePlugin(ABC):
     """Base class for all GHST plugins."""

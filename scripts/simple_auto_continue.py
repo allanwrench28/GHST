@@ -14,6 +14,7 @@ from datetime import datetime
 
 import keyboard
 
+
 class SimpleAutoContinue:
     """Simple automation for VS Code terminal interactions."""
 
@@ -144,6 +145,7 @@ class SimpleAutoContinue:
         print("   - Press hotkeys from any window")
         print("=" * 50)
 
+
 def check_dependencies():
     """Check if required packages are available."""
     try:
@@ -160,6 +162,7 @@ def check_dependencies():
             print("❌ Failed to install keyboard: {e}")
             print("💡 Try: pip install keyboard")
             return False
+
 
 def main():
     """Main entry point."""
@@ -193,6 +196,7 @@ def main():
         auto_continue.stop_automation()
 
     return True
+
 
 if __name__ == "__main__":
     main()

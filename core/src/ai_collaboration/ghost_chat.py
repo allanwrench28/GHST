@@ -16,10 +16,11 @@ Features:
 """
 
 import json
-import time
 import random
-from typing import Dict, List
+import time
 from datetime import datetime
+from typing import Dict, List
+
 
 class GhostChatInterface:
     """Conversational interface for interacting with the GHST Agent collective."""

@@ -26,6 +26,7 @@ except ImportError:
     SYNTAX_SUPERVISORS_AVAILABLE = False
     print("⚠️ Syntax Supervisors not available")
 
+
 def launch_ghst():
     """Launch the GHST AI coding engine."""
     print("🚀 Starting GHST - Open Source AI Coding Engine")
@@ -130,6 +131,7 @@ def launch_ghst():
         print("🔍 Please check the error above and try again.")
         print("📧 Report issues to the development team.")
 
+
 def show_help():
     """Show help information."""
     print("🚀 GHST Launcher Help")
@@ -152,12 +154,14 @@ def show_help():
     print("• Human oversight and control")
     print("• Open source collaboration")
 
+
 def main():
     """Main entry point."""
     if len(sys.argv) > 1 and sys.argv[1] == "help":
         show_help()
     else:
         launch_ghst()
+
 
 if __name__ == "__main__":
     main()

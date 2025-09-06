@@ -48,6 +48,7 @@ CURRENT_VERSION = "1.0.0-alpha.3"
 GITHUB_REPO = "allanwrench28/GHST"
 UPDATE_CHECK_URL = "https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
 
+
 class CacheManager:
     """Manages cache cleanup and preference preservation."""
 
@@ -104,12 +105,12 @@ class CacheManager:
                     try:
                         shutil.rmtree(cache_path)
                         cleaned.append(
-                            "Removed cache: {
+                            f"Removed cache: {
                                 cache_path.relative_to(
                                     self.install_path)}")
                     except Exception as e:
                         cleaned.append(
-                            "Warning: Could not remove {cache_path}: {e}")
+                            f"Warning: Could not remove {cache_path}: {e}")
 
         # Remove .pyc files
         for root, dirs, files in os.walk(self.install_path):
@@ -119,12 +120,12 @@ class CacheManager:
                     try:
                         pyc_path.unlink()
                         cleaned.append(
-                            "Removed: {
+                            f"Removed: {
                                 pyc_path.relative_to(
                                     self.install_path)}")
                     except Exception as e:
                         cleaned.append(
-                            "Warning: Could not remove {pyc_path}: {e}")
+                            f"Warning: Could not remove {pyc_path}: {e}")
 
         # Clean backup directory after successful restore
         backup_path = self.install_path / ".ghst_backup"
@@ -136,6 +137,7 @@ class CacheManager:
                 pass
 
         return cleaned
+
 
 class UpdateChecker:
     """Checks for GHST updates from GitHub releases."""
@@ -172,6 +174,7 @@ class UpdateChecker:
 
         return {'available': False, 'current_version': CURRENT_VERSION}
 
+
 class InstallationWorker(QThread):
     """Enhanced background worker for installation tasks."""
 
@@ -203,7 +206,7 @@ class InstallationWorker(QThread):
                 preferences_backup = self.cache_manager.backup_preferences()
                 if preferences_backup:
                     self.log_updated.emit(
-                        "✅ Backed up {
+                        f"✅ Backed up {
                             len(preferences_backup)} preference files")
 
                 # Clean caches and temporary files
@@ -211,10 +214,10 @@ class InstallationWorker(QThread):
                     "Cleaning caches and temporary files...")
                 cleaned_items = self.cache_manager.cleanup_caches()
                 for item in cleaned_items[:10]:  # Show first 10 items
-                    self.log_updated.emit("🧹 {item}")
+                    self.log_updated.emit(f"🧹 {item}")
                 if len(cleaned_items) > 10:
                     self.log_updated.emit(
-                        "🧹 ... and {
+                        f"🧹 ... and {
                             len(cleaned_items) -
                             10} more items")
 
@@ -344,6 +347,7 @@ updates:
         """Cancel the installation process."""
         self.cancelled = True
 
+
 class UpdateTab(QWidget):
     """Tab for checking and managing updates."""
 
@@ -422,13 +426,13 @@ class UpdateTab(QWidget):
 
         if 'error' in self.update_info:
             self.update_status.setText(
-                "❌ Update check failed: {
+                f"❌ Update check failed: {
                     self.update_info['error']}")
             return
 
         if self.update_info['available']:
             latest = self.update_info['latest_version']
-            self.update_status.setText("🎉 New version available: v{latest}")
+            self.update_status.setText(f"🎉 New version available: v{latest}")
             self.update_status.setStyleSheet(
                 "color: #28a745; font-weight: bold;")
 
@@ -454,6 +458,7 @@ class UpdateTab(QWidget):
         download_url = self.update_info.get(
             'download_url', f'https://github.com/{GITHUB_REPO}/releases')
         webbrowser.open(download_url)
+
 
 class WelcomePage(QWidget):
     """Enhanced welcome page with update check."""
@@ -503,6 +508,7 @@ class WelcomePage(QWidget):
 
         layout.addStretch()
         self.setLayout(layout)
+
 
 class OptionsPage(QWidget):
     """Enhanced options page with cache cleanup options."""
@@ -570,6 +576,7 @@ class OptionsPage(QWidget):
             'dev_mode': self.dev_mode.isChecked(),
             'create_shortcuts': self.create_shortcuts.isChecked()
         }
+
 
 class InstallationPage(QWidget):
     """Installation page with enhanced progress tracking."""
@@ -647,6 +654,7 @@ class InstallationPage(QWidget):
         else:
             self.status_label.setText("❌ Installation failed!")
 
+
 class CompletionPage(QWidget):
     """Enhanced completion page with next steps."""
 
@@ -722,6 +730,7 @@ class CompletionPage(QWidget):
         except Exception:
             # Fallback for non-Windows systems
             subprocess.run(['explorer', str(Path.cwd())], shell=True)
+
 
 class GHSTInstaller(QMainWindow):
     """Enhanced GHST Installation Wizard with tabbed interface."""
@@ -849,6 +858,7 @@ class GHSTInstaller(QMainWindow):
             self.current_page += 1
             self.tab_widget.setCurrentIndex(self.current_page)
 
+
 def main():
     """Main application entry point."""
     if not PYQT5_AVAILABLE:
@@ -870,6 +880,7 @@ def main():
     installer.show()
 
     sys.exit(app.exec_())
+
 
 if __name__ == "__main__":
     main()

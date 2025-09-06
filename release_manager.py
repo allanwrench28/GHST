@@ -12,6 +12,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
+
 class ReleaseManager:
     def __init__(self, releases_dir="releases"):
         self.releases_dir = Path(releases_dir)

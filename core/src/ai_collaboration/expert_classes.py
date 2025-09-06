@@ -5,8 +5,9 @@ Core expert system for AI coding assistance with specialized agents.
 """
 
 from abc import ABC, abstractmethod
-from typing import Dict, Any
 from datetime import datetime
+from typing import Any, Dict
+
 
 class BaseExpert(ABC):
     """Base class for all AI experts in GHST system."""
@@ -33,6 +34,7 @@ class BaseExpert(ABC):
             'last_activity': self.last_activity
         }
 
+
 class CodeAnalysisExpert(BaseExpert):
     """Expert in code analysis and quality assessment."""
 
@@ -54,6 +56,7 @@ class CodeAnalysisExpert(BaseExpert):
             'priority': 'medium',
             'estimated_time': '15-30 minutes'
         }
+
 
 class DebuggingExpert(BaseExpert):
     """Expert in debugging and error resolution."""
@@ -77,6 +80,7 @@ class DebuggingExpert(BaseExpert):
             'estimated_time': '30-60 minutes'
         }
 
+
 class ProblemSolvingExpert(BaseExpert):
     """Expert in creative problem solving and algorithm design."""
 
@@ -98,6 +102,7 @@ class ProblemSolvingExpert(BaseExpert):
             'priority': 'medium',
             'estimated_time': '45-90 minutes'
         }
+
 
 class ResearchExpert(BaseExpert):
     """Expert in research and finding FOSS solutions."""
@@ -121,6 +126,7 @@ class ResearchExpert(BaseExpert):
             'estimated_time': '60-120 minutes'
         }
 
+
 class PerformanceExpert(BaseExpert):
     """Expert in performance optimization and profiling."""
 
@@ -142,6 +148,7 @@ class PerformanceExpert(BaseExpert):
             'priority': 'medium',
             'estimated_time': '30-60 minutes'
         }
+
 
 class SecurityExpert(BaseExpert):
     """Expert in security analysis and vulnerability assessment."""
@@ -165,6 +172,7 @@ class SecurityExpert(BaseExpert):
             'estimated_time': '45-90 minutes'
         }
 
+
 class DocumentationExpert(BaseExpert):
     """Expert in documentation and code commenting."""
 
@@ -186,6 +194,7 @@ class DocumentationExpert(BaseExpert):
             'priority': 'low',
             'estimated_time': '60-120 minutes'
         }
+
 
 class TestingExpert(BaseExpert):
     """Expert in testing strategies and test automation."""
@@ -209,6 +218,7 @@ class TestingExpert(BaseExpert):
             'estimated_time': '45-90 minutes'
         }
 
+
 class ArchitectureExpert(BaseExpert):
     """Expert in software architecture and design patterns."""
 
@@ -230,6 +240,7 @@ class ArchitectureExpert(BaseExpert):
             'priority': 'medium',
             'estimated_time': '60-120 minutes'
         }
+
 
 class UIUXExpert(BaseExpert):
     """Expert in user interface and user experience design."""
@@ -253,6 +264,7 @@ class UIUXExpert(BaseExpert):
             'estimated_time': '45-90 minutes'
         }
 
+
 class DevOpsExpert(BaseExpert):
     """Expert in DevOps practices and deployment strategies."""
 
@@ -274,6 +286,7 @@ class DevOpsExpert(BaseExpert):
             'priority': 'low',
             'estimated_time': '60-120 minutes'
         }
+
 
 class DataExpert(BaseExpert):
     """Expert in data processing and analysis."""

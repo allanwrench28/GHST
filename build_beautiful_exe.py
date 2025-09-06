@@ -32,11 +32,12 @@ Usage: python build_beautiful_exe.py
 """
 
 import os
-import sys
 import shutil
 import subprocess
-from pathlib import Path
+import sys
 import zipfile
+from pathlib import Path
+
 
 def clean_build_directories():
     """Clean previous build artifacts."""
@@ -55,6 +56,7 @@ def clean_build_directories():
     for spec_file in spec_files:
         os.remove(spec_file)
         print("   ✓ Removed {spec_file}")
+
 
 def build_installer_exe():
     """Build the installer executable using PyInstaller."""

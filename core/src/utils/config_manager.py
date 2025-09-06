@@ -10,12 +10,13 @@ Manages YAML-based configuration system inspired by Klipper:
 All configs include safety disclaimers and experimental feature warnings.
 """
 
-import yaml
-import os
-from typing import Dict, Any, Optional, List
-from pathlib import Path
-from dataclasses import dataclass, asdict
 import logging
+import os
+from dataclasses import asdict, dataclass
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+import yaml
 
 # Import plugin system
 try:
@@ -25,6 +26,7 @@ try:
     PLUGINS_AVAILABLE = True
 except ImportError:
     PLUGINS_AVAILABLE = False
+
 
 @dataclass
 class PrinterConfig:
@@ -47,6 +49,7 @@ class PrinterConfig:
         if self.experimental_features is None:
             self.experimental_features = []
 
+
 @dataclass
 class MaterialConfig:
     """Material configuration data structure."""
@@ -64,6 +67,7 @@ class MaterialConfig:
     def __post_init__(self):
         if self.safety_notes is None:
             self.safety_notes = []
+
 
 @dataclass
 class SlicingConfig:
@@ -88,6 +92,7 @@ class SlicingConfig:
                 "adaptive_infill": True,
                 "ghst_optimization": True
             }
+
 
 class ConfigManager:
     """Manages all SlicerGPT configuration files and settings."""

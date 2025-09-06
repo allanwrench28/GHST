@@ -11,6 +11,7 @@ import sys
 import zipfile
 from pathlib import Path
 
+
 def clean_build_dirs():
     """Clean previous build artifacts"""
     dirs_to_clean = ['build', 'dist', '__pycache__']
@@ -23,6 +24,7 @@ def clean_build_dirs():
     for spec_file in Path('.').glob('*.spec'):
         print("🧹 Removing {spec_file}")
         spec_file.unlink()
+
 
 def build_optimized_installer():
     """Build optimized beautiful installer"""
@@ -69,6 +71,7 @@ def build_optimized_installer():
         print("STDOUT: {e.stdout}")
         print("STDERR: {e.stderr}")
         return False
+
 
 def create_optimized_release():
     """Create optimized release package"""
@@ -158,6 +161,7 @@ echo Starting installer...
 
     return True
 
+
 def main():
     print("🎨 GHST Beautiful Installer Builder (Size Optimized)")
     print("=" * 50)
@@ -179,6 +183,7 @@ def main():
     print("🎯 Ready for distribution with modern UI and optimized size")
 
     return True
+
 
 if __name__ == '__main__':
     success = main()

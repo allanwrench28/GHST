@@ -12,6 +12,7 @@ from pathlib import Path
 src_path = Path(__file__).parent / "src"
 sys.path.insert(0, str(src_path))
 
+
 def main():
     """Launch GUI directly."""
     try:
@@ -56,6 +57,7 @@ def main():
         print("❌ Failed to start GHST GUI: {e}")
         print("🧠 This error would be captured by the AI expert system!")
         return 1
+
 
 if __name__ == "__main__":
     try:

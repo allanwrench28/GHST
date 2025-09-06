@@ -6,11 +6,12 @@ Ensures all source files have proper license headers.
 ⚠️ Part of GHST repository ruleset
 """
 
-import sys
 import os
 import re
+import sys
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import Any, Dict, List
+
 
 class LicenseChecker:
     """License header validation system."""

@@ -22,6 +22,7 @@ if response.lower() != 'yes':
     print("Setup cancelled by user.")
     sys.exit(0)
 
+
 def run_command(cmd, description):
     """Run a command with error handling and user notification."""
     print("\n🔧 {description}")
@@ -36,6 +37,7 @@ def run_command(cmd, description):
         print("❌ Failed: {description}")
         print("Error: {e.stderr}")
         return False
+
 
 def main():
     """Main setup routine."""
@@ -103,6 +105,7 @@ def main():
     print("⚠️ This version excludes coding engine functionality.")
 
     return True
+
 
 if __name__ == "__main__":
     try:

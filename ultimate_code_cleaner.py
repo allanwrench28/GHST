@@ -9,6 +9,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+
 def install_autoflake():
     """Install autoflake for removing unused imports"""
     try:
@@ -25,6 +26,7 @@ def install_autoflake():
         except subprocess.CalledProcessError as e:
             print("❌ Failed to install autoflake: {e}")
             return False
+
 
 def ultimate_fix_file(file_path):
     """Apply ultimate fixes to a Python file"""
@@ -72,6 +74,7 @@ def ultimate_fix_file(file_path):
         print("  ❌ Error fixing {file_path}: {e}")
         return False
 
+
 def manual_fix_file(file_path):
     """Apply manual fixes that tools can't handle"""
     try:
@@ -101,6 +104,7 @@ def manual_fix_file(file_path):
     except Exception as e:
         print("  ⚠️ Manual fix error: {e}")
 
+
 def get_all_python_files():
     """Get ALL Python files in the project"""
     python_files = []
@@ -123,6 +127,7 @@ def get_all_python_files():
                 python_files.append(file_path)
 
     return python_files
+
 
 def main():
     print("🚀 GHST Ultimate Code Cleaner")
@@ -154,6 +159,7 @@ def main():
     print("💨 VS Code will be lightning fast now!")
 
     return True
+
 
 if __name__ == '__main__':
     success = main()

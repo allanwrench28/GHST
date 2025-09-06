@@ -16,6 +16,7 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 
+
 class GHSTBackupManager:
     """Comprehensive backup system for GHST workspace."""
 

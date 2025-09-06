@@ -4,11 +4,24 @@ GHST Main Window - AI Coding Engine Interface
 Modern interface for AI-assisted coding, debugging, and problem solving.
 """
 
-from PyQt5.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
-                             QTextEdit, QPushButton, QLabel, QSplitter,
-                             QTabWidget, QListWidget, QStatusBar, QMessageBox)
-from PyQt5.QtCore import Qt
 import sys
+
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (
+    QHBoxLayout,
+    QLabel,
+    QListWidget,
+    QMainWindow,
+    QMessageBox,
+    QPushButton,
+    QSplitter,
+    QStatusBar,
+    QTabWidget,
+    QTextEdit,
+    QVBoxLayout,
+    QWidget,
+)
+
 
 class GHSTWindow(QMainWindow):
     """Main window for GHST AI Coding Engine."""
@@ -63,8 +76,11 @@ class GHSTWindow(QMainWindow):
         # Create status bar
         self.create_status_bar()
 
-        # Apply styling
-        self.apply_styling()
+    # Apply styling
+    self.apply_styling()
+
+    # Add autocommit ticker to status bar (after status bar is created)
+    self.add_autocommit_ticker()
 
     def create_left_pane(self):
         """Create left pane with expert agents and tools."""
@@ -224,6 +240,34 @@ class GHSTWindow(QMainWindow):
         self.setStatusBar(self.status_bar)
         self.status_bar.showMessage("GHST AI Coding Engine - Ready")
 
+    def add_autocommit_ticker(self):
+        """Add live autocommit ticker to the status bar."""
+        from PyQt5.QtCore import QTimer
+        self.autocommit_label = QLabel("🔄 Last autocommit: loading...")
+        self.status_bar.addPermanentWidget(self.autocommit_label)
+        self.autocommit_timer = QTimer(self)
+        self.autocommit_timer.timeout.connect(self.update_autocommit_ticker)
+        self.autocommit_timer.start(10000)  # Refresh every 10 seconds
+        self.update_autocommit_ticker()
+
+    def update_autocommit_ticker(self):
+        """Update the autocommit ticker with latest commit info."""
+        import subprocess
+        try:
+            result = subprocess.run([
+                "git", "log", "-1", "--pretty=format:%h %s (%ci)"
+            ], capture_output=True, text=True, cwd=None)
+            if result.returncode == 0:
+                commit_info = result.stdout.strip()
+                if commit_info:
+                    self.autocommit_label.setText(f"🔄 Last autocommit: {commit_info}")
+                else:
+                    self.autocommit_label.setText("🔄 Last autocommit: No commits found.")
+            else:
+                self.autocommit_label.setText("❌ Autocommit ticker error: git log failed.")
+        except Exception as e:
+            self.autocommit_label.setText(f"❌ Autocommit ticker error: {e}")
+
     def apply_styling(self):
         """Apply modern styling to the interface."""
         self.setStyleSheet("""
@@ -304,13 +348,10 @@ class GHSTWindow(QMainWindow):
         """Show AI expert status."""
         if self.expert_manager:
             status = self.expert_manager.get_experts_status()
-            QMessageBox.information(
-                self, "Expert Status", "Active Experts: {
-                    status['active_experts']}/{
-                    status['total_experts']}")
+            msg = f"Active Experts: {status['active_experts']}/{status['total_experts']}"
+            QMessageBox.information(self, "Expert Status", msg)
         else:
-            QMessageBox.information(
-                self, "Expert Status", "Expert manager not initialized.")
+            QMessageBox.information(self, "Expert Status", "Expert manager not initialized.")
 
     def configure_experts(self):
         """Configure AI experts."""

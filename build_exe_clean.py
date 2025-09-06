@@ -1,10 +1,11 @@
 # GHST Enhanced Executable Builder
 # Creates standalone .exe installer with cache cleanup and update checking
 
-import sys
-import subprocess
 import shutil
+import subprocess
+import sys
 from pathlib import Path
+
 
 def build_installer_exe():
     """Build standalone installer executable."""
@@ -62,6 +63,7 @@ def build_installer_exe():
         return False
 
     return True
+
 
 def create_exe_release_package():
     """Create executable release package."""
@@ -215,6 +217,7 @@ Built with PyInstaller for maximum compatibility and ease of use.
 
     return exe_release_dir
 
+
 def main():
     """Main build process."""
     print("🚀 GHST Enhanced Executable Build System")
@@ -239,6 +242,7 @@ def main():
         print("4. Tag the release for easy distribution")
     else:
         print("❌ Build process failed")
+
 
 if __name__ == "__main__":
     main()

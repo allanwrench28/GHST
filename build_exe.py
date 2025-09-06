@@ -2,10 +2,11 @@
 # Creates standalone .exe installer with cache cleanup and update checking
 
 import os
-import sys
-import subprocess
 import shutil
+import subprocess
+import sys
 from pathlib import Path
+
 
 def build_installer_exe():
     """Build standalone installer executable."""
@@ -63,6 +64,7 @@ def build_installer_exe():
         return False
 
     return True
+
 
 def create_exe_release_package():
     """Create executable release package."""
@@ -267,6 +269,7 @@ Built with PyInstaller for maximum compatibility and ease of use.
         print("❌ Unexpected error: {e}")
         return False
 
+
 def create_portable_launcher():
     """Create a simple .exe launcher that doesn't need installation."""
     print("\n🚀 Creating portable launcher...")
@@ -349,6 +352,7 @@ if __name__ == "__main__":
     except Exception as e:
         print("❌ Failed to create portable launcher: {e}")
         return False
+
 
 if __name__ == "__main__":
     print("🔨 GHST Executable Builder v1.0")

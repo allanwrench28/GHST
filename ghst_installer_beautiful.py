@@ -25,14 +25,8 @@ from typing import Dict, List
 import requests
 
 try:
-    from PyQt5.QtCore import (
-        Qt,
-        QThread,
-        pyqtSignal,
-    )
-    from PyQt5.QtGui import (
-        QColor,
-    )
+    from PyQt5.QtCore import Qt, QThread, pyqtSignal
+    from PyQt5.QtGui import QColor
     from PyQt5.QtWidgets import (
         QApplication,
         QCheckBox,
@@ -74,6 +68,7 @@ COLORS = {
     'text_secondary': '  # 94a3b8',  # Muted text
     'border': '  # 475569'        # Border color
 }
+
 
 class CacheManager:
     """Manages cache cleanup and preference preservation."""
@@ -126,6 +121,7 @@ class CacheManager:
                         pass
 
         except Exception as e:
+            pass
             cleaned.append("Warning: {str(e)}")
         finally:
             # Restore preserved data

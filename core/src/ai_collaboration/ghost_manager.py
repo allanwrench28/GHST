@@ -25,15 +25,16 @@ AI Expert Collective:
 """
 
 import logging
-import time
 import threading
-from typing import Dict, List, Any
+import time
 from datetime import datetime
 from pathlib import Path
+from typing import Any, Dict, List
 
 # Mock imports - replace with actual AI/LLM libraries
 # from mistral import MistralClient  # FOSS LLM
 # from openai import OpenAI  # Alternative
+
 
 class ExpertManager:
     """Manages the AI expert collective and their activities."""
@@ -263,7 +264,8 @@ caused by this code. Please review carefully before merging.
             self.log_activity("⚠️ PR includes no-liability disclaimer")
 
             # In real implementation, use GitHub API:
-            # response = self._create_github_pr(branch_name, pr_description, code_changes)
+            # response = self._create_github_pr(branch_name, pr_description,
+            # code_changes)
 
             return True
 

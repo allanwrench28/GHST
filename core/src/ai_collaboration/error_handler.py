@@ -7,14 +7,15 @@ for fixes with proper disclaimers and safety warnings.
 ⚠️ All AI-generated fixes include no-liability disclaimers
 """
 
-import logging
-import traceback
 import hashlib
-from typing import Dict, Any, Optional, Callable
+import logging
+import queue
+import threading
+import traceback
 from datetime import datetime
 from pathlib import Path
-import threading
-import queue
+from typing import Any, Callable, Dict, Optional
+
 
 class ErrorHandler:
     """Captures and processes errors for GHST Agent analysis and fixing."""

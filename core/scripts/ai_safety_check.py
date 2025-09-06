@@ -6,11 +6,12 @@ Automated safety validation for AI-related functionality.
 ⚠️ AI-generated analysis - verify before implementation
 """
 
-import sys
+import ast
 import os
 import re
-import ast
-from typing import List, Dict, Any
+import sys
+from typing import Any, Dict, List
+
 
 class AISafetyChecker:
     """AI safety validation system."""

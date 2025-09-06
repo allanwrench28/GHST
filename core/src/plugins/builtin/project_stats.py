@@ -33,6 +33,7 @@ except ImportError:
         def deactivate(self):
             return True
 
+
 class ProjectStats(BasePlugin):
     """GHST project statistics plugin."""
 
@@ -81,6 +82,7 @@ class ProjectStats(BasePlugin):
 
         except Exception as e:
             return {'error': str(e)}
+
 
 def create_plugin():
     """Create and return plugin instance."""

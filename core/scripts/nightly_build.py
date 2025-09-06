@@ -9,17 +9,19 @@ Use at your own risk - verify all outputs before use!
 """
 
 import os
+import shutil
+import subprocess
 import sys
 import time
-import subprocess
-import shutil
 from datetime import datetime
+
 
 def print_banner(message):
     """Print a formatted banner message."""
     print("\n" + "=" * 60)
     print("🚀 {message}")
     print("=" * 60)
+
 
 def print_disclaimer():
     """Print the liability disclaimer."""
@@ -31,6 +33,7 @@ def print_disclaimer():
     print("   - Always review AI-generated code")
     print("   - Verify all operations before execution")
     print("=" * 60)
+
 
 def run_command(cmd, description, check=True):
     """Run a command with logging."""
@@ -55,6 +58,7 @@ def run_command(cmd, description, check=True):
             print("Error: {e.stderr}")
         return False
 
+
 def ghst_analysis():
     """Run GHST Agent collective analysis."""
     print_banner("GHOST COLLECTIVE ANALYSIS")
@@ -62,8 +66,8 @@ def ghst_analysis():
     try:
         # Import and run GHST Agent analysis
         sys.path.insert(0, 'src')
-        from ai_collaboration.ghst_manager import ExpertManager
         from ai_collaboration.error_handler import ErrorHandler
+        from ai_collaboration.ghst_manager import ExpertManager
 
         print("👻 Initializing GHST Agent collective...")
         ExpertManager()
@@ -97,6 +101,7 @@ def ghst_analysis():
     except Exception as e:
         print("❌ GHST Agent analysis failed: {e}")
         return 0, 0
+
 
 def create_version_info():
     """Create version info file for PyInstaller."""
@@ -132,6 +137,7 @@ VSVersionInfo(
     with open('version_info.txt', 'w') as f:
         f.write(version_info)
     print("📝 Version info created")
+
 
 def build_executable():
     """Build the executable using PyInstaller."""
@@ -170,6 +176,7 @@ def build_executable():
         print("❌ Executable build failed")
         return False
 
+
 def run_tests():
     """Run the test suite."""
     print_banner("RUNNING TESTS")
@@ -185,6 +192,7 @@ def run_tests():
             run_command(cmd, "Testing {test_file}", check=False)
 
     print("✅ Test suite completed")
+
 
 def create_build_report():
     """Create a build report."""
@@ -234,6 +242,7 @@ def create_build_report():
 
     print("📋 Build report created: build_report.md")
 
+
 def main():
     """Main build process."""
     print_disclaimer()
@@ -272,6 +281,7 @@ def main():
     except Exception as e:
         print("\n❌ Build failed: {e}")
         return 1
+
 
 if __name__ == "__main__":
     sys.exit(main())

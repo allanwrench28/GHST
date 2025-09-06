@@ -15,6 +15,7 @@ import time
 import keyboard
 import pyautogui
 
+
 class GHSTAutoHandler:
     """Handles automatic continuation of prompts and interactions."""
 
