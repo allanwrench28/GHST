@@ -1,4 +1,4 @@
-# FANTOM Repository Ruleset - Quick Reference
+# GHST Repository Ruleset - Quick Reference
 
 ## 🚀 Quick Start
 
@@ -15,7 +15,7 @@ mypy src/
 pytest tests/
 
 # Test custom checks
-python scripts/ghost_ethical_review.py src/ai_collaboration/
+python scripts/ghst_ethical_review.py src/ai_collaboration/
 python scripts/ai_safety_check.py src/ai_collaboration/
 ```
 
@@ -33,7 +33,7 @@ python scripts/ai_safety_check.py src/ai_collaboration/
 - [x] `.gitignore` - Git ignore patterns
 - [x] `.markdownlint.json` - Markdown style rules
 - [x] `CONTRIBUTING.md` - Contribution guidelines
-- [x] `scripts/ghost_ethical_review.py` - AI ethics check
+- [x] `scripts/ghst_ethical_review.py` - AI ethics check
 - [x] `scripts/ai_safety_check.py` - AI safety validation
 - [x] `scripts/check_license_headers.py` - License verification
 
@@ -42,15 +42,15 @@ python scripts/ai_safety_check.py src/ai_collaboration/
 ```
 type(scope): description
 
-feat(ai): add new Ghost ethical review system
+feat(ai): add new GHST Agent ethical review system
 fix(ui): resolve layout issue in settings panel
 docs: update installation instructions
 test: add coverage for config manager
-ghost: enhance collective oversight capabilities
+ghst: enhance collective oversight capabilities
 security: implement additional vulnerability scanning
 ```
 
-**Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `ghost`, `security`, `config`
+**Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `ghst`, `security`, `config`
 
 ## 🔧 Tool Configurations
 
@@ -93,7 +93,7 @@ security: implement additional vulnerability scanning
 
 ### For AI-Related Code
 - ✅ Human approval required
-- ✅ Ethical review by Ghost collective
+- ✅ Ethical review by GHST Agent collective
 - ✅ Safety disclaimers included
 - ✅ Error handling implemented
 - ✅ Input validation present
@@ -101,7 +101,7 @@ security: implement additional vulnerability scanning
 
 ### Review Process
 1. Automated detection of AI code
-2. Ghost collective ethical analysis
+2. GHST Agent collective ethical analysis
 3. Safety validation scoring
 4. Human oversight verification
 5. Documentation requirements check
@@ -119,7 +119,7 @@ security: implement additional vulnerability scanning
 - ✅ `ci/tests` - Test suite passes
 - ✅ `ci/lint` - Code quality checks
 - ✅ `ci/security-scan` - Security validation
-- ✅ `ghost-collective/ethical-review` - AI ethics review
+- ✅ `ghst-collective/ethical-review` - AI ethics review
 
 ## 🚨 Common Issues & Solutions
 
@@ -171,7 +171,7 @@ pre-commit run flake8 --all-files
 - All CI checks pass
 - Documentation updated
 
-### AI/Ghost Changes
+### AI/GHST Agent Changes
 - Enhanced ethical review
 - Safety validation required
 - Human oversight documented
@@ -217,7 +217,7 @@ safety check
 pytest tests/ --cov=src
 
 # AI-specific checks
-python scripts/ghost_ethical_review.py src/ai_collaboration/
+python scripts/ghst_ethical_review.py src/ai_collaboration/
 python scripts/ai_safety_check.py src/ai_collaboration/
 ```
 
@@ -251,8 +251,8 @@ python -c "import toml; toml.load('pyproject.toml')"
 
 ---
 
-**🎯 Remember**: This ruleset is designed to enhance code quality while supporting the unique AI-human collaboration of the FANTOM Ghost collective. Human oversight and ethical considerations are paramount.
+**🎯 Remember**: This ruleset is designed to enhance code quality while supporting the unique AI-human collaboration of the GHST GHST Agent collective. Human oversight and ethical considerations are paramount.
 
 **📄 License**: MIT License - see `LICENSE` file  
 **🤖 AI Notice**: Some content may be AI-generated - verify before use  
-**⚖️ Liability**: FANTOM assumes no liability - use at your own risk
+**⚖️ Liability**: GHST assumes no liability - use at your own risk

@@ -1,8 +1,8 @@
-# FANTOM Repository Ruleset Documentation
+# GHST Repository Ruleset Documentation
 
 ## 📋 Overview
 
-This document describes the comprehensive repository ruleset implemented for the FANTOM AI-driven 3D printing platform. The ruleset enhances coding standards, security, and ethical AI practices while maintaining the unique Ghost collective workflow.
+This document describes the comprehensive repository ruleset implemented for the GHST AI-driven AI coding assistance platform. The ruleset enhances coding standards, security, and ethical AI practices while maintaining the unique GHST Agent collective workflow.
 
 ## 🏗️ Ruleset Components
 
@@ -18,7 +18,7 @@ This document describes the comprehensive repository ruleset implemented for the
 
 **Key Rules**:
 - Require 1 approval for main branch PRs
-- Mandatory status checks: `ci/tests`, `ci/lint`, `ci/security-scan`, `ghost-collective/ethical-review`
+- Mandatory status checks: `ci/tests`, `ci/lint`, `ci/security-scan`, `ghst-collective/ethical-review`
 - File size limit: 100MB
 - Blocked file types: `.exe`, `.dll`, `.so`, `.dylib`
 - Conventional commit message pattern enforcement
@@ -33,10 +33,10 @@ This document describes the comprehensive repository ruleset implemented for the
 - **Security**: Bandit vulnerability scanning, secret detection
 - **Documentation**: PyDocStyle, Markdown linting
 - **File Validation**: YAML/JSON/TOML syntax, trailing whitespace
-- **Ghost Integration**: Custom ethical review and safety checks
+- **GHST Agent Integration**: Custom ethical review and safety checks
 
 **Special Features**:
-- AI-specific ethical review for Ghost collective code
+- AI-specific ethical review for GHST Agent collective code
 - Automated safety validation for AI functionality
 - License header verification
 - Large file detection and prevention
@@ -57,7 +57,7 @@ This document describes the comprehensive repository ruleset implemented for the
 - Package information and dependencies
 - Entry points for CLI tools
 - Development/testing/AI/docs dependency groups
-- Ghost collective integration settings
+- GHST Agent collective integration settings
 
 ### 4. 🔒 Security Configuration
 
@@ -71,7 +71,7 @@ This document describes the comprehensive repository ruleset implemented for the
 **Purpose**: Automatic PR and issue labeling based on file patterns.
 
 **Label Categories**:
-- **Component**: ai, ghost-collective, core, ui, backend
+- **Component**: ai, ghst-collective, core, ui, backend
 - **Type**: documentation, testing, security, configuration
 - **Size**: small/medium/large based on change volume
 - **Special**: ethics-review-required for AI code
@@ -81,7 +81,7 @@ This document describes the comprehensive repository ruleset implemented for the
 **Purpose**: Define review requirements for different code areas.
 
 **Key Ownership**:
-- AI/Ghost components require specialized review
+- AI/GHST Agent components require specialized review
 - Security and ethics files have strict ownership
 - Documentation and configuration changes tracked
 - Repository governance files protected
@@ -94,7 +94,7 @@ This document describes the comprehensive repository ruleset implemented for the
 1. **Pre-flight Checks**: Detect AI code changes, determine review requirements
 2. **Code Quality**: Black, isort, Flake8, MyPy validation
 3. **Security Scanning**: Bandit, Safety, vulnerability detection
-4. **AI Ethics Review**: Ghost collective ethical analysis
+4. **AI Ethics Review**: GHST Agent collective ethical analysis
 5. **Testing**: Multi-platform, multi-Python version test matrix
 6. **Compliance**: License headers, documentation validation
 7. **Build**: Package creation and artifact uploading
@@ -109,9 +109,9 @@ This document describes the comprehensive repository ruleset implemented for the
 
 ## 🤖 AI Ethics Integration
 
-### Ghost Collective Oversight
+### GHST Agent Collective Oversight
 
-The ruleset includes special provisions for the FANTOM Ghost collective:
+The ruleset includes special provisions for the GHST GHST Agent collective:
 
 1. **Automated Ethical Review**: AI code changes trigger ethical analysis
 2. **Safety Validation**: Comprehensive safety checks for AI functionality
@@ -122,7 +122,7 @@ The ruleset includes special provisions for the FANTOM Ghost collective:
 ### Ethical Review Process
 
 ```
-AI Code Change → Ghost Analysis → Safety Check → Human Review → Approval
+AI Code Change → GHST Agent Analysis → Safety Check → Human Review → Approval
 ```
 
 ### Safety Requirements
@@ -160,7 +160,7 @@ AI Code Change → Ghost Analysis → Safety Check → Human Review → Approval
 1. **Automated Checks**:
    - Verify all CI checks pass
    - Review security scan results
-   - Check Ghost collective analysis
+   - Check GHST Agent collective analysis
 
 2. **Manual Review**:
    - Validate AI ethics considerations
@@ -193,7 +193,7 @@ AI Code Change → Ghost Analysis → Safety Check → Human Review → Approval
 ### Review Requirements
 
 - **Standard Changes**: 1 approval required
-- **AI/Ghost Changes**: Enhanced review + ethics check
+- **AI/GHST Agent Changes**: Enhanced review + ethics check
 - **Security Changes**: Security-focused review
 - **Documentation**: Style and accuracy validation
 

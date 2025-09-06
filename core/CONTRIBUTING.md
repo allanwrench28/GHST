@@ -1,12 +1,12 @@
-# Contributing to FANTOM
+# Contributing to GHST
 
-Welcome to the FANTOM AI-driven 3D printing platform! We're excited to have you contribute to the Ghost collective.
+Welcome to the GHST AI-driven AI coding assistance platform! We're excited to have you contribute to the GHST Agent collective.
 
 ## 🤖 AI-Human Collaboration
 
-FANTOM features a unique AI Ghost collective that collaborates with human developers. All contributions go through both automated AI analysis and human review.
+GHST features a unique AI GHST Agent collective that collaborates with human developers. All contributions go through both automated AI analysis and human review.
 
-### 👻 Ghost Collective Overview
+### 👻 GHST Agent Collective Overview
 
 Our 26 PhD-level AI Ghosts provide:
 
@@ -84,7 +84,7 @@ Follow our coding standards:
 """
 Example Python module with proper formatting.
 
-This module demonstrates FANTOM coding standards.
+This module demonstrates GHST coding standards.
 ⚠️ AI-generated content - verify before use
 """
 
@@ -95,7 +95,7 @@ from some_package import SomeClass
 
 
 class ExampleClass:
-    """Example class following FANTOM standards.
+    """Example class following GHST standards.
     
     Args:
         name: The name of the example.
@@ -186,7 +186,7 @@ Use conventional commit messages:
 
 ```bash
 # Format: type(scope): description
-git commit -m "feat(ai): add new Ghost ethical review system"
+git commit -m "feat(ai): add new GHST Agent ethical review system"
 git commit -m "fix(ui): resolve layout issue in settings panel"
 git commit -m "docs: update installation instructions"
 git commit -m "test: add coverage for config manager"
@@ -208,7 +208,7 @@ Create a pull request with:
 
 1. **Pre-commit hooks** run locally
 2. **CI pipeline** runs full test suite
-3. **Ghost collective** analyzes changes
+3. **GHST Agent collective** analyzes changes
 4. **Security scanning** checks for vulnerabilities
 5. **License compliance** verification
 
@@ -305,7 +305,7 @@ We follow Semantic Versioning (SemVer):
 
 ### Liability Disclaimer
 
-⚠️ **IMPORTANT**: FANTOM assumes no liability for:
+⚠️ **IMPORTANT**: GHST assumes no liability for:
 
 ### AI Ethics Commitment
 
@@ -316,4 +316,4 @@ We are committed to:
 This project is licensed under the MIT License. By contributing, you agree that your contributions will be licensed under the same license.
 
 
-**Thank you for contributing to FANTOM! Together, humans and AI can build amazing things. 🚀👻**
+**Thank you for contributing to GHST! Together, humans and AI can build amazing things. 🚀👻**
