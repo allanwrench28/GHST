@@ -10,7 +10,7 @@
     "*.tmp", 
     "__pycache__",
     ".git",
-    "node_modules",
+    "node_modules",    
     "*.exe",
     "*.zip",
     "*.pkg",
