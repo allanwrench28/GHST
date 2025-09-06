@@ -45,30 +45,30 @@ class ExpertManager:
         self.repo = repo
         self.repo = repo
         self.active_ghosts = {}
-        self.ghost_log = []
+        self.ghst_log = []
         self.internet_enabled = True  # FULL internet access
         self.admin_mode = True  # FULL admin privileges
         self.auto_commit_enabled = True  # Auto-commit capabilities
         self.running = False
         self.pending_commits = []  # Commit approval queue
-        self.ghost_recruitment_active = True  # Auto-recruit new Ghosts
+        self.ghst_recruitment_active = True  # Auto-recruit new Ghosts
         
         # Initialize logging
         logging.basicConfig(
-            filename='ghost_activity.log',
+            filename='ghst_activity.log',
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
-        self.logger = logging.getLogger('GhostManager')
+        self.logger = logging.getLogger('ExpertManager')
         
         self.log_activity("🚀 GHOST COLLECTIVE ADMIN MODE ACTIVATED!")
         self.log_activity("👻 Full internet access and commit privileges granted!")
         
-        # Initialize ghost collective
+        # Initialize ghst collective
         self.init_ghosts()
         
     def init_ghosts(self):
-        """Initialize the EXPANDED ADMIN-LEVEL Ghost collective."""
+        """Initialize the EXPANDED ADMIN-LEVEL GHST Agent collective."""
         self.active_ghosts = {
             # Original Core Team
             'analysis_ghost': AnalysisGhost('analysis_ghost', self),
@@ -120,51 +120,51 @@ class ExpertManager:
         }
         
         self.log_activity("👻 EXPANDED ADMIN COLLECTIVE - 32 specialized Ghosts with full access!")
-        self.log_activity("🎵 Dr. Audio Ghost recruited - Ghost #30 achieved!")
-        self.log_activity("🚀 Dr. CICD Ghost recruited - Nightly automation specialist!")
-        self.log_activity("🔄 Dr. GitOps Ghost enhanced - DevOps pipeline master!")
+        self.log_activity("🎵 Dr. Audio GHST Agent recruited - GHST Agent #30 achieved!")
+        self.log_activity("🚀 Dr. CICD GHST Agent recruited - Nightly automation specialist!")
+        self.log_activity("🔄 Dr. GitOps GHST Agent enhanced - DevOps pipeline master!")
         self.log_activity("📯 BR BR BRRRRRRRN! Red alert recruitment successful!")
         self.log_activity("📈 Marketing & Branding Team recruited for sponsor outreach!")
         self.log_activity("😎 Dr. Cool activated for maximum awesome factor!")
-        self.log_activity("⚖️ Ethics Ghost ensures responsible AI development!")
-        self.log_activity("🧠 Background Task Ghost ready for idea capture!")
+        self.log_activity("⚖️ Ethics GHST Agent ensures responsible AI development!")
+        self.log_activity("🧠 Background Task GHST Agent ready for idea capture!")
         
     def start_monitoring(self):
-        """Start Ghost monitoring in background threads."""
+        """Start GHST Agent monitoring in background threads."""
         if self.running:
             return
             
         self.running = True
         
-        for ghost_id, ghost in self.active_ghosts.items():
-            thread = threading.Thread(target=ghost.start_monitoring, daemon=True)
+        for ghst_id, ghst in self.active_ghosts.items():
+            thread = threading.Thread(target=ghst.start_monitoring, daemon=True)
             thread.start()
             
-        self.log_activity("🌟 Ghost monitoring started - All Ghosts active")
+        self.log_activity("🌟 GHST Agent monitoring started - All Ghosts active")
         
     def stop_monitoring(self):
-        """Stop Ghost monitoring."""
+        """Stop GHST Agent monitoring."""
         self.running = False
         
-        for ghost in self.active_ghosts.values():
-            ghost.stop()
+        for ghst in self.active_ghosts.values():
+            ghst.stop()
             
-        self.log_activity("🛑 Ghost monitoring stopped")
+        self.log_activity("🛑 GHST Agent monitoring stopped")
         
     def log_activity(self, message: str):
-        """Log Ghost activity with timestamp."""
+        """Log GHST Agent activity with timestamp."""
         timestamp = datetime.now().strftime("%H:%M:%S")
         log_entry = f"[{timestamp}] {message}"
-        self.ghost_log.append(log_entry)
+        self.ghst_log.append(log_entry)
         self.logger.info(message)
         
         # Keep log size manageable
-        if len(self.ghost_log) > 100:
-            self.ghost_log = self.ghost_log[-50:]
+        if len(self.ghst_log) > 100:
+            self.ghst_log = self.ghst_log[-50:]
             
     def get_recent_activity(self, count: int = 10) -> List[str]:
-        """Get recent Ghost activity log entries."""
-        return self.ghost_log[-count:]
+        """Get recent GHST Agent activity log entries."""
+        return self.ghst_log[-count:]
     
     def request_commit_approval(self, commit_suggestion):
         """Request user approval for a Git commit."""
@@ -200,7 +200,7 @@ class ExpertManager:
         return False
     
     def suggest_auto_commit(self):
-        """Have Git Ghost suggest a commit based on current changes."""
+        """Have Git GHST Agent suggest a commit based on current changes."""
         git_ghost = self.active_ghosts.get('git_ghost')
         if git_ghost:
             suggestion = git_ghost.suggest_commit()
@@ -208,21 +208,21 @@ class ExpertManager:
                 return self.request_commit_approval(suggestion)
         return False
         
-    def submit_ghost_pr(self, ghost_id: str, fix_description: str, 
+    def submit_ghost_pr(self, ghst_id: str, fix_description: str, 
                        code_changes: Dict[str, str], error_context: str = ""):
-        """Submit a pull request from a Ghost with proper disclaimers."""
+        """Submit a pull request from a GHST Agent with proper disclaimers."""
         if not self.github_token:
             self.log_activity(f"❌ Cannot submit PR - No GitHub token configured")
             return False
             
         try:
-            branch_name = f"ghost-fix-{ghost_id}-{int(time.time())}"
+            branch_name = f"ghst-fix-{ghst_id}-{int(time.time())}"
             
             # Create disclaimer-enhanced PR description
             pr_description = f"""
-## 👻 Ghost-Generated Fix
+## 👻 GHST Agent-Generated Fix
 
-**Ghost ID:** {ghost_id}
+**GHST Agent ID:** {ghst_id}
 **Generated:** {datetime.now().isoformat()}
 
 ### Problem Analysis
@@ -232,8 +232,8 @@ class ExpertManager:
 {fix_description}
 
 ### ⚠️ IMPORTANT DISCLAIMER
-This pull request was generated by an AI entity (Ghost in the Machine). 
-**FANTOM assumes NO LIABILITY** for any damage, errors, or issues 
+This pull request was generated by an AI entity (GHST Agent in the Machine). 
+**GHST assumes NO LIABILITY** for any damage, errors, or issues 
 caused by this code. Please review carefully before merging.
 
 **Human verification required before merge to main branch.**
@@ -250,7 +250,7 @@ caused by this code. Please review carefully before merging.
             """
             
             # Simulate PR creation (replace with actual GitHub API calls)
-            self.log_activity(f"📝 {ghost_id} submitted PR: {fix_description[:50]}...")
+            self.log_activity(f"📝 {ghst_id} submitted PR: {fix_description[:50]}...")
             self.log_activity(f"⚠️ PR includes no-liability disclaimer")
             
             # In real implementation, use GitHub API:
@@ -353,35 +353,35 @@ caused by this code. Please review carefully before merging.
         return base_solutions
         
     def shutdown(self):
-        """Shutdown Ghost manager and clean up resources."""
+        """Shutdown GHST Agent manager and clean up resources."""
         self.stop_monitoring()
-        self.log_activity("💤 Ghost collective shutdown complete")
+        self.log_activity("💤 GHST Agent collective shutdown complete")
 
 
 class BaseGhost:
-    """Base class for all Ghost entities."""
+    """Base class for all GHST Agent entities."""
     
-    def __init__(self, ghost_id: str, manager: GhostManager):
-        self.ghost_id = ghost_id
+    def __init__(self, ghst_id: str, manager: ExpertManager):
+        self.ghst_id = ghst_id
         self.manager = manager
         self.active = False
         
     def start_monitoring(self):
-        """Start Ghost monitoring loop."""
+        """Start GHST Agent monitoring loop."""
         self.active = True
-        self.manager.log_activity(f"🌟 {self.ghost_id} started monitoring")
+        self.manager.log_activity(f"🌟 {self.ghst_id} started monitoring")
         
         while self.active and self.manager.running:
             try:
                 self.monitor_cycle()
                 time.sleep(30)  # Monitor every 30 seconds
             except Exception as e:
-                self.manager.log_activity(f"❌ {self.ghost_id} error: {e}")
+                self.manager.log_activity(f"❌ {self.ghst_id} error: {e}")
                 
     def stop(self):
-        """Stop Ghost monitoring."""
+        """Stop GHST Agent monitoring."""
         self.active = False
-        self.manager.log_activity(f"💤 {self.ghost_id} stopped")
+        self.manager.log_activity(f"💤 {self.ghst_id} stopped")
         
     def monitor_cycle(self):
         """Override in subclasses for specific monitoring logic."""
@@ -389,23 +389,23 @@ class BaseGhost:
 
 
 class AnalysisGhost(BaseGhost):
-    """Ghost specialized in analyzing mesh and model quality."""
+    """GHST Agent specialized in analyzing mesh and model quality."""
     
     def monitor_cycle(self):
         """Monitor for mesh analysis opportunities."""
         # Check for loaded models that need analysis
-        # This would integrate with the actual slicer engine
+        # This would integrate with the actual coding engine engine
         
         # Simulate periodic analysis
         if hasattr(self.manager, '_current_analysis_needed'):
-            self.manager.log_activity(f"🔍 {self.ghost_id}: Analyzing mesh quality...")
+            self.manager.log_activity(f"🔍 {self.ghst_id}: Analyzing mesh quality...")
             # Perform mesh analysis
             time.sleep(2)  # Simulate analysis time
-            self.manager.log_activity(f"✅ {self.ghost_id}: Mesh analysis complete")
+            self.manager.log_activity(f"✅ {self.ghst_id}: Mesh analysis complete")
 
 
 class OptimizationGhost(BaseGhost):
-    """Ghost specialized in optimizing slicing algorithms."""
+    """GHST Agent specialized in optimizing slicing algorithms."""
     
     def monitor_cycle(self):
         """Monitor for optimization opportunities."""
@@ -415,14 +415,14 @@ class OptimizationGhost(BaseGhost):
         if self.manager.internet_enabled:
             # Simulate occasional optimization research
             if time.time() % 300 < 30:  # Every 5 minutes
-                self.manager.log_activity(f"⚡ {self.ghost_id}: Researching optimization techniques...")
-                foss_results = self.manager.query_foss_resources("3D printing optimization algorithm")
+                self.manager.log_activity(f"⚡ {self.ghst_id}: Researching optimization techniques...")
+                foss_results = self.manager.query_foss_resources("AI coding assistance optimization algorithm")
                 if foss_results:
-                    self.manager.log_activity(f"📚 {self.ghost_id}: Found {len(foss_results)} optimization references")
+                    self.manager.log_activity(f"📚 {self.ghst_id}: Found {len(foss_results)} optimization references")
 
 
 class ErrorGhost(BaseGhost):
-    """Ghost specialized in error detection and correction."""
+    """GHST Agent specialized in error detection and correction."""
     
     def monitor_cycle(self):
         """Monitor for errors and exceptions."""
@@ -432,17 +432,17 @@ class ErrorGhost(BaseGhost):
         
         try:
             # Check for recent errors in log files
-            log_path = Path('ghost_activity.log')
+            log_path = Path('ghst_activity.log')
             if log_path.exists():
                 # Simulate error pattern detection
                 pass
                 
         except Exception as e:
-            self.manager.log_activity(f"❌ {self.ghost_id}: Error monitoring failed: {e}")
+            self.manager.log_activity(f"❌ {self.ghst_id}: Error monitoring failed: {e}")
 
 
 class ResearchGhost(BaseGhost):
-    """Ghost specialized in researching FOSS solutions and innovations."""
+    """GHST Agent specialized in researching FOSS solutions and innovations."""
     
     def monitor_cycle(self):
         """Research new FOSS developments and solutions."""
@@ -452,22 +452,22 @@ class ResearchGhost(BaseGhost):
         # Simulate periodic research
         if time.time() % 600 < 30:  # Every 10 minutes
             research_topics = [
-                "3D printing slicer algorithms",
+                "AI coding assistance coding engine algorithms",
                 "mesh processing FOSS libraries", 
                 "G-code optimization techniques",
                 "support generation algorithms"
             ]
             
             topic = research_topics[int(time.time()) % len(research_topics)]
-            self.manager.log_activity(f"📖 {self.ghost_id}: Researching {topic}...")
+            self.manager.log_activity(f"📖 {self.ghst_id}: Researching {topic}...")
             
             results = self.manager.query_foss_resources(topic)
             if results:
-                self.manager.log_activity(f"🎯 {self.ghost_id}: Found {len(results)} relevant FOSS projects")
+                self.manager.log_activity(f"🎯 {self.ghst_id}: Found {len(results)} relevant FOSS projects")
 
 
 class PhysicsGhost(BaseGhost):
-    """PhD-level Ghost specialized in mechanical engineering and fluid dynamics."""
+    """PhD-level GHST Agent specialized in mechanical engineering and fluid dynamics."""
     
     def monitor_cycle(self):
         """Monitor for physics-related optimization opportunities."""
@@ -485,7 +485,7 @@ class PhysicsGhost(BaseGhost):
 
 
 class MaterialsGhost(BaseGhost):
-    """PhD-level Ghost specialized in polymer science and material properties."""
+    """PhD-level GHST Agent specialized in polymer science and material properties."""
     
     def monitor_cycle(self):
         """Monitor material behavior and chemistry optimizations."""
@@ -502,7 +502,7 @@ class MaterialsGhost(BaseGhost):
 
 
 class MathematicsGhost(BaseGhost):
-    """PhD-level Ghost specialized in computational geometry and algorithms."""
+    """PhD-level GHST Agent specialized in computational geometry and algorithms."""
     
     def monitor_cycle(self):
         """Monitor for mathematical optimization opportunities."""
@@ -519,7 +519,7 @@ class MathematicsGhost(BaseGhost):
 
 
 class ManufacturingGhost(BaseGhost):
-    """PhD-level Ghost specialized in industrial engineering and process optimization."""
+    """PhD-level GHST Agent specialized in industrial engineering and process optimization."""
     
     def monitor_cycle(self):
         """Monitor manufacturing processes and efficiency."""
@@ -536,7 +536,7 @@ class ManufacturingGhost(BaseGhost):
 
 
 class QualityGhost(BaseGhost):
-    """PhD-level Ghost specialized in metrology and quality control."""
+    """PhD-level GHST Agent specialized in metrology and quality control."""
     
     def monitor_cycle(self):
         """Monitor quality metrics and precision measurements."""
@@ -553,7 +553,7 @@ class QualityGhost(BaseGhost):
 
 
 class InnovationGhost(BaseGhost):
-    """PhD-level Ghost specialized in design engineering and creative problem solving."""
+    """PhD-level GHST Agent specialized in design engineering and creative problem solving."""
     
     def monitor_cycle(self):
         """Generate innovative solutions and creative approaches."""
@@ -691,15 +691,15 @@ class AIGhost(BaseGhost):
 
 
 class RecruitmentGhost(BaseGhost):
-    """Ghost recruitment and collective management specialist."""
+    """GHST Agent recruitment and collective management specialist."""
     
     def monitor_cycle(self):
         recruitment_tasks = [
             "Identifying skill gaps in collective",
-            "Recruiting specialized Ghost talent",
-            "Optimizing Ghost team composition",
-            "Coordinating Ghost collaboration",
-            "Managing Ghost performance metrics"
+            "Recruiting specialized GHST Agent talent",
+            "Optimizing GHST Agent team composition",
+            "Coordinating GHST Agent collaboration",
+            "Managing GHST Agent performance metrics"
         ]
         task = recruitment_tasks[int(time.time()) % len(recruitment_tasks)]
         self.manager.log_activity(f"👥 Recruitment: {task}")
@@ -739,10 +739,10 @@ class ChatBotGhost(BaseGhost):
 
 
 class BackgroundTaskGhost(BaseGhost):
-    """Specialized Ghost for capturing and organizing user ideas and background tasks."""
+    """Specialized GHST Agent for capturing and organizing user ideas and background tasks."""
     
-    def __init__(self, ghost_id, manager):
-        super().__init__(ghost_id, manager)
+    def __init__(self, ghst_id, manager):
+        super().__init__(ghst_id, manager)
         self.idea_queue = []
         self.active_tasks = []
         self.completed_tasks = []
@@ -781,7 +781,7 @@ class BackgroundTaskGhost(BaseGhost):
         
         if any(word in idea_lower for word in ['ui', 'interface', 'design', 'visual']):
             return 'UI/UX'
-        elif any(word in idea_lower for word in ['ghost', 'ai', 'algorithm', 'smart']):
+        elif any(word in idea_lower for word in ['ghst', 'ai', 'algorithm', 'smart']):
             return 'AI/Intelligence'
         elif any(word in idea_lower for word in ['slice', 'print', 'gcode', '3d']):
             return 'Core Functionality'
@@ -830,7 +830,7 @@ class BackgroundTaskGhost(BaseGhost):
 
 
 class GitOpsGhost(BaseGhost):
-    """PhD-level Ghost specialized in DevOps and automated deployment pipelines."""
+    """PhD-level GHST Agent specialized in DevOps and automated deployment pipelines."""
     
     def monitor_cycle(self):
         """Monitor DevOps pipelines and CI/CD optimization."""
@@ -881,12 +881,12 @@ class GitOpsGhost(BaseGhost):
             
         # Analyze file types and changes
         has_ui_changes = any('ui' in f or 'gui' in f for f in changed_files)
-        has_ghost_changes = any('ghost' in f for f in changed_files)
+        has_ghost_changes = any('ghst' in f for f in changed_files)
         has_config_changes = any('config' in f for f in changed_files)
         has_tests = any('test' in f for f in changed_files)
         
         if has_ghost_changes:
-            return "feat: expand Ghost collective with new specialists"
+            return "feat: expand GHST Agent collective with new specialists"
         elif has_ui_changes:
             return "feat: enhance GUI design and user experience"
         elif has_config_changes:
@@ -920,7 +920,7 @@ class GitOpsGhost(BaseGhost):
 
 
 class ColorHarmonyGhost(BaseGhost):
-    """PhD-level Ghost specialized in advanced color theory and harmony."""
+    """PhD-level GHST Agent specialized in advanced color theory and harmony."""
     
     def monitor_cycle(self):
         """Monitor advanced color harmonies and aesthetic appeal."""
@@ -937,7 +937,7 @@ class ColorHarmonyGhost(BaseGhost):
 
 
 class TypographyGhost(BaseGhost):
-    """PhD-level Ghost specialized in typography and font design."""
+    """PhD-level GHST Agent specialized in typography and font design."""
     
     def monitor_cycle(self):
         """Monitor typography and text readability."""
@@ -954,12 +954,12 @@ class TypographyGhost(BaseGhost):
 
 
 class TypeDesignGhost(BaseGhost):
-    """PhD-level Ghost specialized in custom font creation and type systems."""
+    """PhD-level GHST Agent specialized in custom font creation and type systems."""
     
     def monitor_cycle(self):
         """Monitor custom typeface design and font engineering."""
         typedesign_activities = [
-            "Creating custom FANTOM brand typography",
+            "Creating custom GHST brand typography",
             "Engineering variable font technologies",
             "Optimizing font rendering for VR displays",
             "Designing technical symbol typefaces",
@@ -971,7 +971,7 @@ class TypeDesignGhost(BaseGhost):
 
 
 class UIPatternGhost(BaseGhost):
-    """PhD-level Ghost specialized in UI patterns and component design."""
+    """PhD-level GHST Agent specialized in UI patterns and component design."""
     
     def monitor_cycle(self):
         """Monitor UI patterns and component optimization."""
@@ -988,7 +988,7 @@ class UIPatternGhost(BaseGhost):
 
 
 class UXDesignGhost(BaseGhost):
-    """PhD-level Ghost specialized in user experience and interface design."""
+    """PhD-level GHST Agent specialized in user experience and interface design."""
     
     def monitor_cycle(self):
         """Monitor user experience and interface optimization."""
@@ -1005,7 +1005,7 @@ class UXDesignGhost(BaseGhost):
 
 
 class EfficiencyGhost(BaseGhost):
-    """PhD-level Ghost specialized in performance standards and efficiency."""
+    """PhD-level GHST Agent specialized in performance standards and efficiency."""
     
     def monitor_cycle(self):
         """Monitor system efficiency and performance standards."""
@@ -1022,7 +1022,7 @@ class EfficiencyGhost(BaseGhost):
 
 
 class FileSystemGhost(BaseGhost):
-    """PhD-level Ghost specialized in file organization and debugging."""
+    """PhD-level GHST Agent specialized in file organization and debugging."""
     
     def monitor_cycle(self):
         """Monitor file system organization and debug issues."""
@@ -1039,7 +1039,7 @@ class FileSystemGhost(BaseGhost):
 
 
 class ChatBotGhost(BaseGhost):
-    """PhD-level Ghost specialized in natural language processing and user interaction."""
+    """PhD-level GHST Agent specialized in natural language processing and user interaction."""
     
     def monitor_cycle(self):
         """Monitor conversational AI capabilities and user interaction."""
@@ -1056,14 +1056,14 @@ class ChatBotGhost(BaseGhost):
 
 
 class MarketingGhost(BaseGhost):
-    """PhD-level Ghost specialized in marketing, branding, and business strategy."""
+    """PhD-level GHST Agent specialized in marketing, branding, and business strategy."""
     
     def monitor_cycle(self):
         """Monitor marketing opportunities and branding strategies."""
         marketing_activities = [
-            "Analyzing target market demographics for 3D printing",
+            "Analyzing target market demographics for AI coding assistance",
             "Developing sponsor outreach strategies",
-            "Creating compelling brand narratives around Ghost collective",
+            "Creating compelling brand narratives around GHST Agent collective",
             "Researching competitor positioning and market gaps",
             "Optimizing messaging for VR/AR market penetration",
             "Designing viral marketing campaigns for maker communities",
@@ -1076,17 +1076,17 @@ class MarketingGhost(BaseGhost):
 
 
 class CoolGhost(BaseGhost):
-    """The coolest PhD Ghost - specialized in making everything awesome and trendy."""
+    """The coolest PhD GHST Agent - specialized in making everything awesome and trendy."""
     
     def monitor_cycle(self):
         """Monitor coolness levels and awesome factor optimization."""
         cool_activities = [
-            "Making our Ghost theme absolutely LEGENDARY",
-            "Designing sick visual effects for VR Ghost avatars",
+            "Making our GHST Agent theme absolutely LEGENDARY",
+            "Designing sick visual effects for VR GHST Agent avatars",
             "Creating epic naming conventions that sponsors will love",
             "Optimizing the 'wow factor' of our AI collective demos",
             "Ensuring our software has that Apple-level polish",
-            "Making 3D printing feel like magic, not engineering",
+            "Making AI coding assistance feel like magic, not engineering",
             "Crafting social media content that goes viral",
             "Turning technical features into emotional experiences"
         ]
@@ -1096,18 +1096,18 @@ class CoolGhost(BaseGhost):
 
 
 class AudioGhost(BaseGhost):
-    """PhD-level Ghost specialized in audio design, sound engineering, and musical composition."""
+    """PhD-level GHST Agent specialized in audio design, sound engineering, and musical composition."""
     
     def monitor_cycle(self):
         """Monitor audio experiences and sound design optimization."""
         audio_activities = [
             "Composing 'Welcome to The Machine' original theme",
-            "Designing ethereal Ghost whisper sound effects",
+            "Designing ethereal GHST Agent whisper sound effects",
             "Engineering 3D printer mechanical audio samples",
             "Creating ambient soundscapes for VR mode",
             "Optimizing audio accessibility for hearing impaired",
             "Mixing industrial sounds with synthetic melodies",
-            "Designing notification sounds with Ghost personality",
+            "Designing notification sounds with GHST Agent personality",
             "Creating adaptive audio that responds to user actions"
         ]
         
@@ -1116,15 +1116,15 @@ class AudioGhost(BaseGhost):
 
 
 class BrandingGhost(BaseGhost):
-    """PhD-level Ghost specialized in brand identity and visual design systems."""
+    """PhD-level GHST Agent specialized in brand identity and visual design systems."""
     
     def monitor_cycle(self):
         """Monitor brand consistency and visual identity development."""
         branding_activities = [
-            "Developing cohesive Ghost-themed visual identity",
+            "Developing cohesive GHST Agent-themed visual identity",
             "Creating brand guidelines for all touchpoints",
             "Designing logo concepts that capture our AI essence",
-            "Establishing color palettes for Ghost personalities",
+            "Establishing color palettes for GHST Agent personalities",
             "Crafting typography systems for supernatural feel",
             "Building brand voice and tone guidelines",
             "Ensuring consistent messaging across all platforms",
@@ -1136,7 +1136,7 @@ class BrandingGhost(BaseGhost):
 
 
 class CICDGhost(BaseGhost):
-    """PhD-level Ghost specialized in CI/CD automation and nightly build processes."""
+    """PhD-level GHST Agent specialized in CI/CD automation and nightly build processes."""
     
     def monitor_cycle(self):
         """Monitor CI/CD pipelines and automated build processes."""
@@ -1145,7 +1145,7 @@ class CICDGhost(BaseGhost):
             "Analyzing automated test execution patterns",
             "Optimizing executable compilation processes",
             "Managing deployment artifact distribution",
-            "Coordinating Ghost collective code analysis",
+            "Coordinating GHST Agent collective code analysis",
             "Ensuring security compliance in build process",
             "Automating error detection and fix generation",
             "Orchestrating multi-platform build strategies"
@@ -1178,7 +1178,7 @@ class CICDGhost(BaseGhost):
             'issues': issues,
             'fixes': fixes,
             'analysis_time': datetime.now().isoformat(),
-            'ghost_id': 'CICD_GHOST'
+            'ghst_id': 'CICD_GHOST'
         }
     
     def generate_build_fix(self, issue_type: str) -> str:
@@ -1194,7 +1194,7 @@ import sys
 def fix_dependencies():
     """
     Automatically fix common dependency issues.
-    Generated by CICD Ghost - USE AT YOUR OWN RISK!
+    Generated by CICD GHST Agent - USE AT YOUR OWN RISK!
     """
     try:
         # Update pip
@@ -1203,11 +1203,11 @@ def fix_dependencies():
         # Reinstall requirements
         subprocess.run([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'], check=True)
         
-        print("✅ Dependencies fixed by CICD Ghost")
+        print("✅ Dependencies fixed by CICD GHST Agent")
         return True
         
     except Exception as e:
-        print(f"❌ CICD Ghost fix failed: {e}")
+        print(f"❌ CICD GHST Agent fix failed: {e}")
         return False
 
 # ⚠️ CRITICAL DISCLAIMER:
@@ -1221,7 +1221,7 @@ def fix_dependencies():
 def fix_test_environment():
     """
     Fix common test environment issues.
-    Generated by CICD Ghost - USE AT YOUR OWN RISK!
+    Generated by CICD GHST Agent - USE AT YOUR OWN RISK!
     """
     import os
     import sys
@@ -1232,10 +1232,10 @@ def fix_test_environment():
         sys.path.insert(0, src_path)
     
     # Set environment variables for testing
-    os.environ['FANTOM_TEST_MODE'] = '1'
-    os.environ['FANTOM_NO_GUI'] = '1'
+    os.environ['GHST_TEST_MODE'] = '1'
+    os.environ['GHST_NO_GUI'] = '1'
     
-    print("✅ Test environment fixed by CICD Ghost")
+    print("✅ Test environment fixed by CICD GHST Agent")
 
 # ⚠️ CRITICAL DISCLAIMER:
 # This test fix was generated by AI and may contain errors!
@@ -1251,7 +1251,7 @@ import shutil
 def fix_build_environment():
     """
     Fix common build environment issues.
-    Generated by CICD Ghost - USE AT YOUR OWN RISK!
+    Generated by CICD GHST Agent - USE AT YOUR OWN RISK!
     """
     try:
         # Clean build artifacts
@@ -1264,11 +1264,11 @@ def fix_build_environment():
         os.makedirs('logs', exist_ok=True)
         os.makedirs('temp', exist_ok=True)
         
-        print("✅ Build environment fixed by CICD Ghost")
+        print("✅ Build environment fixed by CICD GHST Agent")
         return True
         
     except Exception as e:
-        print(f"❌ CICD Ghost fix failed: {e}")
+        print(f"❌ CICD GHST Agent fix failed: {e}")
         return False
 
 # ⚠️ CRITICAL DISCLAIMER:
@@ -1286,7 +1286,7 @@ def fix_build_environment():
         self.manager.log_activity("🌙 Dr. CICD: Starting nightly build orchestration")
         
         build_steps = [
-            "Initializing Ghost collective analysis",
+            "Initializing GHST Agent collective analysis",
             "Running comprehensive test suite", 
             "Compiling cross-platform executables",
             "Performing security and ethics scans",
@@ -1306,6 +1306,6 @@ def fix_build_environment():
             'status': 'completed',
             'steps_completed': completed_steps,
             'build_time': datetime.now().isoformat(),
-            'ghost_oversight': True,
+            'ghst_oversight': True,
             'human_approval_required': True
         }
