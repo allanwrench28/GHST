@@ -8,6 +8,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+
 def install_autopep8():
     """Install autopep8 for automatic code formatting"""
     try:
@@ -20,9 +21,10 @@ def install_autopep8():
                 [sys.executable, '-m', 'pip', 'install', 'autopep8'])
             print("✅ autopep8 installed successfully")
             return True
-        except subprocess.CalledProcessError as e:
-            print("❌ Failed to install autopep8: {e}")
+        except subprocess.CalledProcessError:
+            print("❌ Failed to install autopep8")
             return False
+
 
 def install_isort():
     """Install isort for import sorting"""
@@ -36,9 +38,10 @@ def install_isort():
                 [sys.executable, '-m', 'pip', 'install', 'isort'])
             print("✅ isort installed successfully")
             return True
-        except subprocess.CalledProcessError as e:
-            print("❌ Failed to install isort: {e}")
+        except subprocess.CalledProcessError:
+            print("❌ Failed to install isort")
             return False
+
 
 def fix_python_file(file_path):
     """Fix a single Python file with aggressive formatting"""
@@ -82,8 +85,9 @@ def fix_python_file(file_path):
         return True
 
     except Exception as e:
-        print("  ❌ Error fixing {file_path}: {e}")
+        print(f"  ❌ Error fixing {file_path}: {e}")
         return False
+
 
 def get_python_files():
     """Get all Python files that need fixing"""
@@ -114,6 +118,7 @@ def get_python_files():
         python_files.extend(scripts_dir.glob("*.py"))
 
     return python_files
+
 
 def main():
     print("🚀 GHST Code Quality Fixer")
@@ -148,6 +153,7 @@ def main():
     print("💡 Tip: Restart VS Code to see the performance improvement")
 
     return True
+
 
 if __name__ == '__main__':
     success = main()
