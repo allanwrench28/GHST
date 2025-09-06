@@ -11,6 +11,13 @@ Welcome to GHST — an open-source AI coding engine designed to bring together a
 ## 🚀 **Quick Start - New Graphical Installer!**
 
 ### 🎯 **Easy Installation** (Recommended)
+
+**📦 Download from GitHub Releases** (Right sidebar → Releases)
+1. Go to [GHST Releases](https://github.com/allanwrench28/GHST/releases)
+2. Download `GHST-v1.0.0-alpha.3-windows.zip`
+3. Extract and run `install_ghst.bat`
+
+**🔧 Or install from source:**
 ```bash
 # Clone the repository  
 git clone https://github.com/allanwrench28/GHST.git
