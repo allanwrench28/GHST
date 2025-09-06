@@ -1,3 +1,73 @@
+# --- News Ticker Logic ---
+news_ticker_msgs = []
+news_ticker_label = None
+
+def update_news_ticker(msg):
+    news_ticker_msgs.append(msg)
+    if news_ticker_label:
+        news_ticker_label.text = f'📰 News: {msg}'
+
+def ghost_generator(failed_ghost):
+    # Generate two new ghosts with explicit training
+    new_ghosts = [
+        {
+            'name': f'{failed_ghost["name"]}_Reborn_1',
+            'emoji': '👻',
+            'field': failed_ghost['field'],
+            'color': '#FFB300',
+            'note': 'Explicitly trained NOT to repeat predecessor mistakes.'
+        },
+        {
+            'name': f'{failed_ghost["name"]}_Reborn_2',
+            'emoji': '👻',
+            'field': failed_ghost['field'],
+            'color': '#FFB300',
+            'note': 'Explicitly trained NOT to repeat predecessor mistakes.'
+        }
+    ]
+    GHSTS.extend(new_ghosts)
+    wall_of_shame.append(failed_ghost['name'])
+    shame_msg = f'🔥 {failed_ghost["name"]} incinerated! Two new ghosts generated. Wall of Shame updated.'
+    add_log(shame_msg)
+    update_news_ticker(shame_msg)
+
+def celebrate_innovation(ghost):
+    fame_msg = f'🏆 {ghost["name"]} innovated! Added to Wall of Fame.'
+    add_log(fame_msg)
+    update_news_ticker(fame_msg)
+
+# --- Accountability & Ghost Generator Logic ---
+wall_of_shame = []
+
+def ghost_generator(failed_ghost):
+    # Generate two new ghosts with explicit training
+    new_ghosts = [
+        {
+            'name': f'{failed_ghost["name"]}_Reborn_1',
+            'emoji': '👻',
+            'field': failed_ghost['field'],
+            'color': '#FFB300',
+            'note': 'Explicitly trained NOT to repeat predecessor mistakes.'
+        },
+        {
+            'name': f'{failed_ghost["name"]}_Reborn_2',
+            'emoji': '👻',
+            'field': failed_ghost['field'],
+            'color': '#FFB300',
+            'note': 'Explicitly trained NOT to repeat predecessor mistakes.'
+        }
+    ]
+    GHSTS.extend(new_ghosts)
+    wall_of_shame.append(failed_ghost['name'])
+    add_log(f'🔥 {failed_ghost["name"]} sent to the incinerator! Two new ghosts generated and added to the council. Wall of Shame updated.')
+
+def check_auto_fixer_status():
+    # Simulate auto-fixer failure for demonstration
+    failed_ghost = next((g for g in GHSTS if g['field'] in ['Refactoring', 'Debugging']), None)
+    if failed_ghost:
+        ghost_generator(failed_ghost)
+
+threading.Thread(target=check_auto_fixer_status, daemon=True).start()
 # --- Live Viewport for Think Tank Suggestions ---
 live_suggestion_label = None
 
@@ -132,9 +202,12 @@ with ui.row().classes('w-full items-start'):
                 time.sleep(2)
         threading.Thread(target=update_logs, daemon=True).start()
 
-with ui.row().classes('w-full items-center'):
-    time_estimator = ui.label('Estimated Time for Current Task: Calculating...').style('font-size: 1.1rem; color: #007AFF; margin-top: 20px;')
-    progress_bar = ui.linear_progress(0).classes('w-full').style('height: 16px; margin-top: 10px;')
+    battle_counter = ui.label(f'Battle Counter: {battle_count}').style('font-size: 1.1rem; color: #FF3B30; margin-top: 20px; margin-right: 20px;')
+    ui.button('Syntax Supervisor Action', on_click=increment_battle).style('background: #007AFF; color: #fff; border-radius: 8px; margin-top: 20px;')
+    # Live viewport for think tank suggestions
+    global live_suggestion_label, news_ticker_label
+    live_suggestion_label = ui.label('🧠 Think Tank (Auto-Run): Waiting...').style('font-size: 1.1rem; color: #007AFF; margin-top: 20px; margin-left: 20px;')
+    news_ticker_label = ui.label('📰 News: Waiting for council updates...').style('font-size: 1.1rem; color: #FF9500; margin-top: 20px; margin-left: 20px;')
 
 def update_time_estimator():
     tasks = [
