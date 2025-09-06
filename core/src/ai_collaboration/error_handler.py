@@ -1,5 +1,5 @@
 """
-Error Handler for FANTOM Ghost System
+Error Handler for GHST GHST Agent System
 
 Captures runtime errors, analyzes them with AI, and submits pull requests
 for fixes with proper disclaimers and safety warnings.
@@ -19,10 +19,10 @@ import threading
 import queue
 
 class ErrorHandler:
-    """Captures and processes errors for Ghost analysis and fixing."""
+    """Captures and processes errors for GHST Agent analysis and fixing."""
     
-    def __init__(self, ghost_manager=None, github_token: Optional[str] = None):
-        self.ghost_manager = ghost_manager
+    def __init__(self, ghst_manager=None, github_token: Optional[str] = None):
+        self.ghst_manager = ghst_manager
         self.github_token = github_token
         self.error_queue = queue.Queue()
         self.error_history = []
@@ -35,7 +35,7 @@ class ErrorHandler:
             'slicing_errors': ['slice', 'layer', 'gcode', 'path', 'toolpath'],
             'io_errors': ['file', 'load', 'save', 'read', 'write', 'permission'],
             'memory_errors': ['memory', 'allocation', 'out of memory', 'malloc'],
-            'ai_errors': ['ghost', 'ai', 'model', 'prediction', 'analysis'],
+            'ai_errors': ['ghst', 'ai', 'model', 'prediction', 'analysis'],
             'config_errors': ['config', 'setting', 'parameter', 'yaml', 'validation']
         }
         
@@ -53,16 +53,16 @@ class ErrorHandler:
         log_path = Path('logs')
         log_path.mkdir(exist_ok=True)
         
-        error_log_path = log_path / 'slicergpt_errors.log'
+        error_log_path = log_path / 'coding enginegpt_errors.log'
         file_handler = logging.FileHandler(error_log_path)
         file_handler.setLevel(logging.ERROR)
         
         # Create formatter
         formatter = logging.Formatter(
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s\n'
-            'Ghost Analysis: %(ghost_analysis)s\n'
+            'GHST Agent Analysis: %(ghst_analysis)s\n'
             'Disclaimer: ⚠️ AI-generated analysis - verify before implementation\n',
-            defaults={'ghost_analysis': 'Pending'}
+            defaults={'ghst_analysis': 'Pending'}
         )
         file_handler.setFormatter(formatter)
         
@@ -77,8 +77,8 @@ class ErrorHandler:
         self.processing_thread = threading.Thread(target=self._process_errors, daemon=True)
         self.processing_thread.start()
         
-        if self.ghost_manager:
-            self.ghost_manager.log_activity("🚨 Error handler started - Ghost analysis enabled")
+        if self.ghst_manager:
+            self.ghst_manager.log_activity("🚨 Error handler started - GHST Agent analysis enabled")
         
     def stop_processing(self):
         """Stop error processing."""
@@ -88,7 +88,7 @@ class ErrorHandler:
             
     def capture_exception(self, exception: Exception, context: str = "", 
                          function_name: str = "", file_path: str = ""):
-        """Capture an exception for Ghost analysis."""
+        """Capture an exception for GHST Agent analysis."""
         try:
             error_data = {
                 'timestamp': datetime.now().isoformat(),
@@ -109,12 +109,12 @@ class ErrorHandler:
             # Log immediately
             self.logger.error(
                 f"Captured {error_data['exception_type']}: {error_data['exception_message']}",
-                extra={'ghost_analysis': 'Queued for analysis'}
+                extra={'ghst_analysis': 'Queued for analysis'}
             )
             
-            if self.ghost_manager:
-                self.ghost_manager.log_activity(
-                    f"🚨 Error captured: {error_data['exception_type']} - Ghost analysis queued"
+            if self.ghst_manager:
+                self.ghst_manager.log_activity(
+                    f"🚨 Error captured: {error_data['exception_type']} - GHST Agent analysis queued"
                 )
                 
         except Exception as e:
@@ -123,7 +123,7 @@ class ErrorHandler:
             
     def capture_custom_error(self, error_code: str, message: str, context: str = "",
                            severity: str = "error", data: Dict[str, Any] = None):
-        """Capture a custom error condition for Ghost analysis."""
+        """Capture a custom error condition for GHST Agent analysis."""
         error_data = {
             'timestamp': datetime.now().isoformat(),
             'error_code': error_code,
@@ -137,8 +137,8 @@ class ErrorHandler:
         
         self.error_queue.put(error_data)
         
-        if self.ghost_manager:
-            self.ghost_manager.log_activity(
+        if self.ghst_manager:
+            self.ghst_manager.log_activity(
                 f"🔍 Custom error logged: {error_code} - {message[:50]}..."
             )
             
@@ -149,7 +149,7 @@ class ErrorHandler:
                 # Get error from queue with timeout
                 error_data = self.error_queue.get(timeout=1)
                 
-                # Process with Ghost analysis
+                # Process with GHST Agent analysis
                 self._analyze_with_ghosts(error_data)
                 
                 # Add to history
@@ -165,26 +165,26 @@ class ErrorHandler:
                 print(f"Error processing failed: {e}")
                 
     def _analyze_with_ghosts(self, error_data: Dict[str, Any]):
-        """Analyze error with Ghost collective."""
-        if not self.ghost_manager:
+        """Analyze error with GHST Agent collective."""
+        if not self.ghst_manager:
             return
             
         try:
             # Prepare analysis context
             analysis_context = self._prepare_analysis_context(error_data)
             
-            # Get Ghost analysis
-            if hasattr(self.ghost_manager, 'analyze_with_ai'):
-                analysis = self.ghost_manager.analyze_with_ai(
+            # Get GHST Agent analysis
+            if hasattr(self.ghst_manager, 'analyze_with_ai'):
+                analysis = self.ghst_manager.analyze_with_ai(
                     problem=error_data.get('exception_message', error_data.get('message', '')),
                     context=analysis_context
                 )
                 
-                error_data['ghost_analysis'] = analysis
+                error_data['ghst_analysis'] = analysis
                 
                 # Log analysis results
-                self.ghost_manager.log_activity(
-                    f"🧠 Ghost analysis complete for {error_data.get('error_id', 'unknown')}"
+                self.ghst_manager.log_activity(
+                    f"🧠 GHST Agent analysis complete for {error_data.get('error_id', 'unknown')}"
                 )
                 
                 # Check if fix should be submitted
@@ -193,18 +193,18 @@ class ErrorHandler:
                     
             else:
                 # Fallback analysis
-                error_data['ghost_analysis'] = {
+                error_data['ghst_analysis'] = {
                     'status': 'basic_analysis',
                     'category': error_data.get('category', 'unknown'),
                     'severity': error_data.get('severity', 'unknown'),
-                    'disclaimer': '⚠️ Basic analysis only - Ghost AI unavailable'
+                    'disclaimer': '⚠️ Basic analysis only - GHST Agent AI unavailable'
                 }
                 
         except Exception as e:
-            self.ghost_manager.log_activity(f"❌ Ghost analysis failed: {e}")
+            self.ghst_manager.log_activity(f"❌ GHST Agent analysis failed: {e}")
             
     def _prepare_analysis_context(self, error_data: Dict[str, Any]) -> str:
-        """Prepare context for Ghost analysis."""
+        """Prepare context for GHST Agent analysis."""
         context_parts = [
             f"Error Type: {error_data.get('exception_type', error_data.get('error_code', 'Unknown'))}",
             f"Category: {error_data.get('category', 'Unknown')}",
@@ -227,7 +227,7 @@ class ErrorHandler:
         return '\n'.join(context_parts)
         
     def _should_submit_fix(self, analysis: Dict[str, Any]) -> bool:
-        """Determine if Ghost should submit a fix PR."""
+        """Determine if GHST Agent should submit a fix PR."""
         if not analysis or 'confidence' not in analysis:
             return False
             
@@ -242,8 +242,8 @@ class ErrorHandler:
         return False
         
     def _submit_ghost_fix(self, error_data: Dict[str, Any], analysis: Dict[str, Any]):
-        """Submit a Ghost-generated fix as a pull request."""
-        if not self.ghost_manager or not hasattr(self.ghost_manager, 'submit_ghost_pr'):
+        """Submit a GHST Agent-generated fix as a pull request."""
+        if not self.ghst_manager or not hasattr(self.ghst_manager, 'submit_ghost_pr'):
             return
             
         try:
@@ -253,26 +253,26 @@ class ErrorHandler:
             # Simulate code changes (in real implementation, would generate actual fixes)
             code_changes = self._generate_code_changes(error_data, analysis)
             
-            # Submit PR through Ghost manager
-            success = self.ghost_manager.submit_ghost_pr(
-                ghost_id="error_ghost",
+            # Submit PR through GHST Agent manager
+            success = self.ghst_manager.submit_ghost_pr(
+                ghst_id="error_ghost",
                 fix_description=fix_description,
                 code_changes=code_changes,
                 error_context=self._prepare_analysis_context(error_data)
             )
             
             if success:
-                self.ghost_manager.log_activity(
-                    f"📝 Ghost fix submitted for {error_data.get('error_id', 'unknown')}"
+                self.ghst_manager.log_activity(
+                    f"📝 GHST Agent fix submitted for {error_data.get('error_id', 'unknown')}"
                 )
             else:
-                self.ghost_manager.log_activity(
-                    f"❌ Ghost fix submission failed for {error_data.get('error_id', 'unknown')}"
+                self.ghst_manager.log_activity(
+                    f"❌ GHST Agent fix submission failed for {error_data.get('error_id', 'unknown')}"
                 )
                 
         except Exception as e:
-            if self.ghost_manager:
-                self.ghost_manager.log_activity(f"❌ Ghost fix submission error: {e}")
+            if self.ghst_manager:
+                self.ghst_manager.log_activity(f"❌ GHST Agent fix submission error: {e}")
                 
     def _generate_fix_description(self, error_data: Dict[str, Any], 
                                 analysis: Dict[str, Any]) -> str:
@@ -300,7 +300,7 @@ class ErrorHandler:
 {len(analysis.get('foss_references', []))} relevant FOSS projects found for reference.
 
 ### ⚠️ CRITICAL SAFETY DISCLAIMER
-This fix was generated by AI (Ghost in the Machine). **SlicerGPT assumes NO LIABILITY** for:
+This fix was generated by AI (GHST Agent in the Machine). **SlicerGPT assumes NO LIABILITY** for:
 - Code correctness or functionality
 - Printer damage or safety issues  
 - Data loss or corruption
@@ -343,7 +343,7 @@ This fix was generated by AI (Ghost in the Machine). **SlicerGPT assumes NO LIAB
 def validate_mesh_safely(mesh):
     """
     Validate mesh with comprehensive error handling.
-    Generated by Ghost AI - USE AT YOUR OWN RISK!
+    Generated by GHST Agent AI - USE AT YOUR OWN RISK!
     """
     try:
         if mesh is None:
@@ -363,7 +363,7 @@ def validate_mesh_safely(mesh):
         
     except Exception as e:
         logging.error(f"Mesh validation failed: {e}")
-        # ⚠️ Ghost-generated error handling - verify before use!
+        # ⚠️ GHST Agent-generated error handling - verify before use!
         return False
 '''
         
@@ -371,12 +371,12 @@ def validate_mesh_safely(mesh):
         """Generate error handling improvement."""
         return '''
 # AI-Generated Error Handling Enhancement  
-# ⚠️ WARNING: Ghost-generated code - No liability for errors or issues!
+# ⚠️ WARNING: GHST Agent-generated code - No liability for errors or issues!
 
 def enhanced_error_handler(func):
     """
     Decorator for enhanced error handling.
-    Generated by Ghost AI - VERIFY BEFORE PRODUCTION USE!
+    Generated by GHST Agent AI - VERIFY BEFORE PRODUCTION USE!
     """
     def wrapper(*args, **kwargs):
         try:
@@ -407,7 +407,7 @@ def enhanced_error_handler(func):
 class SafetyChecker:
     """
     Enhanced safety checking system.
-    Generated by Ghost AI - NO LIABILITY ASSUMED!
+    Generated by GHST Agent AI - NO LIABILITY ASSUMED!
     """
     
     @staticmethod
@@ -484,7 +484,7 @@ class SafetyChecker:
         return 'custom'
         
     def get_error_statistics(self) -> Dict[str, Any]:
-        """Get error statistics for Ghost analysis."""
+        """Get error statistics for GHST Agent analysis."""
         if not self.error_history:
             return {'total_errors': 0}
             
@@ -511,13 +511,13 @@ class SafetyChecker:
             'severities': severities,
             'recent_hourly_rate': len(recent_errors),
             'most_common_category': max(categories.items(), key=lambda x: x[1])[0] if categories else 'none',
-            'ghost_analysis_available': bool(self.ghost_manager)
+            'ghst_analysis_available': bool(self.ghst_manager)
         }
 
 
 # Decorator for automatic error capture
 def capture_errors(error_handler: ErrorHandler, context: str = ""):
-    """Decorator to automatically capture errors for Ghost analysis."""
+    """Decorator to automatically capture errors for GHST Agent analysis."""
     def decorator(func: Callable) -> Callable:
         def wrapper(*args, **kwargs):
             try:
