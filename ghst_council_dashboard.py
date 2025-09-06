@@ -1,3 +1,41 @@
+# --- Live Viewport for Think Tank Suggestions ---
+live_suggestion_label = None
+
+def update_live_suggestion(priority):
+    if live_suggestion_label:
+        live_suggestion_label.text = f'🧠 Think Tank (Auto-Run): {priority}'
+
+# --- Think Tank Prioritization ---
+think_tank_priorities = [
+    'Fix critical syntax errors',
+    'Refactor legacy code',
+    'Optimize imports and dependencies',
+    'Improve UI/UX for council dashboard',
+    'Enhance auto-logging and ML feedback',
+    'Expand GHST profiles and camaraderie',
+    'Automate error fixing and code hygiene',
+    'Integrate creative elements (Dr. Fun)',
+    'Increase test coverage',
+    'Document council decisions and actions'
+]
+
+def suggest_priority():
+    priority = think_tank_priorities[0]
+    timestamp = datetime.now().strftime('%H:%M:%S')
+    add_log(f'🧠 Think Tank Suggestion [{timestamp}]: {priority}')
+    update_live_suggestion(priority)
+    # Simulate auto-running the top priority
+    add_log(f'🤖 GHSTS auto-running: {priority}')
+
+
+def rotate_priorities():
+    while True:
+        # Rotate priorities and suggest the top one every 3 minutes
+        think_tank_priorities.append(think_tank_priorities.pop(0))
+        suggest_priority()
+        time.sleep(180)
+
+threading.Thread(target=rotate_priorities, daemon=True).start()
 from nicegui import ui
 
 import random
@@ -13,9 +51,11 @@ def increment_battle():
     battle_counter.text = f'Battle Counter: {battle_count} {chosen_emoji}'
     add_log(f'Dr. Fun {chosen_emoji}: "Let’s make this restructuring a party!"')
 
-with ui.row().classes('w-full items-center'):
     battle_counter = ui.label(f'Battle Counter: {battle_count}').style('font-size: 1.1rem; color: #FF3B30; margin-top: 20px; margin-right: 20px;')
     ui.button('Syntax Supervisor Action', on_click=increment_battle).style('background: #007AFF; color: #fff; border-radius: 8px; margin-top: 20px;')
+    # Live viewport for think tank suggestions
+    global live_suggestion_label
+    live_suggestion_label = ui.label('🧠 Think Tank (Auto-Run): Waiting...').style('font-size: 1.1rem; color: #007AFF; margin-top: 20px; margin-left: 20px;')
 from datetime import datetime
 import threading
 import time
