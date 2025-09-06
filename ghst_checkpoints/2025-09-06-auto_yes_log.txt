@@ -1,0 +1,6 @@
+# GHST Auto-Yes Log
+# Date: 2025-09-06
+# Purpose: Log auto-yes actions for ML training and council feedback
+
+entry_id, timestamp, action, agent, result
+1, 2025-09-06T00:00:00, auto_yes, AutoYessr, YES
