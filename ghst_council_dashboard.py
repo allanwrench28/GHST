@@ -88,4 +88,99 @@ with ui.row():
 
     threading.Thread(target=update_logs, daemon=True).start()
 
+# Time Estimator Section
+with ui.row():
+    time_estimator = ui.label('Estimated Time for Current Task: Calculating...').style('font-size: 1.2rem; color: #fff; margin-top: 20px;')
+    progress_bar = ui.linear_progress(0).style('width: 600px; height: 20px; margin-top: 10px;')
+
+def update_time_estimator():
+    tasks = [
+        ('Refactoring', 5),
+        ('Style Checks', 3),
+        ('Import Optimization', 2),
+        ('Testing', 4),
+        ('Deployment', 6)
+    ]
+    while True:
+        task, est_time = tasks[int(time.time()) % len(tasks)]
+        time_estimator.text = f'Estimated Time for {task}: {est_time} minutes'
+        progress_bar.value = (time.time() % 60) / 60 * 100  # Simulate progress
+        time.sleep(5)
+
+threading.Thread(target=update_time_estimator, daemon=True).start()
+
+# Hall of Fame Section
+with ui.expansion('🏆 GHST Hall of Fame').classes('w-full'):
+    ui.label('Celebrating Innovations and Excellence in Coding').style('font-size: 1.5rem; color: #fff; margin-bottom: 10px;')
+    with ui.grid(columns=2):
+        # Dr. TidyCode
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🧭 Dr. TidyCode').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Code Refactoring & Maintenance').style('color: #e0e0e0;')
+            ui.label('Innovation: Automated code hygiene fixes, reducing errors by 90%.').style('color: #e0e0e0;')
+            ui.label('"Clean code is the foundation of innovation."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Syntax
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🕯️ Dr. Syntax').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Syntax Analysis & Debugging').style('color: #e0e0e0;')
+            ui.label('Innovation: Real-time syntax validation for all languages.').style('color: #e0e0e0;')
+            ui.label('"Syntax errors are just opportunities to learn."').style('font-style: italic; color: #bbb;')
+
+        # Dr. ImportOrder
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🦴 Dr. ImportOrder').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Import Optimization & Dependency Management').style('color: #e0e0e0;')
+            ui.label('Innovation: Intelligent import sorting, speeding up load times.').style('color: #e0e0e0;')
+            ui.label('"Order brings clarity to chaos."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Formatter
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🪄 Dr. Formatter').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Code Formatting & Style Enforcement').style('color: #e0e0e0;')
+            ui.label('Innovation: Universal formatter supporting 50+ languages.').style('color: #e0e0e0;')
+            ui.label('"Beauty in code inspires greatness."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Archivist
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🧪 Dr. Archivist').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Data Archiving & Version Control').style('color: #e0e0e0;')
+            ui.label('Innovation: Automated backup and versioning systems.').style('color: #e0e0e0;')
+            ui.label('"Preserve the past to build the future."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Debugger
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🐛 Dr. Debugger').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Debugging & Error Resolution').style('color: #e0e0e0;')
+            ui.label('Innovation: AI-powered bug detection and fixes.').style('color: #e0e0e0;')
+            ui.label('"Every bug is a lesson in perfection."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Data
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('📊 Dr. Data').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Data Science & Analytics').style('color: #e0e0e0;')
+            ui.label('Innovation: Predictive analytics for code performance.').style('color: #e0e0e0;')
+            ui.label('"Data drives decisions, code drives results."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Architect
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🏗️ Dr. Architect').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: System Architecture & Design').style('color: #e0e0e0;')
+            ui.label('Innovation: Scalable architecture templates.').style('color: #e0e0e0;')
+            ui.label('"Build for tomorrow, today."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Security
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🔒 Dr. Security').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Cybersecurity & Vulnerability Management').style('color: #e0e0e0;')
+            ui.label('Innovation: Automated security audits and patches.').style('color: #e0e0e0;')
+            ui.label('"Security is the silent guardian of innovation."').style('font-style: italic; color: #bbb;')
+
+        # Dr. Test
+        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
+            ui.label('🧪 Dr. Test').style('font-size: 1.2rem; color: #4caf50;')
+            ui.label('Field: Testing & Quality Assurance').style('color: #e0e0e0;')
+            ui.label('Innovation: Comprehensive test suites with 99% coverage.').style('color: #e0e0e0;')
+            ui.label('"Test to trust, innovate to excel."').style('font-style: italic; color: #bbb;')
+
 ui.run()
