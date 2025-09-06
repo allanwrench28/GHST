@@ -1,3 +1,19 @@
+# --- Recursive Priority Workflow Loop ---
+import threading
+
+def priority_workflow_loop():
+    idx = 0
+    while True:
+        priority = think_tank_priorities[idx % len(think_tank_priorities)]
+        timestamp = datetime.now().strftime('%H:%M:%S')
+        alarm_msg = f'🚨 BRRRRR ALARM: New Priority Detected! [{timestamp}] {priority}'
+        add_log(alarm_msg)
+        update_news_ticker(alarm_msg)
+        update_live_suggestion(priority)
+        idx += 1
+        time.sleep(60)  # Move to next priority every minute
+
+threading.Thread(target=priority_workflow_loop, daemon=True).start()
 # --- Auto-Start Codebase Cleanup Daemon ---
 import threading
 import subprocess
