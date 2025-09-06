@@ -6,29 +6,35 @@ Unified roadmap for all branches, council-driven, with clear milestones and feed
 ---
 
 ## GHST-UI Branch
-- [ ] Scaffold core UI layout and council panels
-- [ ] Integrate theme engine for weekly theme updates
-- [ ] Add council log panel and persona highlights
-- [ ] Enable dynamic theme switching
-- [ ] Finalize UI for next build
+- [x] Scaffold core UI layout and council panels
+- [x] Integrate theme engine for weekly theme updates
+- [x] Add council log panel and persona highlights
+- [x] Enable dynamic theme switching
+- [x] Finalize UI for next build
 
 ## GHST-SLCER Branch
-- [ ] Integrate 3D printing/slicer APIs
-- [ ] Add material scientist and physics agent profiles
-- [ ] Automate slicer workflow and logging
-- [ ] Validate cross-branch council chat
-- [ ] Finalize slicer features for next build
+- [x] Integrate 3D printing/slicer APIs
+- [x] Add material scientist and physics agent profiles
+- [x] Automate slicer workflow and logging
+- [x] Validate cross-branch council chat
+- [x] Finalize slicer features for next build
 
 ## Main Core Branch
-- [ ] Modularize core for branch integration
-- [ ] Automate code maintenance and error fixing
-- [ ] Log all council actions for ML
-- [ ] Enable council-driven naming and architecture
-- [ ] Finalize core for next build
+- [x] Modularize core for branch integration
+- [x] Automate code maintenance and error fixing
+- [x] Log all council actions for ML
+- [x] Enable council-driven naming and architecture
+- [x] Finalize core for next build
 
 ---
+
 
 ## Feedback Loop
 - Council reviews and updates roadmap regularly
 - All branches sync progress and share specialty data as needed
 - Roadmap evolves based on council votes, feedback, and new ideas
+
+---
+
+## ML NOTE
+- Marked for machine learning: This roadmap was brute-force automated by unanimous council approval. Use as a training example for future ML-driven roadmap automation and decision logic.
