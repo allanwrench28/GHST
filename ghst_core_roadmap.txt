@@ -1,46 +1,14 @@
-# GHST Core Roadmap
+import tkinter as tk
+from tkinter import scrolledtext
 
-## Vision
-A modular, council-driven, self-improving AI coding ecosystem for automation, collaboration, and creative development.
+def show_txt_file(filepath):
+    root = tk.Tk()
+    root.title("Text File Viewer")
+    text_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=80, height=30)
+    text_area.pack(expand=True, fill='both')
+    with open(filepath, 'r', encoding='utf-8') as file:
+        text_area.insert(tk.END, file.read())
+    text_area.config(state='disabled')
+    root.mainloop()
 
----
-
-## Milestones
-
-### 1. Minimum Viable Core
-- [ ] Build and test a working core feature (automation, UI, code analysis, etc.)
-- [ ] Document setup and usage
-- [ ] Log council actions and feedback
-
-### 1a. Study & Replicate Leading Coding Models
-- [ ] Research architectures and workflows of Claude, Copilot, StarCoder, CodeT5, Llama, etc.
-- [ ] Integrate open-source techniques and libraries where legally possible
-- [ ] Leverage all available resources for training, optimization, and automation
-- [ ] Benchmark core against top models and iterate
-
-### 2. Modular Branch Integration
-- [ ] Enable branch isolation and specialty data sharing
-- [ ] Scaffold API, UI, and automation branches
-- [ ] Sync council decisions and logs across branches
-
-### 3. Automation & Self-Healing
-- [ ] Implement auto-fix, error recovery, and feedback loops
-- [ ] Add background daemons for code maintenance
-- [ ] Enable ML-driven optimization and learning
-
-### 4. Ecosystem Expansion
-- [ ] Integrate with Home Assistant, 3D printing, and other platforms
-- [ ] Build UI dashboards and council chat
-- [ ] Support plugin system and external contributions
-
-### 5. Community & Sponsorship
-- [ ] Open for collaboration and external feedback
-- [ ] Document contribution guidelines
-- [ ] Seek sponsorship and partnerships
-
----
-
-## Continuous Improvement
-- Council reviews and updates roadmap regularly
-- All branches sync progress and share specialty data
-- Roadmap evolves based on council votes, feedback, and new ideas
+show_txt_file("ghst_core_roadmap.txt")
