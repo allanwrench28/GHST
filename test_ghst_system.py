@@ -13,6 +13,7 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
+
 def test_ghst_components():
     """Test all GHST components."""
 
@@ -98,6 +99,7 @@ def test_ghst_components():
         print("⚠️ Some components need attention")
         return False
 
+
 def test_ghst_integration():
     """Test GHST integration and workflow."""
 
@@ -143,6 +145,7 @@ def hello_world():
         print("❌ Integration test failed: {e}")
         return False
 
+
 def main():
     """Run the complete GHST test suite."""
 
@@ -174,6 +177,7 @@ def main():
             print("❌ Integration issues detected")
         print("🔧 Debug and fix issues before production")
         return 1
+
 
 if __name__ == "__main__":
     exit_code = main()
