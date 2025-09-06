@@ -1,4 +1,4 @@
---- FORCED SPEEDBUILD CYCLE 1 ---
+docker build -t ghst-nicegui .docker build -t ghst-nicegui .python core\src\ui_components\nicegui_minimal_dark.pypython core\src\ui_components\nicegui_minimal_dark.py--- FORCED SPEEDBUILD CYCLE 1 ---
 Council Debate: UI must look modern and interactive; ghost agents must be accessible in terminal.
 Actions:
 	- Enhanced UI theme, layout, and icons.

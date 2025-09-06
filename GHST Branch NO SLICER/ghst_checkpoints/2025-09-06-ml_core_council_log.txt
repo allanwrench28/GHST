@@ -1,0 +1,18 @@
+# GHST Council ML Log (Core Branch)
+# Date: 2025-09-06
+
+## Prompts & Interactions
+- "I want a hands-off, self-healing, multi-persona AI coding environment."
+- "Log for machine learning, always auto-fix, always log council actions."
+- "Create a GHST-SLCER branch for 3D printing/slicer AI and agent specialization."
+- "Address the council for integration strategies and log all brainstorming."
+- "When I say address the council I want you to run a simulated instance of the core GHST council think tank but anything generated in this branch I want to stay in it."
+- "Log these past prompts and interactions for machine learning only in the core branch, but anything 3d printed related gets commented out so we can see that its an example and not infecting the core."
+
+## Council Actions
+- Branch 'GHST-SLCER' created for 3D printing/slicer specialization.
+- Council brainstorming logged for Klipper/Home Assistant/WLED integration.
+- All 3D printing/slicer-related content is commented out in the core branch logs.
+
+---
+# End of ML Log

@@ -22,7 +22,7 @@ def clean_build_dirs():
 
     # Remove spec files
     for spec_file in Path('.').glob('*.spec'):
-    print(f"🧹 Removing {spec_file}")
+        print(f"🧹 Removing {spec_file}")
         spec_file.unlink()
 
 
@@ -58,18 +58,18 @@ def build_optimized_installer():
     ]
 
     try:
-    print("⚡ Running PyInstaller with optimization...")
-        result = subprocess.run(
+        print("⚡ Running PyInstaller with optimization...")
+        subprocess.run(
             cmd,
             capture_output=True,
             text=True,
             check=True)
-    print("✅ Build completed successfully!")
+        print("✅ Build completed successfully!")
         return True
     except subprocess.CalledProcessError as e:
-    print(f"❌ Build failed: {e}")
-    print(f"STDOUT: {e.stdout}")
-    print(f"STDERR: {e.stderr}")
+        print(f"❌ Build failed: {e}")
+        print(f"STDOUT: {e.stdout}")
+        print(f"STDERR: {e.stderr}")
         return False
 
 

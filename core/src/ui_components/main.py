@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 GHST Main Window - AI Coding Engine Interface
 
@@ -576,3 +577,5 @@ if __name__ == "__main__":
     window = GHSTWindow()
     window.show()
     sys.exit(app.exec_())
+=======
+>>>>>>> e5d859f2d87d98897ba379404835c6c543a0ff8a

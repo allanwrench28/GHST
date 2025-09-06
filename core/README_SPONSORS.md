@@ -1,3 +1,6 @@
+# 🚀 FANTOM: Revolutionary AI-Powered 3D Printing Platform
+
+## 🎯 **Seeking Sponsorship & Investment Partners**
 
 FANTOM represents a paradigm shift in 3D printing software, combining:
 - **26 PhD-level AI specialists** working collaboratively
