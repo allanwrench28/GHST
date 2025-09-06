@@ -1,4 +1,21 @@
 from nicegui import ui
+
+import random
+
+# --- Battle Counter ---
+battle_count = 0
+fun_emojis = ['🎉', '😎', '🤩', '🥳', '🦄', '✨', '🍕', '🚀', '🎨', '🧠']
+
+def increment_battle():
+    global battle_count
+    battle_count += 1
+    chosen_emoji = random.choice(fun_emojis)
+    battle_counter.text = f'Battle Counter: {battle_count} {chosen_emoji}'
+    add_log(f'Dr. Fun {chosen_emoji}: "Let’s make this restructuring a party!"')
+
+with ui.row().classes('w-full items-center'):
+    battle_counter = ui.label(f'Battle Counter: {battle_count}').style('font-size: 1.1rem; color: #FF3B30; margin-top: 20px; margin-right: 20px;')
+    ui.button('Syntax Supervisor Action', on_click=increment_battle).style('background: #007AFF; color: #fff; border-radius: 8px; margin-top: 20px;')
 from datetime import datetime
 import threading
 import time
