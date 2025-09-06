@@ -1,24 +1,24 @@
-# FANTOM Configuration
-# AI-driven 3D printing slicer with FOSS components
+# GHST Configuration
+# AI-driven AI coding assistance coding engine with FOSS components
 # ⚠️ Modify settings at your own risk
 
 # Application Settings
 app:
-  name: "FANTOM"
+  name: "GHST"
   version: "0.1.0"
   theme: "Material"
   font_family: "Play"
   developer_mode: false  # ⚠️ Enables experimental AI features
   show_disclaimers: true  # Required for liability protection
 
-# Ghost AI Configuration  
-ghosts:
+# GHST Agent AI Configuration  
+ghsts:
   enabled: true  # ⚠️ Enables AI collaboration features
   max_concurrent: 4
   internet_access: true  # Required for FOSS research
   auto_pr: false  # Require manual approval for PRs
   
-  # Ghost Types and Capabilities
+  # GHST Agent Types and Capabilities
   analysis:
     enabled: true
     optimization_level: "conservative"  # conservative|aggressive|experimental
@@ -76,7 +76,7 @@ slicing:
   # Advanced settings (⚠️ Experimental)
   adaptive_layers: false
   ai_optimization: false  # Requires developer mode
-  ghost_suggestions: false  # AI-driven improvements
+  ghst_suggestions: false  # AI-driven improvements
 
 # Safety and Legal
 safety:
@@ -92,7 +92,7 @@ safety:
 # Logging
 logging:
   level: "INFO"  # DEBUG|INFO|WARNING|ERROR
-  file: "slicergpt.log"
+  file: "coding enginegpt.log"
   max_size_mb: 50
   backup_count: 3
   
@@ -108,5 +108,5 @@ development:
 # - AI features are experimental and may produce unpredictable results  
 # - Always verify generated G-code before printing
 # - Developer mode enables potentially dangerous experimental features
-# - Ghost AI actions are logged but not guaranteed safe
+# - GHST Agent AI actions are logged but not guaranteed safe
 # - User is responsible for all configuration choices and outcomes

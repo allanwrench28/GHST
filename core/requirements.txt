@@ -1,5 +1,5 @@
-# FANTOM Requirements
-# Core dependencies for AI-driven 3D printing slicer
+# GHST Requirements
+# Core dependencies for AI-driven AI coding assistance coding engine
 # ⚠️ Install at your own risk - verify all packages
 
 # GUI Framework
