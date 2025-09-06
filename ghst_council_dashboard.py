@@ -1,3 +1,15 @@
+# --- Auto-Start Codebase Cleanup Daemon ---
+import threading
+import subprocess
+
+def start_cleanup_daemon():
+    def run_daemon():
+        subprocess.Popen([
+            'python', 'codebase_cleanup_daemon.py'
+        ])
+    threading.Thread(target=run_daemon, daemon=True).start()
+
+start_cleanup_daemon()
 def council_live_chat():
     for ghost in GHSTS:
         msg = f'{ghost["emoji"]} {ghost["name"]}: "I am actively working to improve our home!"'
