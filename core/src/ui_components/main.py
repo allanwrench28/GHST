@@ -24,22 +24,57 @@ from PyQt5.QtWidgets import (
 
 
 class GHSTWindow(QMainWindow):
-    """Main window for GHST AI Coding Engine."""
-
-    def __init__(self):
-        super().__init__()
-        self.expert_manager = None
-        self.config_manager = None
-        self.ss_manager = None  # Syntax Supervisors Manager
-        self.init_ui()
-
+    def apply_styling(self):
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #222831;
+            }
+            QWidget {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                color: #f8f8f8;
+                background-color: #222831;
+            }
+            QLabel {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 14px;
+                color: #00adb5;
+                text-shadow: 1px 1px 2px #222;
+            }
+            QListWidget {
+                background: #393e46;
+                border-radius: 12px;
+                padding: 12px;
+                font-size: 16px;
+                box-shadow: 0 2px 8px #222;
+            }
+            QSlider::groove:horizontal {
+                border: 1px solid #00adb5;
+                height: 10px;
+                background: #393e46;
+                border-radius: 5px;
+            }
+            QSlider::handle:horizontal {
+                background: #00adb5;
+                border: 2px solid #f8f8f8;
+                width: 22px;
+                height: 22px;
+                margin: -7px 0;
+                border-radius: 11px;
+                box-shadow: 0 2px 6px #222;
+            }
+            QSlider {
+                margin: 16px 0 28px 0;
+            }
+        """)
     def init_ui(self):
         """Initialize the user interface."""
         self.setWindowTitle("GHST - AI Coding Engine")
         self.setGeometry(100, 100, 1400, 900)
 
         # Apply GHST theme
-        self.apply_ghst_theme()
+        if hasattr(self, 'apply_ghst_theme'):
+            self.apply_ghst_theme()
 
         # Create central widget
         central_widget = QWidget()
@@ -53,17 +88,44 @@ class GHSTWindow(QMainWindow):
         splitter = QSplitter(Qt.Horizontal)
         main_layout.addWidget(splitter)
 
-        # Left pane - Expert agents and tools
-        left_pane = self.create_left_pane()
+        # Left pane - Professional sidebar
+        left_pane = QWidget()
+        left_layout = QVBoxLayout()
+        left_pane.setLayout(left_layout)
+
+        # Sidebar card
+        sidebar_card = QWidget()
+        sidebar_card.setStyleSheet("background: #393e46; border-radius: 16px; box-shadow: 0 2px 12px #222; padding: 18px;")
+        card_layout = QVBoxLayout()
+        sidebar_card.setLayout(card_layout)
+
+        # Section header
+        card_layout.addWidget(QLabel("⚡ SPEEDBUILD Control Panel"))
+
+        # Prominent slider
+        from .speedbuild_slider import SpeedbuildSlider
+        self.speedbuild_slider = SpeedbuildSlider()
+        card_layout.addWidget(self.speedbuild_slider)
+
+        # Interactive button for SPEEDBUILD mode
+        from PyQt5.QtWidgets import QPushButton
+        self.speedbuild_btn = QPushButton("Apply SPEEDBUILD Mode")
+        self.speedbuild_btn.setStyleSheet("background: #00adb5; color: #fff; font-weight: bold; border-radius: 8px; padding: 8px 16px;")
+        card_layout.addWidget(self.speedbuild_btn)
+
+        left_layout.addWidget(sidebar_card)
+        left_layout.addStretch()
         splitter.addWidget(left_pane)
 
         # Center pane - Main work area
-        center_pane = self.create_center_pane()
-        splitter.addWidget(center_pane)
+        if hasattr(self, 'create_center_pane'):
+            center_pane = self.create_center_pane()
+            splitter.addWidget(center_pane)
 
         # Right pane - AI assistance and chat
-        right_pane = self.create_right_pane()
-        splitter.addWidget(right_pane)
+        if hasattr(self, 'create_right_pane'):
+            right_pane = self.create_right_pane()
+            splitter.addWidget(right_pane)
 
         # Set splitter proportions
         splitter.setStretchFactor(0, 1)  # Left pane
@@ -71,22 +133,84 @@ class GHSTWindow(QMainWindow):
         splitter.setStretchFactor(2, 1)  # Right pane
 
         # Create menu bar
-        self.create_menu_bar()
+        if hasattr(self, 'create_menu_bar'):
+            self.create_menu_bar()
 
         # Create status bar
-        self.create_status_bar()
+        if hasattr(self, 'create_status_bar'):
+            self.create_status_bar()
 
-    # Apply styling
-    self.apply_styling()
+        # Apply styling
+        if hasattr(self, 'apply_styling'):
+            self.apply_styling()
 
-    # Add autocommit ticker to status bar (after status bar is created)
-    self.add_autocommit_ticker()
+        # Add autocommit ticker to status bar (after status bar is created)
+        if hasattr(self, 'add_autocommit_ticker'):
+            self.add_autocommit_ticker()
+    """Main window for GHST AI Coding Engine."""
+
+    def __init__(self):
+        super().__init__()
+        self.expert_manager = None
+        self.config_manager = None
+        self.ss_manager = None  # Syntax Supervisors Manager
+        self.init_ui()
 
     def create_left_pane(self):
-        """Create left pane with expert agents and tools."""
+        from .speedbuild_slider import SpeedbuildSlider
         widget = QWidget()
         layout = QVBoxLayout()
         widget.setLayout(layout)
+
+        # SPEEDBUILD slider for branch control
+        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
+        self.speedbuild_slider = SpeedbuildSlider()
+        layout.addWidget(self.speedbuild_slider)
+
+        # Expert agents section
+        layout.addWidget(QLabel("🧠 AI Expert Agents"))
+
+        self.experts_list = QListWidget()
+        self.experts_list.addItems([
+            "🔍 Code Analysis Expert",
+            "🐛 Debugging Expert",
+            "🛠️ Problem Solving Expert",
+            "📚 Research Expert",
+            "⚡ Performance Expert",
+            "🔒 Security Expert",
+            "📝 Documentation Expert",
+            "🧪 Testing Expert",
+            "🏗️ Architecture Expert",
+            "🎨 UI/UX Expert",
+            "🚀 DevOps Expert",
+            "📊 Data Expert"
+        ])
+        layout.addWidget(self.experts_list)
+
+        # Tools section
+        layout.addWidget(QLabel("🔧 Tools"))
+
+        self.tools_list = QListWidget()
+        self.tools_list.addItems([
+            "Plugin Manager",
+            "Configuration",
+            "Project Templates",
+            "Code Snippets"
+        ])
+        layout.addWidget(self.tools_list)
+
+        return widget
+    def create_left_pane(self):
+        """Create left pane with expert agents and tools."""
+        from .speedbuild_slider import SpeedbuildSlider
+        widget = QWidget()
+        layout = QVBoxLayout()
+        widget.setLayout(layout)
+
+        # SPEEDBUILD slider for branch control
+        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
+        self.speedbuild_slider = SpeedbuildSlider()
+        layout.addWidget(self.speedbuild_slider)
 
         # Expert agents section
         layout.addWidget(QLabel("🧠 AI Expert Agents"))

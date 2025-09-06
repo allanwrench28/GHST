@@ -18,8 +18,7 @@ def main():
     try:
         from PyQt5.QtCore import Qt
         from PyQt5.QtWidgets import QApplication
-
-        from ui_components.main import GHSTWindow
+        from src.ui_components.main import GHSTWindow
 
         # Create application
         app = QApplication(sys.argv)
@@ -42,6 +41,7 @@ def main():
         print("🧠 AI expert collective is monitoring...")
         print("⚙️ Ready for AI-assisted coding!")
         print("📝 Check the GUI window for the application interface")
+        print("👥 Council status: All agents are monitoring and ready to assist.")
 
         # Start the application event loop
         exit_code = app.exec_()
@@ -50,11 +50,11 @@ def main():
         return exit_code
 
     except ImportError as e:
-        print("❌ Failed to import GUI components: {e}")
+        print(f"❌ Failed to import GUI components: {e}")
         print("Please ensure PyQt5 is installed: pip install PyQt5")
         return 1
     except Exception as e:
-        print("❌ Failed to start GHST GUI: {e}")
+        print(f"❌ Failed to start GHST GUI: {e}")
         print("🧠 This error would be captured by the AI expert system!")
         return 1
 
@@ -67,6 +67,6 @@ if __name__ == "__main__":
         print("\n🛑 GHST interrupted by user.")
         sys.exit(1)
     except Exception as e:
-        print("\n❌ GHST launcher error: {e}")
+        print(f"\n❌ GHST launcher error: {e}")
         print("🧠 This error would be captured by the AI expert system!")
         sys.exit(1)

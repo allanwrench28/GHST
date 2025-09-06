@@ -17,12 +17,12 @@ def clean_build_dirs():
     dirs_to_clean = ['build', 'dist', '__pycache__']
     for dir_name in dirs_to_clean:
         if os.path.exists(dir_name):
-            print("🧹 Cleaning {dir_name}/")
+            print(f"🧹 Cleaning {dir_name}/")
             shutil.rmtree(dir_name, ignore_errors=True)
 
     # Remove spec files
     for spec_file in Path('.').glob('*.spec'):
-        print("🧹 Removing {spec_file}")
+    print(f"🧹 Removing {spec_file}")
         spec_file.unlink()
 
 
@@ -58,25 +58,25 @@ def build_optimized_installer():
     ]
 
     try:
-        print("⚡ Running PyInstaller with optimization...")
+    print("⚡ Running PyInstaller with optimization...")
         result = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
             check=True)
-        print("✅ Build completed successfully!")
+    print("✅ Build completed successfully!")
         return True
     except subprocess.CalledProcessError as e:
-        print("❌ Build failed: {e}")
-        print("STDOUT: {e.stdout}")
-        print("STDERR: {e.stderr}")
+    print(f"❌ Build failed: {e}")
+    print(f"STDOUT: {e.stdout}")
+    print(f"STDERR: {e.stderr}")
         return False
 
 
 def create_optimized_release():
     """Create optimized release package"""
     version = "v1.0.0-alpha.5-beautiful-optimized"
-    release_dir = Path("releases/{version}")
+    release_dir = Path(f"releases/{version}")
 
     # Create release directory
     release_dir.mkdir(parents=True, exist_ok=True)
@@ -86,12 +86,12 @@ def create_optimized_release():
     exe_dest = release_dir / "GHST-Installer-Beautiful-Optimized.exe"
 
     if exe_source.exists():
-        print("📦 Copying executable to {exe_dest}")
+        print(f"📦 Copying executable to {exe_dest}")
         shutil.copy2(exe_source, exe_dest)
 
         # Get file size
         size_mb = exe_dest.stat().st_size / (1024 * 1024)
-        print("📏 Executable size: {size_mb:.1f} MB")
+        print(f"📏 Executable size: {size_mb:.1f} MB")
     else:
         print("❌ Executable not found!")
         return False
@@ -113,7 +113,7 @@ echo Starting installer...
     batch_file.write_text(batch_content, encoding='utf-8')
 
     # Create README
-    readme_content = '''  # 🎨 GHST Beautiful Installer (Optimized) - {version}
+    readme_content = f'''  # 🎨 GHST Beautiful Installer (Optimized) - {version}
 
 #  # ✨ What's New
 - **Beautiful modern UI** with dark theme and animations
@@ -147,8 +147,8 @@ echo Starting installer...
     readme_file.write_text(readme_content, encoding='utf-8')
 
     # Create ZIP archive
-    zip_path = Path("releases/GHST-{version}.zip")
-    print("📦 Creating release archive: {zip_path}")
+    zip_path = Path(f"releases/GHST-{version}.zip")
+    print(f"📦 Creating release archive: {zip_path}")
 
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
         for file in release_dir.rglob('*'):
@@ -157,7 +157,7 @@ echo Starting installer...
                 zipf.write(file, arcname)
 
     archive_size_mb = zip_path.stat().st_size / (1024 * 1024)
-    print("📏 Archive size: {archive_size_mb:.1f} MB")
+    print(f"📏 Archive size: {archive_size_mb:.1f} MB")
 
     return True
 

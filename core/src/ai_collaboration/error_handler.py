@@ -1,10 +1,10 @@
 """
-Error Handler for GHST GHST Agent System
+Error Handler for GHST Agent System
 
 Captures runtime errors, analyzes them with AI, and submits pull requests
 for fixes with proper disclaimers and safety warnings.
 
-⚠️ All AI-generated fixes include no-liability disclaimers
+All AI-generated fixes include no-liability disclaimers.
 """
 
 import hashlib
