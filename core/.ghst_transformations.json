@@ -1,0 +1,527 @@
+[
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\setup.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.610242"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\setup.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.610271"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ai_safety_check.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.611434"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ai_safety_check.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.611544"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\check_license_headers.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.613176"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghost_ethical_review.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.614215"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghost_ethical_review.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.614349"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghost_ethical_review.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.614387"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.615295"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.615599"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "ghost_references",
+    "pattern": "Ghosts in the Machine",
+    "replacement": "GHST Expert Collective",
+    "timestamp": "2025-09-05T23:47:52.615617"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "ghost_references",
+    "pattern": "GhostManager",
+    "replacement": "ExpertManager",
+    "timestamp": "2025-09-05T23:47:52.615646"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "component_updates",
+    "pattern": "FANTOMWindow",
+    "replacement": "GHSTWindow",
+    "timestamp": "2025-09-05T23:47:52.615663"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "component_updates",
+    "pattern": "launch_fantom",
+    "replacement": "launch_ghst",
+    "timestamp": "2025-09-05T23:47:52.615692"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.615708"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "component_updates",
+    "pattern": "slicer_ui",
+    "replacement": "ghst_ui",
+    "timestamp": "2025-09-05T23:47:52.615734"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.615750"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.615770"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "api_integrations",
+    "pattern": "# TODO: Add AI integration",
+    "replacement": "# xAI Grok integration ready",
+    "timestamp": "2025-09-05T23:47:52.615786"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "api_integrations",
+    "pattern": "mock_ai_call",
+    "replacement": "grok_api_call",
+    "timestamp": "2025-09-05T23:47:52.615804"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "api_integrations",
+    "pattern": "placeholder.*AI",
+    "replacement": "xAI Grok API",
+    "timestamp": "2025-09-05T23:47:52.615824"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\ghst_transform_engine.py",
+    "category": "syntax_supervisor_integration",
+    "pattern": "# Code analysis placeholder",
+    "replacement": "self.syntax_supervisors = SyntaxSupervisorManager(workspace)",
+    "timestamp": "2025-09-05T23:47:52.615841"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\nightly_build.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.616927"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\nightly_build.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.617266"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\nightly_build.py",
+    "category": "ghost_references",
+    "pattern": "GhostManager",
+    "replacement": "ExpertManager",
+    "timestamp": "2025-09-05T23:47:52.617300"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\nightly_build.py",
+    "category": "component_updates",
+    "pattern": "fantom\\.py",
+    "replacement": "ghst.py",
+    "timestamp": "2025-09-05T23:47:52.617320"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\scripts\\nightly_build.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.617342"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\syntax_supervisors.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.622286"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\error_handler.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.623983"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\error_handler.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.624495"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\error_handler.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.624640"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\error_handler.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.624701"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\expert_manager.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.628619"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\expert_manager.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.629784"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\expert_manager.py",
+    "category": "ghost_references",
+    "pattern": "GhostManager",
+    "replacement": "ExpertManager",
+    "timestamp": "2025-09-05T23:47:52.630089"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\expert_manager.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.630420"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\expert_manager.py",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.630709"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\expert_manager.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.630951"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\ghost_chat.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.632789"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\ghost_chat.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.633122"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\ghost_chat.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.633184"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\ai_collaboration\\ghost_chat.py",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.633211"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\base_plugin.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.634787"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\base_plugin.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.634907"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\base_plugin.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.634923"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\plugin_manager.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.635886"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\plugin_manager.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.636293"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\plugin_manager.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.636331"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\__init__.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.636893"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\config_manager.py",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.639096"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\config_manager.py",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.639814"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\config_manager.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.640007"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\builtin\\gcode_optimizer.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.641186"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\builtin\\gcode_optimizer.py",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.641205"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\builtin\\print_stats.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.641932"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\plugins\\builtin\\__init__.py",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.642417"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\config\\default.yaml",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.643060"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\config\\default.yaml",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.643126"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\config\\default.yaml",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.643148"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\config\\default.yaml",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.643157"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\config\\default.yaml",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.643164"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\CONTRIBUTING.md",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.644104"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\CONTRIBUTING.md",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.644290"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\CONTRIBUTING.md",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.644309"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\REPOSITORY_RULESET.md",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.645800"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\REPOSITORY_RULESET.md",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.646020"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\REPOSITORY_RULESET.md",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.646086"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\REPOSITORY_RULESET.md",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.646109"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\RULESET_QUICK_REFERENCE.md",
+    "category": "ghost_references",
+    "pattern": "\\bGhost\\b(?!.*[Ss]upervisor)",
+    "replacement": "GHST Agent",
+    "timestamp": "2025-09-05T23:47:52.647147"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\RULESET_QUICK_REFERENCE.md",
+    "category": "ghost_references",
+    "pattern": "\\bghost(?!.*[Ss]upervisor)",
+    "replacement": "ghst",
+    "timestamp": "2025-09-05T23:47:52.647292"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\docs\\RULESET_QUICK_REFERENCE.md",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.647332"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\requirements.txt",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.648127"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\requirements.txt",
+    "category": "component_updates",
+    "pattern": "3D printing",
+    "replacement": "AI coding assistance",
+    "timestamp": "2025-09-05T23:47:52.648138"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\requirements.txt",
+    "category": "component_updates",
+    "pattern": "slicer",
+    "replacement": "coding engine",
+    "timestamp": "2025-09-05T23:47:52.648144"
+  },
+  {
+    "file": "C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\version_info.txt",
+    "category": "component_updates",
+    "pattern": "FANTOM",
+    "replacement": "GHST",
+    "timestamp": "2025-09-05T23:47:52.648889"
+  }
+]
