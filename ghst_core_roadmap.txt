@@ -12,6 +12,12 @@ A modular, council-driven, self-improving AI coding ecosystem for automation, co
 - [ ] Document setup and usage
 - [ ] Log council actions and feedback
 
+### 1a. Study & Replicate Leading Coding Models
+- [ ] Research architectures and workflows of Claude, Copilot, StarCoder, CodeT5, Llama, etc.
+- [ ] Integrate open-source techniques and libraries where legally possible
+- [ ] Leverage all available resources for training, optimization, and automation
+- [ ] Benchmark core against top models and iterate
+
 ### 2. Modular Branch Integration
 - [ ] Enable branch isolation and specialty data sharing
 - [ ] Scaffold API, UI, and automation branches
