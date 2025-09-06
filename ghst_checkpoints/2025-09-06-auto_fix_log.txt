@@ -1,0 +1,6 @@
+# GHST Auto-Fix Log
+# Date: 2025-09-06
+# Purpose: Log all auto-fix attempts, errors, and resolutions for machine learning and council improvement
+
+entry_id, timestamp, error, attempted_fix, result, agent, notes
+1, 2025-09-06T00:00:00, "launch_gui.py not found", "Checked workspace for correct entry point", "Pending user confirmation", AutoFixer, "Recommend verifying file location and name."
