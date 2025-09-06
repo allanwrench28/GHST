@@ -18,6 +18,27 @@ from typing import Any, Callable, Dict, Optional
 
 
 class ErrorHandler:
+def normalize_user_input(raw_input: str) -> str:
+    """
+    Normalize and auto-correct user input for 'ape' typing and natural language brains.
+    - Fix common syntax errors (missing colons, parentheses, etc.)
+    - Auto-correct simple spelling mistakes
+    - Standardize casing and whitespace
+    - Make input more robust for downstream processing
+    """
+    import re
+    # Example: Add colon after 'def' if missing
+    raw_input = re.sub(r'(def\s+\w+\(.*\))\s*$', r'\1:', raw_input)
+    # Example: Fix common Python keywords
+    raw_input = re.sub(r'pritn', 'print', raw_input, flags=re.IGNORECASE)
+    raw_input = re.sub(r'improt', 'import', raw_input, flags=re.IGNORECASE)
+    # Example: Remove excessive whitespace
+    raw_input = re.sub(r'\s+', ' ', raw_input)
+    # Example: Lowercase keywords
+    for kw in ['def', 'class', 'import', 'from', 'return', 'if', 'else', 'elif', 'for', 'while', 'try', 'except', 'with', 'as', 'print']:
+        raw_input = re.sub(rf'\b{kw}\b', kw, raw_input, flags=re.IGNORECASE)
+    # More advanced corrections can be added here
+    return raw_input.strip()
     """Captures and processes errors for GHST Agent analysis and fixing."""
 
     def __init__(self, ghst_manager=None, github_token: Optional[str] = None):
