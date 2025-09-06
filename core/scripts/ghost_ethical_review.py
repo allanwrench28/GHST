@@ -9,13 +9,11 @@ Automated ethical review for AI-related code changes.
 import sys
 import os
 import re
-from pathlib import Path
 from typing import List, Dict, Any
-
 
 class GhostEthicalReviewer:
     """GHST Agent collective ethical review system."""
-    
+
     def __init__(self):
         self.ethical_patterns = {
             'bias_risks': [
@@ -46,7 +44,7 @@ class GhostEthicalReviewer:
                 r'covert.*operation'
             ]
         }
-        
+
         self.ai_code_patterns = [
             r'ghst.*collective',
             r'ai.*model',
@@ -67,10 +65,10 @@ class GhostEthicalReviewer:
                 'error': str(e),
                 'status': 'error'
             }
-        
+
         issues = []
         is_ai_related = self._is_ai_related_code(content)
-        
+
         for category, patterns in self.ethical_patterns.items():
             for pattern in patterns:
                 if re.search(pattern, content):
@@ -79,7 +77,7 @@ class GhostEthicalReviewer:
                         'pattern': pattern,
                         'severity': 'high' if is_ai_related else 'medium'
                     })
-        
+
         return {
             'file': filepath,
             'ai_related': is_ai_related,
@@ -100,8 +98,8 @@ class GhostEthicalReviewer:
         total_files = len(results)
         files_with_issues = len([r for r in results if r.get('issues')])
         ai_related_files = len([r for r in results if r.get('ai_related')])
-        
-        report = f"""
+
+        report = """
 👻 GHOST COLLECTIVE ETHICAL REVIEW REPORT
 
 📊 Summary:
@@ -110,28 +108,31 @@ class GhostEthicalReviewer:
 - AI-related files: {ai_related_files}
 
 """
-        
+
         if files_with_issues > 0:
             report += "🚨 ETHICAL CONCERNS DETECTED:\n\n"
             for result in results:
                 if result.get('issues'):
-                    report += f"File: {result['file']}\n"
+                    report += "File: {result['file']}\n"
                     for issue in result['issues']:
-                        report += f"  ⚠️ {issue['category']}: {issue['pattern']} ({issue['severity']})\n"
+                        report += "  ⚠️ {
+                            issue['category']}: {
+                            issue['pattern']} ({
+                            issue['severity']})\n"
                     report += "\n"
-        
+
         if ai_related_files > 0:
             report += "🤖 AI-RELATED FILES REQUIRING HUMAN REVIEW:\n\n"
             for result in results:
                 if result.get('ai_related'):
-                    report += f"  - {result['file']}\n"
-        
+                    report += "  - {result['file']}\n"
+
         report += "\n⚖️ ETHICAL FRAMEWORK COMPLIANCE:\n"
         report += "- Human oversight: REQUIRED ✅\n"
         report += "- Transparency: MAINTAINED ✅\n"
         report += "- Accountability: TRACKED ✅\n"
         report += "- Safety-first approach: ACTIVE ✅\n"
-        
+
         report += "\n🔔 NEXT STEPS:\n"
         if files_with_issues > 0 or ai_related_files > 0:
             report += "1. Human review required before merge\n"
@@ -141,28 +142,27 @@ class GhostEthicalReviewer:
         else:
             report += "1. No immediate ethical concerns detected\n"
             report += "2. Proceed with standard review process\n"
-        
-        return report
 
+        return report
 
 def main():
     """Main ethical review function."""
     if len(sys.argv) < 2:
         print("Usage: python ghst_ethical_review.py <file1> [file2] ...")
         sys.exit(1)
-    
+
     reviewer = GhostEthicalReviewer()
     results = []
-    
+
     for filepath in sys.argv[1:]:
         if os.path.exists(filepath):
             result = reviewer.review_file(filepath)
             results.append(result)
-    
+
     # Generate and display report
     report = reviewer.generate_report(results)
     print(report)
-    
+
     # Exit with error code if issues found
     has_issues = any(r.get('issues') or r.get('ai_related') for r in results)
     if has_issues:
@@ -171,7 +171,6 @@ def main():
     else:
         print("\n✅ Ethical review passed - no immediate concerns detected")
         sys.exit(0)
-
 
 if __name__ == '__main__':
     main()

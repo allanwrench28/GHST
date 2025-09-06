@@ -26,20 +26,19 @@ except ImportError:
     SYNTAX_SUPERVISORS_AVAILABLE = False
     print("⚠️ Syntax Supervisors not available")
 
-
 def launch_ghst():
     """Launch the GHST AI coding engine."""
     print("🚀 Starting GHST - Open Source AI Coding Engine")
     print("=" * 60)
     print()
-    
+
     print("🧠 AI EXPERT COLLECTIVE STATUS")
     print("✅ Human oversight enabled")
     print("✅ Transparency enforced")
     print("✅ Human authority maintained")
     print("✅ Expert agents ready")
     print()
-    
+
     print("�‍💻 AI EXPERT AGENTS ONLINE")
     print("� Code Analysis & Debugging specialists ready")
     print("�️ Problem Solving & Optimization ready")
@@ -49,7 +48,7 @@ def launch_ghst():
     print("⚡ Performance & Security ready")
     print("🤖 AI Collaboration Framework active")
     print()
-    
+
     print("🤝 HUMAN-CENTERED DESIGN PRINCIPLES")
     print("• You maintain ultimate authority over all decisions")
     print("• All AI recommendations require your validation")
@@ -57,19 +56,19 @@ def launch_ghst():
     print("• Minimum viable human interaction maintained")
     print("• Emergency human override always available")
     print()
-    
+
     # Try to launch the main application
     try:
         print("🔄 Loading AI expert collective...")
         from core.src.ai_collaboration.expert_manager import ExpertManager
         expert_manager = ExpertManager()
         print("✅ AI expert collective initialized")
-        
+
         print("🔄 Loading configuration...")
         from core.src.utils.config_manager import ConfigManager
         config_manager = ConfigManager()
         print("✅ Configuration loaded")
-        
+
         # Initialize Syntax Supervisors
         if SYNTAX_SUPERVISORS_AVAILABLE:
             print("🔄 Starting Syntax Supervisors...")
@@ -78,10 +77,10 @@ def launch_ghst():
             print("✅ Syntax Supervisors active - monitoring in background")
         else:
             print("⚠️ Syntax Supervisors unavailable")
-        
+
         print("🔄 Starting GUI...")
         from core.src.ui_components.main import GHSTWindow
-        
+
         # Initialize PyQt5 application
         try:
             from PyQt5.QtWidgets import QApplication
@@ -89,48 +88,47 @@ def launch_ghst():
             print("❌ PyQt5 not found. Installing...")
             os.system("pip install PyQt5")
             from PyQt5.QtWidgets import QApplication
-        
+
         app = QApplication(sys.argv)
         app.setApplicationName("GHST")
         app.setApplicationVersion("0.1.0-alpha")
-        
+
         # Create main window
         main_window = GHSTWindow()
         main_window.expert_manager = expert_manager
         main_window.config_manager = config_manager
         main_window.show()
-        
+
         print("✅ GHST GUI launched successfully!")
         print()
         print("🎯 Ready for AI-assisted coding and problem solving!")
         print("💬 Use the interface to interact with expert AI agents")
         print("⚖️ Remember: You have final authority over all decisions")
         print()
-        
+
         # Run the application
         sys.exit(app.exec_())
-        
+
     except ImportError as e:
-        print(f"❌ Import error: {e}")
+        print("❌ Import error: {e}")
         print("🔧 Attempting to install missing dependencies...")
-        
+
         dependencies = [
             "PyQt5",
             "PyYAML",
             "numpy"
         ]
-        
+
         for dep in dependencies:
-            print(f"📦 Installing {dep}...")
-            os.system(f"pip install {dep}")
-        
+            print("📦 Installing {dep}...")
+            os.system("pip install {dep}")
+
         print("✅ Dependencies installed. Please restart the launcher.")
-        
+
     except Exception as e:
-        print(f"❌ Error launching GHST: {e}")
+        print("❌ Error launching GHST: {e}")
         print("🔍 Please check the error above and try again.")
         print("📧 Report issues to the development team.")
-
 
 def show_help():
     """Show help information."""
@@ -154,14 +152,12 @@ def show_help():
     print("• Human oversight and control")
     print("• Open source collaboration")
 
-
 def main():
     """Main entry point."""
     if len(sys.argv) > 1 and sys.argv[1] == "help":
         show_help()
     else:
         launch_ghst()
-
 
 if __name__ == "__main__":
     main()
