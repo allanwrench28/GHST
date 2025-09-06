@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-FANTOM Ghost Collective Ethical Review Script
+GHST GHST Agent Collective Ethical Review Script
 Automated ethical review for AI-related code changes.
 
 ⚠️ AI-generated analysis - human oversight required
@@ -14,7 +14,7 @@ from typing import List, Dict, Any
 
 
 class GhostEthicalReviewer:
-    """Ghost collective ethical review system."""
+    """GHST Agent collective ethical review system."""
     
     def __init__(self):
         self.ethical_patterns = {
@@ -48,7 +48,7 @@ class GhostEthicalReviewer:
         }
         
         self.ai_code_patterns = [
-            r'ghost.*collective',
+            r'ghst.*collective',
             r'ai.*model',
             r'machine.*learning',
             r'neural.*network',
@@ -148,7 +148,7 @@ class GhostEthicalReviewer:
 def main():
     """Main ethical review function."""
     if len(sys.argv) < 2:
-        print("Usage: python ghost_ethical_review.py <file1> [file2] ...")
+        print("Usage: python ghst_ethical_review.py <file1> [file2] ...")
         sys.exit(1)
     
     reviewer = GhostEthicalReviewer()

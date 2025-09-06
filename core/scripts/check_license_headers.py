@@ -3,7 +3,7 @@
 License Header Check Script
 Ensures all source files have proper license headers.
 
-⚠️ Part of FANTOM repository ruleset
+⚠️ Part of GHST repository ruleset
 """
 
 import sys
@@ -20,50 +20,50 @@ class LicenseChecker:
         self.license_templates = {
             'python': {
                 'header': '''"""
-FANTOM: AI-Driven 3D Printing Platform
-Copyright (c) 2024 FANTOM Development Team
+GHST: AI-Driven 3D Printing Platform
+Copyright (c) 2024 GHST Development Team
 
-This file is part of FANTOM.
+This file is part of GHST.
 
-FANTOM is free software: you can redistribute it and/or modify
+GHST is free software: you can redistribute it and/or modify
 it under the terms of the MIT License.
 
 ⚠️ AI-generated content - verify before use
-FANTOM assumes no liability for AI-generated code or suggestions.
+GHST assumes no liability for AI-generated code or suggestions.
 """''',
-                'pattern': r'("""|\'\'\').*?FANTOM.*?MIT.*?("""|\'\'\')',
+                'pattern': r'("""|\'\'\').*?GHST.*?MIT.*?("""|\'\'\')',
                 'extensions': ['.py']
             },
             'javascript': {
                 'header': '''/*
- * FANTOM: AI-Driven 3D Printing Platform
- * Copyright (c) 2024 FANTOM Development Team
+ * GHST: AI-Driven 3D Printing Platform
+ * Copyright (c) 2024 GHST Development Team
  * 
- * This file is part of FANTOM.
+ * This file is part of GHST.
  * 
- * FANTOM is free software: you can redistribute it and/or modify
+ * GHST is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
  * 
  * ⚠️ AI-generated content - verify before use
- * FANTOM assumes no liability for AI-generated code or suggestions.
+ * GHST assumes no liability for AI-generated code or suggestions.
  */''',
-                'pattern': r'/\*.*?FANTOM.*?MIT.*?\*/',
+                'pattern': r'/\*.*?GHST.*?MIT.*?\*/',
                 'extensions': ['.js', '.ts']
             },
             'cpp': {
                 'header': '''/*
- * FANTOM: AI-Driven 3D Printing Platform
- * Copyright (c) 2024 FANTOM Development Team
+ * GHST: AI-Driven 3D Printing Platform
+ * Copyright (c) 2024 GHST Development Team
  * 
- * This file is part of FANTOM.
+ * This file is part of GHST.
  * 
- * FANTOM is free software: you can redistribute it and/or modify
+ * GHST is free software: you can redistribute it and/or modify
  * it under the terms of the MIT License.
  * 
  * ⚠️ AI-generated content - verify before use
- * FANTOM assumes no liability for AI-generated code or suggestions.
+ * GHST assumes no liability for AI-generated code or suggestions.
  */''',
-                'pattern': r'/\*.*?FANTOM.*?MIT.*?\*/',
+                'pattern': r'/\*.*?GHST.*?MIT.*?\*/',
                 'extensions': ['.cpp', '.cc', '.cxx', '.h', '.hpp']
             }
         }

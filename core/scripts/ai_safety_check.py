@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-FANTOM AI Safety Check Script
+GHST AI Safety Check Script
 Automated safety validation for AI-related functionality.
 
 ⚠️ AI-generated analysis - verify before implementation
@@ -46,7 +46,7 @@ class AISafetyChecker:
                 r'\.unlink\s*\(',
                 r'shutil\.rmtree',
             ],
-            'ghost_safety_bypasses': [
+            'ghst_safety_bypasses': [
                 r'bypass.*safety',
                 r'skip.*validation',
                 r'ignore.*warning',
@@ -119,7 +119,7 @@ class AISafetyChecker:
     def _is_ai_code(self, content: str) -> bool:
         """Check if code contains AI-related functionality."""
         ai_indicators = [
-            'ghost', 'ai_', 'machine_learning', 'neural_network',
+            'ghst', 'ai_', 'machine_learning', 'neural_network',
             'model.predict', 'tensorflow', 'pytorch', 'sklearn',
             'artificial_intelligence', 'automated_decision'
         ]
