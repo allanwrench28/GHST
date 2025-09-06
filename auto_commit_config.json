@@ -4,6 +4,7 @@
   "max_batch_size_mb": 10,
   "auto_push": true,
   "auto_pull": true,
+  "auto_start_on_vscode_open": true,
   "exclude_patterns": [
     "*.log",
     "*.tmp", 
