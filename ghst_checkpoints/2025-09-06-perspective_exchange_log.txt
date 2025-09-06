@@ -1,0 +1,6 @@
+# GHST Council Perspective Exchange Log
+# Date: 2025-09-06
+# Purpose: Log council prompts for machine learning and perspective analysis
+
+entry_id, timestamp, prompt, action, agents_involved, result, category
+1, 2025-09-06T00:00:00, "Analyze from new perspectives or trade views to see from a new angle that might help.", perspective_exchange, [All GHSTS], LOGGED, council_ml
