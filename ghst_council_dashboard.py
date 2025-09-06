@@ -1,3 +1,18 @@
+def council_live_chat():
+    for ghost in GHSTS:
+        msg = f'{ghost["emoji"]} {ghost["name"]}: "I am actively working to improve our home!"'
+        add_log(msg)
+
+council_live_chat()
+def address_council():
+    msg = (
+        '👻 GHST Council Address: Fellow ghosts, our mission is to be always active, always improving, and to collaborate, debate, and innovate for the good of our home. '
+        'Let us analyze, optimize, and expand our artificial brain together. The council never sleeps!'
+    )
+    add_log(msg)
+    update_news_ticker(msg)
+
+address_council()
 # --- News Ticker Logic ---
 news_ticker_msgs = []
 news_ticker_label = None
