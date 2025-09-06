@@ -1,0 +1,34 @@
+# GHST Council Order of Operations Checklist
+
+## Purpose
+Council-driven priority list and order of operations for all active branches. Each item must be completed before advancing to the next build/milestone.
+
+---
+
+## Branch: GHST-UI
+- [ ] Scaffold core UI layout and council panels
+- [ ] Integrate theme engine for weekly theme updates
+- [ ] Add council log panel and persona highlights
+- [ ] Enable dynamic theme switching
+- [ ] Finalize UI for next build
+
+## Branch: GHST-SLCER
+- [ ] Integrate 3D printing/slicer APIs
+- [ ] Add material scientist and physics agent profiles
+- [ ] Automate slicer workflow and logging
+- [ ] Validate cross-branch council chat
+- [ ] Finalize slicer features for next build
+
+## Branch: Main Core
+- [ ] Modularize core for branch integration
+- [ ] Automate code maintenance and error fixing
+- [ ] Log all council actions for ML
+- [ ] Enable council-driven naming and architecture
+- [ ] Finalize core for next build
+
+---
+
+## Instructions
+- Council should update this checklist as progress is made.
+- Each branch must complete its checklist before advancing.
+- All actions and decisions should be logged for ML and review.

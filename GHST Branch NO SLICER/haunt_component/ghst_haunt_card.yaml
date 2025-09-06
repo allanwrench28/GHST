@@ -1,0 +1,16 @@
+type: custom:ghst-haunt-card
+name: GHST Haunt AI
+show_icon: true
+icon: mdi:ghost
+show_name: true
+show_state: true
+fields:
+  - name: Query
+    type: text
+    placeholder: "Ask the GHST AI..."
+  - name: Send
+    type: button
+    action: call-service
+    service: ghst_haunt.send_query
+    service_data:
+      query: "{{ states('input_text.ghst_haunt_query') }}"

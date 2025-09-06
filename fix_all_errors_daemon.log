@@ -1,0 +1,1132 @@
+2025-09-06 03:38:25,455 - INFO - 🚀 Dr. TidyCode running fix cycle
+2025-09-06 03:38:25,457 - INFO - (dry-run) Would install autopep8
+2025-09-06 03:38:25,457 - INFO - (dry-run) Would install isort
+2025-09-06 03:38:25,482 - INFO - 📁 Found 84 Python files to process
+2025-09-06 03:38:25,483 - INFO - 🔧 Fixing ghst_installer_beautiful.py
+2025-09-06 03:38:25,483 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 ghst_installer_beautiful.py
+2025-09-06 03:38:25,487 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as ghst_installer_beautiful.py
+2025-09-06 03:38:25,488 - INFO - 🔧 Fixing ghst_installer_enhanced.py
+2025-09-06 03:38:25,488 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 ghst_installer_enhanced.py
+2025-09-06 03:38:25,488 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as ghst_installer_enhanced.py
+2025-09-06 03:38:25,488 - INFO - 🔧 Fixing build_beautiful_optimized.py
+2025-09-06 03:38:25,488 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 build_beautiful_optimized.py
+2025-09-06 03:38:25,489 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as build_beautiful_optimized.py
+2025-09-06 03:38:25,489 - INFO - 🔧 Fixing release_manager.py
+2025-09-06 03:38:25,489 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 release_manager.py
+2025-09-06 03:38:25,489 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as release_manager.py
+2025-09-06 03:38:25,489 - INFO - 🔧 Fixing install_wizard.py
+2025-09-06 03:38:25,489 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 install_wizard.py
+2025-09-06 03:38:25,489 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as install_wizard.py
+2025-09-06 03:38:25,490 - INFO - 🔧 Fixing core\launcher.py
+2025-09-06 03:38:25,490 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\launcher.py
+2025-09-06 03:38:25,490 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\launcher.py
+2025-09-06 03:38:25,490 - INFO - 🔧 Fixing core\launch_gui.py
+2025-09-06 03:38:25,490 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\launch_gui.py
+2025-09-06 03:38:25,490 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\launch_gui.py
+2025-09-06 03:38:25,491 - INFO - 🔧 Fixing core\setup.py
+2025-09-06 03:38:25,491 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\setup.py
+2025-09-06 03:38:25,491 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\setup.py
+2025-09-06 03:38:25,491 - INFO - 🔧 Fixing core\scripts\ai_safety_check.py
+2025-09-06 03:38:25,491 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\scripts\ai_safety_check.py
+2025-09-06 03:38:25,491 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\scripts\ai_safety_check.py
+2025-09-06 03:38:25,491 - INFO - 🔧 Fixing core\scripts\check_license_headers.py
+2025-09-06 03:38:25,491 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\scripts\check_license_headers.py
+2025-09-06 03:38:25,492 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\scripts\check_license_headers.py
+2025-09-06 03:38:25,492 - INFO - 🔧 Fixing core\scripts\ghost_ethical_review.py
+2025-09-06 03:38:25,492 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\scripts\ghost_ethical_review.py
+2025-09-06 03:38:25,492 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\scripts\ghost_ethical_review.py
+2025-09-06 03:38:25,492 - INFO - 🔧 Fixing core\scripts\ghst_transform_engine.py
+2025-09-06 03:38:25,492 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\scripts\ghst_transform_engine.py
+2025-09-06 03:38:25,492 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\scripts\ghst_transform_engine.py
+2025-09-06 03:38:25,493 - INFO - 🔧 Fixing core\scripts\nightly_build.py
+2025-09-06 03:38:25,493 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\scripts\nightly_build.py
+2025-09-06 03:38:25,493 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\scripts\nightly_build.py
+2025-09-06 03:38:25,493 - INFO - 🔧 Fixing core\src\syntax_supervisors.py
+2025-09-06 03:38:25,493 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\syntax_supervisors.py
+2025-09-06 03:38:25,494 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\syntax_supervisors.py
+2025-09-06 03:38:25,494 - INFO - 🔧 Fixing core\src\ai_collaboration\error_handler.py
+2025-09-06 03:38:25,494 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\error_handler.py
+2025-09-06 03:38:25,494 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\error_handler.py
+2025-09-06 03:38:25,494 - INFO - 🔧 Fixing core\src\ai_collaboration\expert_classes.py
+2025-09-06 03:38:25,495 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\expert_classes.py
+2025-09-06 03:38:25,495 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\expert_classes.py
+2025-09-06 03:38:25,495 - INFO - 🔧 Fixing core\src\ai_collaboration\expert_manager.py
+2025-09-06 03:38:25,495 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\expert_manager.py
+2025-09-06 03:38:25,495 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\expert_manager.py
+2025-09-06 03:38:25,495 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:38:25,495 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:38:25,496 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:38:25,496 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:38:25,496 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:38:25,496 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:38:25,496 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:38:25,496 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:38:25,497 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:38:25,497 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:38:25,497 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:38:25,497 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:38:25,497 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:38:25,497 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:38:25,498 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:38:25,498 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:38:25,498 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:38:25,498 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:38:25,498 - INFO - 🔧 Fixing core\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:38:25,498 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:38:25,498 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:38:25,498 - INFO - 🔧 Fixing core\src\ai_collaboration\phd_think_tank.py
+2025-09-06 03:38:25,499 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\phd_think_tank.py
+2025-09-06 03:38:25,499 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\phd_think_tank.py
+2025-09-06 03:38:25,499 - INFO - 🔧 Fixing core\src\ai_collaboration\think_tank_gui.py
+2025-09-06 03:38:25,499 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\think_tank_gui.py
+2025-09-06 03:38:25,499 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\think_tank_gui.py
+2025-09-06 03:38:25,499 - INFO - 🔧 Fixing core\src\ai_collaboration\think_tank_integration.py
+2025-09-06 03:38:25,500 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ai_collaboration\think_tank_integration.py
+2025-09-06 03:38:25,500 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ai_collaboration\think_tank_integration.py
+2025-09-06 03:38:25,500 - INFO - 🔧 Fixing core\src\plugins\base_plugin.py
+2025-09-06 03:38:25,500 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\base_plugin.py
+2025-09-06 03:38:25,500 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\base_plugin.py
+2025-09-06 03:38:25,500 - INFO - 🔧 Fixing core\src\plugins\plugin_manager.py
+2025-09-06 03:38:25,500 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\plugin_manager.py
+2025-09-06 03:38:25,501 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\plugin_manager.py
+2025-09-06 03:38:25,501 - INFO - 🔧 Fixing core\src\plugins\__init__.py
+2025-09-06 03:38:25,501 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\__init__.py
+2025-09-06 03:38:25,501 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\__init__.py
+2025-09-06 03:38:25,502 - INFO - 🔧 Fixing core\src\ui_components\main.py
+2025-09-06 03:38:25,502 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ui_components\main.py
+2025-09-06 03:38:25,502 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ui_components\main.py
+2025-09-06 03:38:25,503 - INFO - 🔧 Fixing core\src\ui_components\orca_viewport.py
+2025-09-06 03:38:25,503 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ui_components\orca_viewport.py
+2025-09-06 03:38:25,503 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ui_components\orca_viewport.py
+2025-09-06 03:38:25,503 - INFO - 🔧 Fixing core\src\ui_themes\orca_components.py
+2025-09-06 03:38:25,503 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ui_themes\orca_components.py
+2025-09-06 03:38:25,504 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ui_themes\orca_components.py
+2025-09-06 03:38:25,504 - INFO - 🔧 Fixing core\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:38:25,504 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:38:25,504 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:38:25,505 - INFO - 🔧 Fixing core\src\utils\config_manager.py
+2025-09-06 03:38:25,505 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\utils\config_manager.py
+2025-09-06 03:38:25,505 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\utils\config_manager.py
+2025-09-06 03:38:25,505 - INFO - 🔧 Fixing core\src\plugins\builtin\code_analyzer.py
+2025-09-06 03:38:25,505 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\builtin\code_analyzer.py
+2025-09-06 03:38:25,506 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\builtin\code_analyzer.py
+2025-09-06 03:38:25,506 - INFO - 🔧 Fixing core\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:38:25,506 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:38:25,506 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:38:25,506 - INFO - 🔧 Fixing core\src\plugins\builtin\print_stats.py
+2025-09-06 03:38:25,507 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\builtin\print_stats.py
+2025-09-06 03:38:25,507 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\builtin\print_stats.py
+2025-09-06 03:38:25,507 - INFO - 🔧 Fixing core\src\plugins\builtin\project_stats.py
+2025-09-06 03:38:25,507 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\builtin\project_stats.py
+2025-09-06 03:38:25,507 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\builtin\project_stats.py
+2025-09-06 03:38:25,508 - INFO - 🔧 Fixing core\src\plugins\builtin\__init__.py
+2025-09-06 03:38:25,508 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\src\plugins\builtin\__init__.py
+2025-09-06 03:38:25,508 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\src\plugins\builtin\__init__.py
+2025-09-06 03:38:25,509 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\launcher.py
+2025-09-06 03:38:25,509 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\launcher.py
+2025-09-06 03:38:25,509 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\launcher.py
+2025-09-06 03:38:25,510 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\launch_gui.py
+2025-09-06 03:38:25,510 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\launch_gui.py
+2025-09-06 03:38:25,510 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\launch_gui.py
+2025-09-06 03:38:25,511 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\setup.py
+2025-09-06 03:38:25,511 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\setup.py
+2025-09-06 03:38:25,511 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\setup.py
+2025-09-06 03:38:25,511 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ai_safety_check.py
+2025-09-06 03:38:25,512 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\scripts\ai_safety_check.py
+2025-09-06 03:38:25,512 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\scripts\ai_safety_check.py
+2025-09-06 03:38:25,512 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\check_license_headers.py
+2025-09-06 03:38:25,512 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\scripts\check_license_headers.py
+2025-09-06 03:38:25,512 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\scripts\check_license_headers.py
+2025-09-06 03:38:25,512 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ghost_ethical_review.py
+2025-09-06 03:38:25,513 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\scripts\ghost_ethical_review.py
+2025-09-06 03:38:25,513 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\scripts\ghost_ethical_review.py
+2025-09-06 03:38:25,513 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ghst_transform_engine.py
+2025-09-06 03:38:25,513 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\scripts\ghst_transform_engine.py
+2025-09-06 03:38:25,514 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\scripts\ghst_transform_engine.py
+2025-09-06 03:38:25,514 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\nightly_build.py
+2025-09-06 03:38:25,514 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\scripts\nightly_build.py
+2025-09-06 03:38:25,514 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\scripts\nightly_build.py
+2025-09-06 03:38:25,514 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\syntax_supervisors.py
+2025-09-06 03:38:25,515 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\syntax_supervisors.py
+2025-09-06 03:38:25,515 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\syntax_supervisors.py
+2025-09-06 03:38:25,515 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\error_handler.py
+2025-09-06 03:38:25,515 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\error_handler.py
+2025-09-06 03:38:25,515 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\error_handler.py
+2025-09-06 03:38:25,515 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_classes.py
+2025-09-06 03:38:25,516 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_classes.py
+2025-09-06 03:38:25,516 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_classes.py
+2025-09-06 03:38:25,516 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_manager.py
+2025-09-06 03:38:25,516 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_manager.py
+2025-09-06 03:38:25,517 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_manager.py
+2025-09-06 03:38:25,517 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:38:25,517 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:38:25,517 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:38:25,517 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:38:25,517 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:38:25,518 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:38:25,518 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:38:25,518 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:38:25,518 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:38:25,518 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:38:25,519 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:38:25,519 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:38:25,519 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:38:25,519 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:38:25,519 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:38:25,519 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:38:25,520 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:38:25,520 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:38:25,520 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:38:25,520 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:38:25,520 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:38:25,520 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\base_plugin.py
+2025-09-06 03:38:25,521 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\plugins\base_plugin.py
+2025-09-06 03:38:25,521 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\plugins\base_plugin.py
+2025-09-06 03:38:25,521 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\plugin_manager.py
+2025-09-06 03:38:25,521 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\plugins\plugin_manager.py
+2025-09-06 03:38:25,521 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\plugins\plugin_manager.py
+2025-09-06 03:38:25,521 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\__init__.py
+2025-09-06 03:38:25,521 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\plugins\__init__.py
+2025-09-06 03:38:25,521 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\plugins\__init__.py
+2025-09-06 03:38:25,522 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_components\main.py
+2025-09-06 03:38:25,522 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ui_components\main.py
+2025-09-06 03:38:25,522 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ui_components\main.py
+2025-09-06 03:38:25,522 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_components\orca_viewport.py
+2025-09-06 03:38:25,522 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ui_components\orca_viewport.py
+2025-09-06 03:38:25,522 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ui_components\orca_viewport.py
+2025-09-06 03:38:25,522 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_components.py
+2025-09-06 03:38:25,523 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_components.py
+2025-09-06 03:38:25,523 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_components.py
+2025-09-06 03:38:25,523 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:38:25,523 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:38:25,523 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:38:25,524 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\utils\config_manager.py
+2025-09-06 03:38:25,524 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\utils\config_manager.py
+2025-09-06 03:38:25,524 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\utils\config_manager.py
+2025-09-06 03:38:25,524 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:38:25,524 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:38:25,524 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:38:25,525 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\print_stats.py
+2025-09-06 03:38:25,525 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\print_stats.py
+2025-09-06 03:38:25,525 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\print_stats.py
+2025-09-06 03:38:25,525 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\__init__.py
+2025-09-06 03:38:25,525 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\__init__.py
+2025-09-06 03:38:25,525 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\__init__.py
+2025-09-06 03:38:25,525 - INFO - 🔧 Fixing scripts\ghst_auto_backup.py
+2025-09-06 03:38:25,526 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 scripts\ghst_auto_backup.py
+2025-09-06 03:38:25,526 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as scripts\ghst_auto_backup.py
+2025-09-06 03:38:25,526 - INFO - 🔧 Fixing scripts\ghst_auto_continue.py
+2025-09-06 03:38:25,526 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 scripts\ghst_auto_continue.py
+2025-09-06 03:38:25,526 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as scripts\ghst_auto_continue.py
+2025-09-06 03:38:25,526 - INFO - 🔧 Fixing scripts\simple_auto_continue.py
+2025-09-06 03:38:25,526 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 scripts\simple_auto_continue.py
+2025-09-06 03:38:25,527 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as scripts\simple_auto_continue.py
+2025-09-06 03:38:25,527 - INFO - 🔧 Fixing auto_commit_daemon.py
+2025-09-06 03:38:25,527 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 auto_commit_daemon.py
+2025-09-06 03:38:25,527 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as auto_commit_daemon.py
+2025-09-06 03:38:25,527 - INFO - 🔧 Fixing build_beautiful_exe.py
+2025-09-06 03:38:25,528 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 build_beautiful_exe.py
+2025-09-06 03:38:25,528 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as build_beautiful_exe.py
+2025-09-06 03:38:25,528 - INFO - 🔧 Fixing build_exe.py
+2025-09-06 03:38:25,528 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 build_exe.py
+2025-09-06 03:38:25,528 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as build_exe.py
+2025-09-06 03:38:25,528 - INFO - 🔧 Fixing build_exe_clean.py
+2025-09-06 03:38:25,529 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 build_exe_clean.py
+2025-09-06 03:38:25,529 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as build_exe_clean.py
+2025-09-06 03:38:25,529 - INFO - 🔧 Fixing codebase_cleanup_daemon.py
+2025-09-06 03:38:25,529 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 codebase_cleanup_daemon.py
+2025-09-06 03:38:25,529 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as codebase_cleanup_daemon.py
+2025-09-06 03:38:25,530 - INFO - 🔧 Fixing fix_all_errors.py
+2025-09-06 03:38:25,530 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 fix_all_errors.py
+2025-09-06 03:38:25,530 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as fix_all_errors.py
+2025-09-06 03:38:25,530 - INFO - 🔧 Fixing launch_think_tank.py
+2025-09-06 03:38:25,530 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 launch_think_tank.py
+2025-09-06 03:38:25,531 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as launch_think_tank.py
+2025-09-06 03:38:25,531 - INFO - 🔧 Fixing smart_auto_commit.py
+2025-09-06 03:38:25,531 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 smart_auto_commit.py
+2025-09-06 03:38:25,531 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as smart_auto_commit.py
+2025-09-06 03:38:25,531 - INFO - 🔧 Fixing test_ghst_system.py
+2025-09-06 03:38:25,531 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 test_ghst_system.py
+2025-09-06 03:38:25,531 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as test_ghst_system.py
+2025-09-06 03:38:25,532 - INFO - 🔧 Fixing ultimate_code_cleaner.py
+2025-09-06 03:38:25,532 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 ultimate_code_cleaner.py
+2025-09-06 03:38:25,532 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as ultimate_code_cleaner.py
+2025-09-06 03:38:25,532 - INFO - 🔧 Fixing vscode_startup.py
+2025-09-06 03:38:25,532 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m autopep8 --in-place --aggressive --aggressive --max-line-length=79 vscode_startup.py
+2025-09-06 03:38:25,532 - INFO - (dry-run) Would run: C:\Users\allan\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe -m isort --line-length=79 --multi-line=3 --trailing-comma --combine-as vscode_startup.py
+2025-09-06 03:38:25,532 - INFO - ✅ Completed cycle: 84/84 files processed
+2025-09-06 03:40:00,882 - INFO - 🚀 Dr. TidyCode running fix cycle
+2025-09-06 03:40:00,883 - INFO - 📦 Installing autopep8...
+2025-09-06 03:40:03,317 - INFO - ✅ autopep8 installed
+2025-09-06 03:40:03,317 - INFO - 📦 Installing isort...
+2025-09-06 03:40:06,354 - INFO - ✅ isort installed
+2025-09-06 03:40:06,383 - INFO - 📁 Found 84 Python files to process
+2025-09-06 03:40:06,383 - INFO - 🔧 Fixing ghst_installer_beautiful.py
+2025-09-06 03:40:06,548 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:07,056 - INFO -   ✅ isort applied
+2025-09-06 03:40:07,056 - INFO - 🔧 Fixing ghst_installer_enhanced.py
+2025-09-06 03:40:07,213 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:07,427 - INFO -   ✅ isort applied
+2025-09-06 03:40:07,427 - INFO - 🔧 Fixing build_beautiful_optimized.py
+2025-09-06 03:40:07,586 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:07,807 - INFO -   ✅ isort applied
+2025-09-06 03:40:07,807 - INFO - 🔧 Fixing release_manager.py
+2025-09-06 03:40:07,969 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:08,365 - INFO - 🚀 Dr. TidyCode running fix cycle
+2025-09-06 03:40:08,367 - INFO - 📦 Installing autopep8...
+2025-09-06 03:40:10,083 - INFO - ✅ autopep8 installed
+2025-09-06 03:40:10,083 - INFO - 📦 Installing isort...
+2025-09-06 03:40:11,701 - INFO - ✅ isort installed
+2025-09-06 03:40:11,726 - INFO - 📁 Found 84 Python files to process
+2025-09-06 03:40:11,726 - INFO - 🔧 Fixing ghst_installer_beautiful.py
+2025-09-06 03:40:11,885 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:12,171 - INFO -   ✅ isort applied
+2025-09-06 03:40:12,171 - INFO - 🔧 Fixing ghst_installer_enhanced.py
+2025-09-06 03:40:12,353 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:12,641 - INFO -   ✅ isort applied
+2025-09-06 03:40:12,641 - INFO - 🔧 Fixing build_beautiful_optimized.py
+2025-09-06 03:40:12,823 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:13,101 - INFO -   ✅ isort applied
+2025-09-06 03:40:13,101 - INFO - 🔧 Fixing release_manager.py
+2025-09-06 03:40:13,295 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:13,560 - INFO -   ✅ isort applied
+2025-09-06 03:40:13,561 - INFO - 🔧 Fixing install_wizard.py
+2025-09-06 03:40:13,726 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:13,986 - INFO -   ✅ isort applied
+2025-09-06 03:40:13,986 - INFO - 🔧 Fixing core\launcher.py
+2025-09-06 03:40:14,200 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:14,457 - INFO -   ✅ isort applied
+2025-09-06 03:40:14,457 - INFO - 🔧 Fixing core\launch_gui.py
+2025-09-06 03:40:14,610 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:14,853 - INFO -   ✅ isort applied
+2025-09-06 03:40:14,854 - INFO - 🔧 Fixing core\setup.py
+2025-09-06 03:40:15,020 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:15,254 - INFO -   ✅ isort applied
+2025-09-06 03:40:15,254 - INFO - 🔧 Fixing core\scripts\ai_safety_check.py
+2025-09-06 03:40:15,443 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:15,675 - INFO -   ✅ isort applied
+2025-09-06 03:40:15,675 - INFO - 🔧 Fixing core\scripts\check_license_headers.py
+2025-09-06 03:40:15,852 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:16,087 - INFO -   ✅ isort applied
+2025-09-06 03:40:16,088 - INFO - 🔧 Fixing core\scripts\ghost_ethical_review.py
+2025-09-06 03:40:16,255 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:16,483 - INFO -   ✅ isort applied
+2025-09-06 03:40:16,483 - INFO - 🔧 Fixing core\scripts\ghst_transform_engine.py
+2025-09-06 03:40:16,625 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:16,837 - INFO -   ✅ isort applied
+2025-09-06 03:40:16,837 - INFO - 🔧 Fixing core\scripts\nightly_build.py
+2025-09-06 03:40:17,033 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:17,265 - INFO -   ✅ isort applied
+2025-09-06 03:40:17,265 - INFO - 🔧 Fixing core\src\syntax_supervisors.py
+2025-09-06 03:40:17,487 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:17,719 - INFO -   ✅ isort applied
+2025-09-06 03:40:17,719 - INFO - 🔧 Fixing core\src\ai_collaboration\error_handler.py
+2025-09-06 03:40:17,895 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:18,165 - INFO -   ✅ isort applied
+2025-09-06 03:40:18,165 - INFO - 🔧 Fixing core\src\ai_collaboration\expert_classes.py
+2025-09-06 03:40:18,363 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:18,587 - INFO -   ✅ isort applied
+2025-09-06 03:40:18,587 - INFO - 🔧 Fixing core\src\ai_collaboration\expert_manager.py
+2025-09-06 03:40:18,801 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:19,038 - INFO -   ✅ isort applied
+2025-09-06 03:40:19,038 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:40:19,207 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:19,438 - INFO -   ✅ isort applied
+2025-09-06 03:40:19,438 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:40:19,577 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:19,794 - INFO -   ✅ isort applied
+2025-09-06 03:40:19,795 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:40:19,946 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:20,155 - INFO -   ✅ isort applied
+2025-09-06 03:40:20,156 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:40:20,299 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:20,512 - INFO -   ✅ isort applied
+2025-09-06 03:40:20,513 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:40:20,782 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:21,102 - INFO -   ✅ isort applied
+2025-09-06 03:40:21,102 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:40:21,255 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:21,476 - INFO -   ✅ isort applied
+2025-09-06 03:40:21,476 - INFO - 🔧 Fixing core\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:40:21,626 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:21,835 - INFO -   ✅ isort applied
+2025-09-06 03:40:21,836 - INFO - 🔧 Fixing core\src\ai_collaboration\phd_think_tank.py
+2025-09-06 03:40:22,436 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:22,669 - INFO -   ✅ isort applied
+2025-09-06 03:40:22,669 - INFO - 🔧 Fixing core\src\ai_collaboration\think_tank_gui.py
+2025-09-06 03:40:23,038 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:23,309 - INFO -   ✅ isort applied
+2025-09-06 03:40:23,309 - INFO - 🔧 Fixing core\src\ai_collaboration\think_tank_integration.py
+2025-09-06 03:40:23,595 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:23,818 - INFO -   ✅ isort applied
+2025-09-06 03:40:23,819 - INFO - 🔧 Fixing core\src\plugins\base_plugin.py
+2025-09-06 03:40:23,977 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:24,217 - INFO -   ✅ isort applied
+2025-09-06 03:40:24,218 - INFO - 🔧 Fixing core\src\plugins\plugin_manager.py
+2025-09-06 03:40:24,395 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:24,627 - INFO -   ✅ isort applied
+2025-09-06 03:40:24,628 - INFO - 🔧 Fixing core\src\plugins\__init__.py
+2025-09-06 03:40:24,772 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:24,987 - INFO -   ✅ isort applied
+2025-09-06 03:40:24,987 - INFO - 🔧 Fixing core\src\ui_components\main.py
+2025-09-06 03:40:25,201 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:25,495 - INFO -   ✅ isort applied
+2025-09-06 03:40:25,496 - INFO - 🔧 Fixing core\src\ui_components\orca_viewport.py
+2025-09-06 03:40:25,685 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:26,001 - INFO -   ✅ isort applied
+2025-09-06 03:40:26,001 - INFO - 🔧 Fixing core\src\ui_themes\orca_components.py
+2025-09-06 03:40:26,141 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:26,356 - INFO -   ✅ isort applied
+2025-09-06 03:40:26,356 - INFO - 🔧 Fixing core\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:40:26,495 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:26,732 - INFO -   ✅ isort applied
+2025-09-06 03:40:26,733 - INFO - 🔧 Fixing core\src\utils\config_manager.py
+2025-09-06 03:40:26,989 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:27,226 - INFO -   ✅ isort applied
+2025-09-06 03:40:27,226 - INFO - 🔧 Fixing core\src\plugins\builtin\code_analyzer.py
+2025-09-06 03:40:27,416 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:27,678 - INFO -   ✅ isort applied
+2025-09-06 03:40:27,678 - INFO - 🔧 Fixing core\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:40:27,854 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:28,083 - INFO -   ✅ isort applied
+2025-09-06 03:40:28,083 - INFO - 🔧 Fixing core\src\plugins\builtin\print_stats.py
+2025-09-06 03:40:28,250 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:28,481 - INFO -   ✅ isort applied
+2025-09-06 03:40:28,482 - INFO - 🔧 Fixing core\src\plugins\builtin\project_stats.py
+2025-09-06 03:40:28,642 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:28,866 - INFO -   ✅ isort applied
+2025-09-06 03:40:28,866 - INFO - 🔧 Fixing core\src\plugins\builtin\__init__.py
+2025-09-06 03:40:29,009 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:29,260 - INFO -   ✅ isort applied
+2025-09-06 03:40:29,260 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\launcher.py
+2025-09-06 03:40:29,417 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:29,671 - INFO -   ✅ isort applied
+2025-09-06 03:40:29,671 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\launch_gui.py
+2025-09-06 03:40:29,822 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:30,043 - INFO -   ✅ isort applied
+2025-09-06 03:40:30,043 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\setup.py
+2025-09-06 03:40:30,202 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:30,434 - INFO -   ✅ isort applied
+2025-09-06 03:40:30,434 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ai_safety_check.py
+2025-09-06 03:40:30,757 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:30,997 - INFO -   ✅ isort applied
+2025-09-06 03:40:30,997 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\check_license_headers.py
+2025-09-06 03:40:31,316 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:31,579 - INFO -   ✅ isort applied
+2025-09-06 03:40:31,580 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ghost_ethical_review.py
+2025-09-06 03:40:31,820 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:32,057 - INFO -   ✅ isort applied
+2025-09-06 03:40:32,057 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ghst_transform_engine.py
+2025-09-06 03:40:32,371 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:32,612 - INFO -   ✅ isort applied
+2025-09-06 03:40:32,612 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\nightly_build.py
+2025-09-06 03:40:32,837 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:33,073 - INFO -   ✅ isort applied
+2025-09-06 03:40:33,073 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\syntax_supervisors.py
+2025-09-06 03:40:33,470 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:33,762 - INFO -   ✅ isort applied
+2025-09-06 03:40:33,762 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\error_handler.py
+2025-09-06 03:40:34,264 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:34,508 - INFO -   ✅ isort applied
+2025-09-06 03:40:34,508 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_classes.py
+2025-09-06 03:40:34,772 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:35,009 - INFO -   ✅ isort applied
+2025-09-06 03:40:35,009 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_manager.py
+2025-09-06 03:40:35,774 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:36,019 - INFO -   ✅ isort applied
+2025-09-06 03:40:36,019 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:40:36,287 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:36,538 - INFO -   ✅ isort applied
+2025-09-06 03:40:36,539 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:40:36,704 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:36,919 - INFO -   ✅ isort applied
+2025-09-06 03:40:36,919 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:40:37,057 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:37,301 - INFO -   ✅ isort applied
+2025-09-06 03:40:37,301 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:40:37,472 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:37,753 - INFO -   ✅ isort applied
+2025-09-06 03:40:37,753 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:40:37,916 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:38,128 - INFO -   ✅ isort applied
+2025-09-06 03:40:38,128 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:40:38,266 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:38,485 - INFO -   ✅ isort applied
+2025-09-06 03:40:38,485 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:40:38,623 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:38,827 - INFO -   ✅ isort applied
+2025-09-06 03:40:38,828 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\base_plugin.py
+2025-09-06 03:40:39,014 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:39,246 - INFO -   ✅ isort applied
+2025-09-06 03:40:39,247 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\plugin_manager.py
+2025-09-06 03:40:39,576 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:39,838 - INFO -   ✅ isort applied
+2025-09-06 03:40:39,839 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\__init__.py
+2025-09-06 03:40:40,013 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:40,266 - INFO -   ✅ isort applied
+2025-09-06 03:40:40,266 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_components\main.py
+2025-09-06 03:40:40,616 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:40,889 - INFO -   ✅ isort applied
+2025-09-06 03:40:40,889 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_components\orca_viewport.py
+2025-09-06 03:40:41,029 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:41,241 - INFO -   ✅ isort applied
+2025-09-06 03:40:41,241 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_components.py
+2025-09-06 03:40:41,375 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:41,591 - INFO -   ✅ isort applied
+2025-09-06 03:40:41,591 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:40:41,742 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:41,953 - INFO -   ✅ isort applied
+2025-09-06 03:40:41,953 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\utils\config_manager.py
+2025-09-06 03:40:42,463 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:42,721 - INFO -   ✅ isort applied
+2025-09-06 03:40:42,721 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:40:42,992 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:43,229 - INFO -   ✅ isort applied
+2025-09-06 03:40:43,229 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\print_stats.py
+2025-09-06 03:40:43,470 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:43,700 - INFO -   ✅ isort applied
+2025-09-06 03:40:43,700 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\__init__.py
+2025-09-06 03:40:43,850 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:44,076 - INFO -   ✅ isort applied
+2025-09-06 03:40:44,076 - INFO - 🔧 Fixing scripts\ghst_auto_backup.py
+2025-09-06 03:40:44,235 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:44,465 - INFO -   ✅ isort applied
+2025-09-06 03:40:44,465 - INFO - 🔧 Fixing scripts\ghst_auto_continue.py
+2025-09-06 03:40:44,619 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:44,846 - INFO -   ✅ isort applied
+2025-09-06 03:40:44,846 - INFO - 🔧 Fixing scripts\simple_auto_continue.py
+2025-09-06 03:40:45,032 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:45,258 - INFO -   ✅ isort applied
+2025-09-06 03:40:45,258 - INFO - 🔧 Fixing auto_commit_daemon.py
+2025-09-06 03:40:45,644 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:45,904 - INFO -   ✅ isort applied
+2025-09-06 03:40:45,904 - INFO - 🔧 Fixing build_beautiful_exe.py
+2025-09-06 03:40:46,077 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:46,357 - INFO -   ✅ isort applied
+2025-09-06 03:40:46,357 - INFO - 🔧 Fixing build_exe.py
+2025-09-06 03:40:46,563 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:46,797 - INFO -   ✅ isort applied
+2025-09-06 03:40:46,798 - INFO - 🔧 Fixing build_exe_clean.py
+2025-09-06 03:40:47,011 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:47,246 - INFO -   ✅ isort applied
+2025-09-06 03:40:47,247 - INFO - 🔧 Fixing codebase_cleanup_daemon.py
+2025-09-06 03:40:47,736 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:47,985 - INFO -   ✅ isort applied
+2025-09-06 03:40:47,985 - INFO - 🔧 Fixing fix_all_errors.py
+2025-09-06 03:40:48,165 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:48,433 - INFO -   ✅ isort applied
+2025-09-06 03:40:48,433 - INFO - 🔧 Fixing launch_think_tank.py
+2025-09-06 03:40:48,640 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:48,880 - INFO -   ✅ isort applied
+2025-09-06 03:40:48,881 - INFO - 🔧 Fixing smart_auto_commit.py
+2025-09-06 03:40:49,241 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:49,470 - INFO -   ✅ isort applied
+2025-09-06 03:40:49,470 - INFO - 🔧 Fixing test_ghst_system.py
+2025-09-06 03:40:49,656 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:49,896 - INFO -   ✅ isort applied
+2025-09-06 03:40:49,896 - INFO - 🔧 Fixing ultimate_code_cleaner.py
+2025-09-06 03:40:50,067 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:50,289 - INFO -   ✅ isort applied
+2025-09-06 03:40:50,290 - INFO - 🔧 Fixing vscode_startup.py
+2025-09-06 03:40:50,484 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:50,715 - INFO -   ✅ isort applied
+2025-09-06 03:40:50,716 - INFO - ✅ Completed cycle: 84/84 files processed
+2025-09-06 03:40:50,957 - INFO - 🚀 Dr. TidyCode running fix cycle
+2025-09-06 03:40:50,959 - INFO - 📦 Installing autopep8...
+2025-09-06 03:40:52,572 - INFO - ✅ autopep8 installed
+2025-09-06 03:40:52,572 - INFO - 📦 Installing isort...
+2025-09-06 03:40:54,165 - INFO - ✅ isort installed
+2025-09-06 03:40:54,189 - INFO - 📁 Found 84 Python files to process
+2025-09-06 03:40:54,189 - INFO - 🔧 Fixing ghst_installer_beautiful.py
+2025-09-06 03:40:54,332 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:54,541 - INFO -   ✅ isort applied
+2025-09-06 03:40:54,541 - INFO - 🔧 Fixing ghst_installer_enhanced.py
+2025-09-06 03:40:54,687 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:54,906 - INFO -   ✅ isort applied
+2025-09-06 03:40:54,907 - INFO - 🔧 Fixing build_beautiful_optimized.py
+2025-09-06 03:40:55,088 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:55,295 - INFO -   ✅ isort applied
+2025-09-06 03:40:55,295 - INFO - 🔧 Fixing release_manager.py
+2025-09-06 03:40:55,439 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:55,640 - INFO -   ✅ isort applied
+2025-09-06 03:40:55,640 - INFO - 🔧 Fixing install_wizard.py
+2025-09-06 03:40:55,772 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:55,975 - INFO -   ✅ isort applied
+2025-09-06 03:40:55,976 - INFO - 🔧 Fixing core\launcher.py
+2025-09-06 03:40:56,139 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:56,350 - INFO -   ✅ isort applied
+2025-09-06 03:40:56,350 - INFO - 🔧 Fixing core\launch_gui.py
+2025-09-06 03:40:56,484 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:56,701 - INFO -   ✅ isort applied
+2025-09-06 03:40:56,702 - INFO - 🔧 Fixing core\setup.py
+2025-09-06 03:40:56,858 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:57,089 - INFO -   ✅ isort applied
+2025-09-06 03:40:57,089 - INFO - 🔧 Fixing core\scripts\ai_safety_check.py
+2025-09-06 03:40:57,266 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:57,503 - INFO -   ✅ isort applied
+2025-09-06 03:40:57,504 - INFO - 🔧 Fixing core\scripts\check_license_headers.py
+2025-09-06 03:40:57,650 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:57,858 - INFO -   ✅ isort applied
+2025-09-06 03:40:57,858 - INFO - 🔧 Fixing core\scripts\ghost_ethical_review.py
+2025-09-06 03:40:58,000 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:58,204 - INFO -   ✅ isort applied
+2025-09-06 03:40:58,205 - INFO - 🔧 Fixing core\scripts\ghst_transform_engine.py
+2025-09-06 03:40:58,335 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:58,534 - INFO -   ✅ isort applied
+2025-09-06 03:40:58,535 - INFO - 🔧 Fixing core\scripts\nightly_build.py
+2025-09-06 03:40:58,693 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:58,896 - INFO -   ✅ isort applied
+2025-09-06 03:40:58,896 - INFO - 🔧 Fixing core\src\syntax_supervisors.py
+2025-09-06 03:40:59,063 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:59,263 - INFO -   ✅ isort applied
+2025-09-06 03:40:59,263 - INFO - 🔧 Fixing core\src\ai_collaboration\error_handler.py
+2025-09-06 03:40:59,409 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:59,606 - INFO -   ✅ isort applied
+2025-09-06 03:40:59,607 - INFO - 🔧 Fixing core\src\ai_collaboration\expert_classes.py
+2025-09-06 03:40:59,758 - INFO -   ✅ autopep8 applied
+2025-09-06 03:40:59,954 - INFO -   ✅ isort applied
+2025-09-06 03:40:59,955 - INFO - 🔧 Fixing core\src\ai_collaboration\expert_manager.py
+2025-09-06 03:41:00,120 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:00,325 - INFO -   ✅ isort applied
+2025-09-06 03:41:00,325 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:41:00,463 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:00,670 - INFO -   ✅ isort applied
+2025-09-06 03:41:00,670 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:41:00,794 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:00,984 - INFO -   ✅ isort applied
+2025-09-06 03:41:00,984 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:41:01,111 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:01,300 - INFO -   ✅ isort applied
+2025-09-06 03:41:01,301 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:41:01,431 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:01,630 - INFO -   ✅ isort applied
+2025-09-06 03:41:01,630 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:41:01,800 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:02,009 - INFO -   ✅ isort applied
+2025-09-06 03:41:02,009 - INFO - 🔧 Fixing core\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:41:02,136 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:02,328 - INFO -   ✅ isort applied
+2025-09-06 03:41:02,329 - INFO - 🔧 Fixing core\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:41:02,458 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:02,647 - INFO -   ✅ isort applied
+2025-09-06 03:41:02,647 - INFO - 🔧 Fixing core\src\ai_collaboration\phd_think_tank.py
+2025-09-06 03:41:02,862 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:03,066 - INFO -   ✅ isort applied
+2025-09-06 03:41:03,066 - INFO - 🔧 Fixing core\src\ai_collaboration\think_tank_gui.py
+2025-09-06 03:41:03,236 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:03,440 - INFO -   ✅ isort applied
+2025-09-06 03:41:03,441 - INFO - 🔧 Fixing core\src\ai_collaboration\think_tank_integration.py
+2025-09-06 03:41:03,585 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:03,786 - INFO -   ✅ isort applied
+2025-09-06 03:41:03,787 - INFO - 🔧 Fixing core\src\plugins\base_plugin.py
+2025-09-06 03:41:03,922 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:04,121 - INFO -   ✅ isort applied
+2025-09-06 03:41:04,121 - INFO - 🔧 Fixing core\src\plugins\plugin_manager.py
+2025-09-06 03:41:04,262 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:04,465 - INFO -   ✅ isort applied
+2025-09-06 03:41:04,466 - INFO - 🔧 Fixing core\src\plugins\__init__.py
+2025-09-06 03:41:04,588 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:04,788 - INFO -   ✅ isort applied
+2025-09-06 03:41:04,788 - INFO - 🔧 Fixing core\src\ui_components\main.py
+2025-09-06 03:41:04,950 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:05,152 - INFO -   ✅ isort applied
+2025-09-06 03:41:05,152 - INFO - 🔧 Fixing core\src\ui_components\orca_viewport.py
+2025-09-06 03:41:05,276 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:05,471 - INFO -   ✅ isort applied
+2025-09-06 03:41:05,471 - INFO - 🔧 Fixing core\src\ui_themes\orca_components.py
+2025-09-06 03:41:05,595 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:05,792 - INFO -   ✅ isort applied
+2025-09-06 03:41:05,793 - INFO - 🔧 Fixing core\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:41:05,917 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:06,111 - INFO -   ✅ isort applied
+2025-09-06 03:41:06,111 - INFO - 🔧 Fixing core\src\utils\config_manager.py
+2025-09-06 03:41:06,329 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:06,537 - INFO -   ✅ isort applied
+2025-09-06 03:41:06,537 - INFO - 🔧 Fixing core\src\plugins\builtin\code_analyzer.py
+2025-09-06 03:41:06,672 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:06,867 - INFO -   ✅ isort applied
+2025-09-06 03:41:06,867 - INFO - 🔧 Fixing core\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:41:07,000 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:07,196 - INFO -   ✅ isort applied
+2025-09-06 03:41:07,197 - INFO - 🔧 Fixing core\src\plugins\builtin\print_stats.py
+2025-09-06 03:41:07,333 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:07,534 - INFO -   ✅ isort applied
+2025-09-06 03:41:07,534 - INFO - 🔧 Fixing core\src\plugins\builtin\project_stats.py
+2025-09-06 03:41:07,665 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:07,869 - INFO -   ✅ isort applied
+2025-09-06 03:41:07,869 - INFO - 🔧 Fixing core\src\plugins\builtin\__init__.py
+2025-09-06 03:41:07,996 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:08,188 - INFO -   ✅ isort applied
+2025-09-06 03:41:08,189 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\launcher.py
+2025-09-06 03:41:08,338 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:08,540 - INFO -   ✅ isort applied
+2025-09-06 03:41:08,540 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\launch_gui.py
+2025-09-06 03:41:08,676 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:08,872 - INFO -   ✅ isort applied
+2025-09-06 03:41:08,873 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\setup.py
+2025-09-06 03:41:09,025 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:09,225 - INFO -   ✅ isort applied
+2025-09-06 03:41:09,225 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ai_safety_check.py
+2025-09-06 03:41:09,398 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:09,597 - INFO -   ✅ isort applied
+2025-09-06 03:41:09,598 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\check_license_headers.py
+2025-09-06 03:41:09,752 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:09,949 - INFO -   ✅ isort applied
+2025-09-06 03:41:09,949 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ghost_ethical_review.py
+2025-09-06 03:41:10,099 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:10,298 - INFO -   ✅ isort applied
+2025-09-06 03:41:10,298 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\ghst_transform_engine.py
+2025-09-06 03:41:10,466 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:10,680 - INFO -   ✅ isort applied
+2025-09-06 03:41:10,681 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\scripts\nightly_build.py
+2025-09-06 03:41:10,843 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:11,053 - INFO -   ✅ isort applied
+2025-09-06 03:41:11,053 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\syntax_supervisors.py
+2025-09-06 03:41:11,240 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:11,442 - INFO -   ✅ isort applied
+2025-09-06 03:41:11,443 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\error_handler.py
+2025-09-06 03:41:11,638 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:11,856 - INFO -   ✅ isort applied
+2025-09-06 03:41:11,856 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_classes.py
+2025-09-06 03:41:12,035 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:12,263 - INFO -   ✅ isort applied
+2025-09-06 03:41:12,263 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\expert_manager.py
+2025-09-06 03:41:12,534 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:12,742 - INFO -   ✅ isort applied
+2025-09-06 03:41:12,743 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_chat.py
+2025-09-06 03:41:12,904 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:13,107 - INFO -   ✅ isort applied
+2025-09-06 03:41:13,108 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_generator.py
+2025-09-06 03:41:13,237 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:13,428 - INFO -   ✅ isort applied
+2025-09-06 03:41:13,428 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_gui_control.py
+2025-09-06 03:41:13,554 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:13,745 - INFO -   ✅ isort applied
+2025-09-06 03:41:13,745 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_internet.py
+2025-09-06 03:41:13,871 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:14,065 - INFO -   ✅ isort applied
+2025-09-06 03:41:14,066 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_manager.py
+2025-09-06 03:41:14,191 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:14,382 - INFO -   ✅ isort applied
+2025-09-06 03:41:14,382 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\ghost_stl_generator.py
+2025-09-06 03:41:14,510 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:14,698 - INFO -   ✅ isort applied
+2025-09-06 03:41:14,698 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ai_collaboration\gpt_chat.py
+2025-09-06 03:41:14,825 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:15,021 - INFO -   ✅ isort applied
+2025-09-06 03:41:15,021 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\base_plugin.py
+2025-09-06 03:41:15,169 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:15,395 - INFO -   ✅ isort applied
+2025-09-06 03:41:15,395 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\plugin_manager.py
+2025-09-06 03:41:15,625 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:15,830 - INFO -   ✅ isort applied
+2025-09-06 03:41:15,831 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\__init__.py
+2025-09-06 03:41:15,962 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:16,153 - INFO -   ✅ isort applied
+2025-09-06 03:41:16,153 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_components\main.py
+2025-09-06 03:41:16,316 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:16,512 - INFO -   ✅ isort applied
+2025-09-06 03:41:16,513 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_components\orca_viewport.py
+2025-09-06 03:41:16,638 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:16,828 - INFO -   ✅ isort applied
+2025-09-06 03:41:16,828 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_components.py
+2025-09-06 03:41:16,952 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:17,141 - INFO -   ✅ isort applied
+2025-09-06 03:41:17,141 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\ui_themes\orca_theme_engine.py
+2025-09-06 03:41:17,264 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:17,455 - INFO -   ✅ isort applied
+2025-09-06 03:41:17,455 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\utils\config_manager.py
+2025-09-06 03:41:17,659 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:17,865 - INFO -   ✅ isort applied
+2025-09-06 03:41:17,865 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\gcode_optimizer.py
+2025-09-06 03:41:18,051 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:18,260 - INFO -   ✅ isort applied
+2025-09-06 03:41:18,260 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\print_stats.py
+2025-09-06 03:41:18,412 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:18,609 - INFO -   ✅ isort applied
+2025-09-06 03:41:18,609 - INFO - 🔧 Fixing core\.ghst_backups\backup_20250905_234752\src\plugins\builtin\__init__.py
+2025-09-06 03:41:18,742 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:18,937 - INFO -   ✅ isort applied
+2025-09-06 03:41:18,937 - INFO - 🔧 Fixing scripts\ghst_auto_backup.py
+2025-09-06 03:41:19,073 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:19,265 - INFO -   ✅ isort applied
+2025-09-06 03:41:19,265 - INFO - 🔧 Fixing scripts\ghst_auto_continue.py
+2025-09-06 03:41:19,403 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:19,605 - INFO -   ✅ isort applied
+2025-09-06 03:41:19,605 - INFO - 🔧 Fixing scripts\simple_auto_continue.py
+2025-09-06 03:41:19,751 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:19,945 - INFO -   ✅ isort applied
+2025-09-06 03:41:19,946 - INFO - 🔧 Fixing auto_commit_daemon.py
+2025-09-06 03:41:20,112 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:20,312 - INFO -   ✅ isort applied
+2025-09-06 03:41:20,313 - INFO - 🔧 Fixing build_beautiful_exe.py
+2025-09-06 03:41:20,442 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:20,643 - INFO -   ✅ isort applied
+2025-09-06 03:41:20,643 - INFO - 🔧 Fixing build_exe.py
+2025-09-06 03:41:20,790 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:21,053 - INFO -   ✅ isort applied
+2025-09-06 03:41:21,054 - INFO - 🔧 Fixing build_exe_clean.py
+2025-09-06 03:41:21,186 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:21,399 - INFO -   ✅ isort applied
+2025-09-06 03:41:21,400 - INFO - 🔧 Fixing codebase_cleanup_daemon.py
+2025-09-06 03:41:21,584 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:21,784 - INFO -   ✅ isort applied
+2025-09-06 03:41:21,784 - INFO - 🔧 Fixing fix_all_errors.py
+2025-09-06 03:41:21,916 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:22,114 - INFO -   ✅ isort applied
+2025-09-06 03:41:22,114 - INFO - 🔧 Fixing launch_think_tank.py
+2025-09-06 03:41:22,254 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:22,461 - INFO -   ✅ isort applied
+2025-09-06 03:41:22,462 - INFO - 🔧 Fixing smart_auto_commit.py
+2025-09-06 03:41:22,623 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:22,827 - INFO -   ✅ isort applied
+2025-09-06 03:41:22,827 - INFO - 🔧 Fixing test_ghst_system.py
+2025-09-06 03:41:22,970 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:23,173 - INFO -   ✅ isort applied
+2025-09-06 03:41:23,173 - INFO - 🔧 Fixing ultimate_code_cleaner.py
+2025-09-06 03:41:23,318 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:23,518 - INFO -   ✅ isort applied
+2025-09-06 03:41:23,518 - INFO - 🔧 Fixing vscode_startup.py
+2025-09-06 03:41:23,662 - INFO -   ✅ autopep8 applied
+2025-09-06 03:41:23,883 - INFO -   ✅ isort applied
+2025-09-06 03:41:23,883 - INFO - ✅ Completed cycle: 84/84 files processed
+2025-09-06 03:45:06,201 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 03:45:06,201 - INFO - PhD GHST Think Tank: Active Personas
+2025-09-06 03:45:06,202 - INFO -   🧭  Dr. TidyCode — Type System Guru
+2025-09-06 03:45:06,202 - INFO -   🕯️  Dr. Syntax — Refactorer
+2025-09-06 03:45:06,202 - INFO -   🦴  Dr. ImportOrder — Style & Lint
+2025-09-06 03:45:06,203 - INFO -   🪄  Dr. Formatter — Type System Guru
+2025-09-06 03:45:06,203 - INFO -   🧪  Dr. Archivist — Type System Guru
+2025-09-06 03:45:06,203 - INFO - Invoking fixer (dry_run=True)
+2025-09-06 03:45:06,311 - WARNING - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\fix_all_errors.py", line 159, in <module>
+    success = main()
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\fix_all_errors.py", line 124, in main
+    print("\U0001f680 GHST Code Quality Fixer")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\allan\miniconda3\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 0: character maps to <undefined>
+
+2025-09-06 03:45:29,611 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 03:45:29,611 - INFO - PhD GHST Think Tank: Active Personas
+2025-09-06 03:45:29,611 - INFO -   🧭  Dr. TidyCode — Refactorer
+2025-09-06 03:45:29,611 - INFO -   🕯️  Dr. Syntax — Dependency Wrangler
+2025-09-06 03:45:29,612 - INFO -   🦴  Dr. ImportOrder — Dependency Wrangler
+2025-09-06 03:45:29,612 - INFO -   🪄  Dr. Formatter — Dependency Wrangler
+2025-09-06 03:45:29,612 - INFO -   🧪  Dr. Archivist — Test Strategist
+2025-09-06 03:45:29,612 - INFO - Invoking fixer (dry_run=True)
+2025-09-06 03:45:56,313 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 03:45:56,314 - INFO - PhD GHST Think Tank: Active Personas
+2025-09-06 03:45:56,314 - INFO -   🧭  Dr. TidyCode — Refactorer
+2025-09-06 03:45:56,314 - INFO -   🕯️  Dr. Syntax — Test Strategist
+2025-09-06 03:45:56,314 - INFO -   🦴  Dr. ImportOrder — Repository Steward
+2025-09-06 03:45:56,314 - INFO -   🪄  Dr. Formatter — Refactorer
+2025-09-06 03:45:56,315 - INFO -   🧪  Dr. Archivist — Automated Code Cleaner
+2025-09-06 03:45:56,315 - INFO - Invoking fixer (dry_run=True)
+2025-09-06 03:46:00,379 - INFO - 🚀 GHST Code Quality Fixer
+==================================================
+This will fix 1000+ lint errors to speed up VS Code!
+
+✅ autopep8 already installed
+✅ isort already installed
+
+📁 Found {len(python_files)} Python files to fix
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+==================================================
+✅ Fixed {fixed_count}/{len(python_files)} files
+🚀 VS Code should be much faster now!
+💡 Tip: Restart VS Code to see the performance improvement
+
+2025-09-06 03:47:26,600 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 03:47:26,600 - INFO - PhD GHST Think Tank: Active Personas
+2025-09-06 03:47:26,600 - INFO -   🧭  Dr. TidyCode — Repository Steward
+2025-09-06 03:47:26,600 - INFO -   🕯️  Dr. Syntax — Automated Code Cleaner
+2025-09-06 03:47:26,601 - INFO -   🦴  Dr. ImportOrder — Style & Lint
+2025-09-06 03:47:26,601 - INFO -   🪄  Dr. Formatter — Refactorer
+2025-09-06 03:47:26,601 - INFO -   🧪  Dr. Archivist — Type System Guru
+2025-09-06 03:47:26,601 - INFO - Invoking fixer (dry_run=True)
+2025-09-06 03:47:31,004 - INFO - 🚀 GHST Code Quality Fixer
+==================================================
+This will fix 1000+ lint errors to speed up VS Code!
+
+✅ autopep8 already installed
+✅ isort already installed
+
+📁 Found {len(python_files)} Python files to fix
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+==================================================
+✅ Fixed {fixed_count}/{len(python_files)} files
+🚀 VS Code should be much faster now!
+💡 Tip: Restart VS Code to see the performance improvement
+
+2025-09-06 03:48:27,600 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 03:48:27,600 - INFO - PhD GHST Think Tank: Active Personas
+2025-09-06 03:48:27,600 - INFO -   🧭  Dr. TidyCode — Syntax Specialist
+2025-09-06 03:48:27,600 - INFO -   🕯️  Dr. Syntax — Repository Steward
+2025-09-06 03:48:27,601 - INFO -   🦴  Dr. ImportOrder — Test Strategist
+2025-09-06 03:48:27,601 - INFO -   🪄  Dr. Formatter — Type System Guru
+2025-09-06 03:48:27,601 - INFO -   🧪  Dr. Archivist — Merge Whisperer
+2025-09-06 03:48:27,601 - INFO - Invoking fixer (dry_run=True)
+2025-09-06 03:48:31,633 - INFO - 🚀 GHST Code Quality Fixer
+==================================================
+This will fix 1000+ lint errors to speed up VS Code!
+
+✅ autopep8 already installed
+✅ isort already installed
+
+📁 Found {len(python_files)} Python files to fix
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+==================================================
+✅ Fixed {fixed_count}/{len(python_files)} files
+🚀 VS Code should be much faster now!
+💡 Tip: Restart VS Code to see the performance improvement
+
+2025-09-06 03:51:37,118 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 05:31:49,627 - INFO - Using fallback GHST list (5 entries)
+2025-09-06 05:31:49,628 - INFO - PhD GHST Think Tank: Active Personas
+2025-09-06 05:31:49,628 - INFO -   🧭  Dr. TidyCode — Merge Whisperer
+2025-09-06 05:31:49,628 - INFO -   🕯️  Dr. Syntax — Automated Code Cleaner
+2025-09-06 05:31:49,628 - INFO -   🦴  Dr. ImportOrder — Dependency Wrangler
+2025-09-06 05:31:49,629 - INFO -   🪄  Dr. Formatter — Repository Steward
+2025-09-06 05:31:49,629 - INFO -   🧪  Dr. Archivist — Automated Code Cleaner
+2025-09-06 05:31:49,629 - INFO - Invoking fixer (dry_run=False)
+2025-09-06 05:31:58,696 - INFO - 🚀 GHST Code Quality Fixer
+==================================================
+This will fix 1000+ lint errors to speed up VS Code!
+
+✅ autopep8 already installed
+✅ isort already installed
+
+📁 Found {len(python_files)} Python files to fix
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+🔧 Fixing {file_path}
+  ✅ autopep8 fixes applied
+  ✅ isort import fixes applied
+
+==================================================
+✅ Fixed {fixed_count}/{len(python_files)} files
+🚀 VS Code should be much faster now!
+💡 Tip: Restart VS Code to see the performance improvement
+

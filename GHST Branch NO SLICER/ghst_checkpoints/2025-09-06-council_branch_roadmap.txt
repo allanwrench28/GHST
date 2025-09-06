@@ -1,0 +1,34 @@
+# GHST Council Branch Roadmap
+
+## Purpose
+Unified roadmap for all branches, council-driven, with clear milestones and feedback loops.
+
+---
+
+## GHST-UI Branch
+- [ ] Scaffold core UI layout and council panels
+- [ ] Integrate theme engine for weekly theme updates
+- [ ] Add council log panel and persona highlights
+- [ ] Enable dynamic theme switching
+- [ ] Finalize UI for next build
+
+## GHST-SLCER Branch
+- [ ] Integrate 3D printing/slicer APIs
+- [ ] Add material scientist and physics agent profiles
+- [ ] Automate slicer workflow and logging
+- [ ] Validate cross-branch council chat
+- [ ] Finalize slicer features for next build
+
+## Main Core Branch
+- [ ] Modularize core for branch integration
+- [ ] Automate code maintenance and error fixing
+- [ ] Log all council actions for ML
+- [ ] Enable council-driven naming and architecture
+- [ ] Finalize core for next build
+
+---
+
+## Feedback Loop
+- Council reviews and updates roadmap regularly
+- All branches sync progress and share specialty data as needed
+- Roadmap evolves based on council votes, feedback, and new ideas

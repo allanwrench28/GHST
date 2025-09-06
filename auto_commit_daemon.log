@@ -1,0 +1,318 @@
+2025-09-06 03:34:14,406 - INFO - ✅ Loaded config from auto_commit_config.json
+2025-09-06 03:34:14,406 - INFO - 🔄 Running auto-commit once
+2025-09-06 03:34:14,460 - INFO - 🔍 Found 6 changes to process
+2025-09-06 03:34:14,461 - INFO - 📦 Created 3 batches for auto-commit
+2025-09-06 03:34:14,688 - INFO - ✅ Committed code batch: 3 files (0.0MB)
+2025-09-06 03:34:16,415 - INFO - 📤 Pushed code batch to remote
+2025-09-06 03:34:18,555 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 03:34:20,087 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 03:34:22,143 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 03:34:22,294 - INFO - ✅ Committed config batch: 2 files (0.0MB)
+2025-09-06 03:34:23,838 - INFO - 📤 Pushed config batch to remote
+2025-09-06 03:34:25,838 - INFO - 🎯 Successfully committed 3/3 batches
+2025-09-06 05:46:47,862 - INFO - ✅ Loaded config from auto_commit_config.json
+2025-09-06 05:46:47,901 - INFO - 🚀 Starting GHST Auto-Commit Daemon
+2025-09-06 05:46:47,901 - INFO - 📁 Repository: C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST
+2025-09-06 05:46:47,901 - INFO - ⏱️ Check interval: 5.0 minutes
+2025-09-06 05:46:47,901 - INFO - 📦 Max batch size: 10MB
+2025-09-06 05:46:47,902 - INFO - 📤 Auto-push: ✅
+2025-09-06 05:46:48,463 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 05:46:48,520 - INFO - 🔍 Found 91 changes to process
+2025-09-06 05:46:48,524 - INFO - 📦 Created 6 batches for auto-commit
+2025-09-06 05:46:52,321 - INFO - ✅ Committed code batch: 84 files (0.8MB)
+2025-09-06 05:46:54,144 - INFO - 📤 Pushed code batch to remote
+2025-09-06 05:46:56,347 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 05:46:58,040 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 05:47:00,085 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 05:47:00,249 - INFO - ✅ Committed config batch: 2 files (0.0MB)
+2025-09-06 05:47:01,718 - INFO - 📤 Pushed config batch to remote
+2025-09-06 05:47:03,931 - INFO - ✅ Committed bugfix batch: 2 files (0.0MB)
+2025-09-06 05:47:05,451 - INFO - 📤 Pushed bugfix batch to remote
+2025-09-06 05:47:07,592 - INFO - ✅ Committed cleanup batch: 1 files (0.0MB)
+2025-09-06 05:47:09,288 - INFO - 📤 Pushed cleanup batch to remote
+2025-09-06 05:47:11,446 - INFO - ✅ Committed mixed batch: 1 files (0.0MB)
+2025-09-06 05:47:13,000 - INFO - 📤 Pushed mixed batch to remote
+2025-09-06 05:47:15,000 - INFO - 🎯 Successfully committed 6/6 batches
+2025-09-06 05:52:15,580 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 05:52:15,624 - INFO - 🔍 Found 2 changes to process
+2025-09-06 05:52:15,625 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 05:52:15,759 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 05:52:17,270 - INFO - 📤 Pushed code batch to remote
+2025-09-06 05:52:19,309 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 05:52:19,368 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 05:52:19\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 05:52:19,368 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 05:57:19,974 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 05:57:20,021 - INFO - 🔍 Found 2 changes to process
+2025-09-06 05:57:20,022 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 05:57:20,145 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 05:57:21,607 - INFO - 📤 Pushed code batch to remote
+2025-09-06 05:57:23,645 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 05:57:23,702 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 05:57:23\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 05:57:23,703 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 06:02:24,281 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:02:24,328 - INFO - 🔍 Found 4 changes to process
+2025-09-06 06:02:24,328 - INFO - 📦 Created 4 batches for auto-commit
+2025-09-06 06:02:24,451 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:02:26,042 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:02:28,207 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:02:29,675 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:02:31,718 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:02:31,779 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:02:31\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:02:31,913 - INFO - ✅ Committed mixed batch: 1 files (0.0MB)
+2025-09-06 06:02:33,457 - INFO - 📤 Pushed mixed batch to remote
+2025-09-06 06:02:35,457 - INFO - 🎯 Successfully committed 3/4 batches
+2025-09-06 06:07:36,062 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:07:36,110 - INFO - 🔍 Found 3 changes to process
+2025-09-06 06:07:36,110 - INFO - 📦 Created 3 batches for auto-commit
+2025-09-06 06:07:36,236 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:07:37,730 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:07:39,898 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:07:41,514 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:07:43,564 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:07:43,623 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:07:43\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:07:43,623 - INFO - 🎯 Successfully committed 2/3 batches
+2025-09-06 06:12:44,252 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:12:44,296 - INFO - 🔍 Found 3 changes to process
+2025-09-06 06:12:44,297 - INFO - 📦 Created 3 batches for auto-commit
+2025-09-06 06:12:44,422 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:12:45,929 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:12:48,100 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:12:49,604 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:12:51,653 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:12:51,709 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:12:51\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:12:51,710 - INFO - 🎯 Successfully committed 2/3 batches
+2025-09-06 06:17:52,335 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:17:52,399 - INFO - 🔍 Found 3 changes to process
+2025-09-06 06:17:52,400 - INFO - 📦 Created 3 batches for auto-commit
+2025-09-06 06:17:52,562 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:17:54,146 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:17:56,296 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:17:57,851 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:17:59,889 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:17:59,950 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:17:59\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:17:59,950 - INFO - 🎯 Successfully committed 2/3 batches
+2025-09-06 06:23:00,542 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:23:00,589 - INFO - 🔍 Found 4 changes to process
+2025-09-06 06:23:00,590 - INFO - 📦 Created 3 batches for auto-commit
+2025-09-06 06:23:00,739 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:23:02,377 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:23:04,574 - INFO - ✅ Committed docs batch: 2 files (0.0MB)
+2025-09-06 06:23:06,052 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:23:08,091 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:23:08,154 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:23:08\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:23:08,155 - INFO - 🎯 Successfully committed 2/3 batches
+2025-09-06 06:28:08,752 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:28:08,796 - INFO - 🔍 Found 3 changes to process
+2025-09-06 06:28:08,797 - INFO - 📦 Created 3 batches for auto-commit
+2025-09-06 06:28:08,922 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:28:10,501 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:28:12,646 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:28:14,062 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:28:16,102 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:28:16,164 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:28:16\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:28:16,165 - INFO - 🎯 Successfully committed 2/3 batches
+2025-09-06 06:33:16,784 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:33:16,829 - INFO - 🔍 Found 2 changes to process
+2025-09-06 06:33:16,829 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 06:33:16,959 - INFO - ✅ Committed code batch: 1 files (0.0MB)
+2025-09-06 06:33:18,512 - INFO - 📤 Pushed code batch to remote
+2025-09-06 06:33:20,562 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:33:20,618 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:33:20\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:33:20,618 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 06:38:21,222 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 06:38:21,269 - INFO - 🔍 Found 2 changes to process
+2025-09-06 06:38:21,269 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 06:38:21,411 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:38:22,900 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 06:38:24,938 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:38:24,995 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:38:24\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:38:24,996 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 06:43:25,622 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 06:43:25,669 - INFO - 🔍 Found 1 changes to process
+2025-09-06 06:43:25,669 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 06:43:25,705 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:43:25,760 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:43:25\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:43:25,761 - INFO - 🎯 Successfully committed 0/1 batches
+2025-09-06 06:48:26,298 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 06:48:26,343 - INFO - 🔍 Found 1 changes to process
+2025-09-06 06:48:26,344 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 06:48:26,382 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:48:26,442 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:48:26\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:48:26,443 - INFO - 🎯 Successfully committed 0/1 batches
+2025-09-06 06:53:26,988 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 06:53:27,033 - INFO - 🔍 Found 2 changes to process
+2025-09-06 06:53:27,034 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 06:53:27,176 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 06:53:27,210 - WARNING - ⚠️ Push failed for docs batch: Command '['git', 'push']' returned non-zero exit status 128.
+2025-09-06 06:53:29,252 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:53:29,308 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:53:29\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:53:29,309 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 06:58:29,905 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 06:58:29,953 - INFO - 🔍 Found 2 changes to process
+2025-09-06 06:58:29,954 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 06:58:29,991 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 06:58:30,048 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:58:29\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:58:30,085 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/"']' returned non-zero exit status 128.
+2025-09-06 06:58:30,141 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 06:58:30\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 06:58:30,142 - INFO - 🎯 Successfully committed 0/2 batches
+2025-09-06 07:03:30,671 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 07:03:30,728 - INFO - 🔍 Found 2 changes to process
+2025-09-06 07:03:30,729 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 07:03:30,767 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 07:03:30,827 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 07:03:30\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:03:30,863 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/"']' returned non-zero exit status 128.
+2025-09-06 07:03:30,937 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 07:03:30\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:03:30,938 - INFO - 🎯 Successfully committed 0/2 batches
+2025-09-06 07:08:31,618 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 07:08:31,666 - INFO - 🔍 Found 2 changes to process
+2025-09-06 07:08:31,667 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 07:08:31,702 - WARNING - ⚠️ Could not add vscode/settings.json: Command '['git', 'add', 'vscode/settings.json']' returned non-zero exit status 128.
+2025-09-06 07:08:31,758 - ERROR - ❌ Commit failed for config batch: Command '['git', 'commit', '-m', '⚙️ Auto-commit: Configuration changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 07:08:31\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:08:31,794 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/"']' returned non-zero exit status 128.
+2025-09-06 07:08:31,850 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 07:08:31\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:08:31,850 - INFO - 🎯 Successfully committed 0/2 batches
+2025-09-06 07:13:32,417 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:13:32,463 - INFO - 🔍 Found 1 changes to process
+2025-09-06 07:13:32,464 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 07:13:32,619 - INFO - ✅ Committed config batch: 1 files (0.0MB)
+2025-09-06 07:13:34,071 - INFO - 📤 Pushed config batch to remote
+2025-09-06 07:13:36,072 - INFO - 🎯 Successfully committed 1/1 batches
+2025-09-06 07:18:36,695 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:18:36,743 - INFO - 🔍 Found 1 changes to process
+2025-09-06 07:18:36,744 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 07:18:36,779 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:18:36,836 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 07:18:36\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:18:36,837 - INFO - 🎯 Successfully committed 0/1 batches
+2025-09-06 07:23:37,405 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:23:37,451 - INFO - 🔍 Found 3 changes to process
+2025-09-06 07:23:37,452 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 07:23:37,489 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:23:37,527 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:23:37,565 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:23:37,623 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 3 files (0.0MB)\n⏰ Time: 07:23:37\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:23:37,623 - INFO - 🎯 Successfully committed 0/1 batches
+2025-09-06 07:28:38,235 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:28:38,285 - INFO - 🔍 Found 8 changes to process
+2025-09-06 07:28:38,290 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 07:28:38,326 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,362 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,399 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,437 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,474 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,511 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,548 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,584 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:28:38,641 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 8 files (0.0MB)\n⏰ Time: 07:28:38\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:28:38,642 - INFO - 🎯 Successfully committed 0/1 batches
+2025-09-06 07:33:39,344 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:33:39,404 - INFO - 🔍 Found 14 changes to process
+2025-09-06 07:33:39,405 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 07:33:39,563 - INFO - ✅ Committed config batch: 1 files (0.0MB)
+2025-09-06 07:33:41,085 - INFO - 📤 Pushed config batch to remote
+2025-09-06 07:33:43,125 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,162 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,200 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,239 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,280 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,335 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,415 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,469 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,516 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,557 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,603 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,648 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,688 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:33:43,756 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 13 files (0.0MB)\n⏰ Time: 07:33:43\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:33:43,756 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 07:38:44,398 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:38:44,446 - INFO - 🔍 Found 17 changes to process
+2025-09-06 07:38:44,447 - INFO - 📦 Created 1 batches for auto-commit
+2025-09-06 07:38:44,484 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,521 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,557 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,593 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,630 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,666 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,702 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,738 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,773 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,809 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,844 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,880 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,917 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,953 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:44,989 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:45,025 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt"']' returned non-zero exit status 128.
+2025-09-06 07:38:45,182 - INFO - ✅ Committed mixed batch: 17 files (0.0MB)
+2025-09-06 07:38:46,665 - INFO - 📤 Pushed mixed batch to remote
+2025-09-06 07:38:48,666 - INFO - 🎯 Successfully committed 1/1 batches
+2025-09-06 07:43:49,263 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:43:49,315 - INFO - 🔍 Found 17 changes to process
+2025-09-06 07:43:49,317 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 07:43:49,456 - INFO - ✅ Committed docs batch: 1 files (0.0MB)
+2025-09-06 07:43:50,982 - INFO - 📤 Pushed docs batch to remote
+2025-09-06 07:43:53,019 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,058 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,096 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,133 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,170 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,207 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,244 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,283 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,320 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,356 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,394 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,430 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,467 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,504 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,541 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,579 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt"']' returned non-zero exit status 128.
+2025-09-06 07:43:53,648 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 16 files (0.0MB)\n⏰ Time: 07:43:53\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:43:53,648 - INFO - 🎯 Successfully committed 1/2 batches
+2025-09-06 07:48:54,219 - INFO - 📥 Pulled latest changes from remote
+2025-09-06 07:48:54,265 - INFO - 🔍 Found 17 changes to process
+2025-09-06 07:48:54,267 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 07:48:54,304 - WARNING - ⚠️ Could not add eleases/v1.0.0-alpha.3/core/src/ui_components/main.py: Command '['git', 'add', 'eleases/v1.0.0-alpha.3/core/src/ui_components/main.py']' returned non-zero exit status 128.
+2025-09-06 07:48:54,366 - ERROR - ❌ Commit failed for code batch: Command '['git', 'commit', '-m', '🔧 Auto-commit: Code changes\n\n📊 Batch: 1 files (0.0MB)\n⏰ Time: 07:48:54\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:48:54,401 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,436 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,472 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,508 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,543 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,579 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,614 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,650 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,686 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,721 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,757 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,792 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,828 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,863 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,899 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,935 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt"']' returned non-zero exit status 128.
+2025-09-06 07:48:54,995 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 16 files (0.0MB)\n⏰ Time: 07:48:54\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:48:54,996 - INFO - 🎯 Successfully committed 0/2 batches
+2025-09-06 07:53:55,572 - WARNING - ⚠️ Auto-pull failed: Command '['git', 'pull']' returned non-zero exit status 1.
+2025-09-06 07:53:55,620 - INFO - 🔍 Found 18 changes to process
+2025-09-06 07:53:55,622 - INFO - 📦 Created 2 batches for auto-commit
+2025-09-06 07:53:55,658 - WARNING - ⚠️ Could not add ore/src/ui_components/main.py: Command '['git', 'add', 'ore/src/ui_components/main.py']' returned non-zero exit status 128.
+2025-09-06 07:53:55,799 - INFO - ✅ Committed code batch: 2 files (0.0MB)
+2025-09-06 07:53:55,834 - WARNING - ⚠️ Push failed for code batch: Command '['git', 'push']' returned non-zero exit status 128.
+2025-09-06 07:53:57,872 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_learning.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:57,910 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now2_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:57,948 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now3_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:57,987 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now4_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,024 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_automation_now_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,060 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_contained_examples_naming_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,097 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_improvement_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,134 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_core_response_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,169 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_feedback_loop_design_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,205 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_general_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,241 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_live_chat_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,279 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_meeting_summaries.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,315 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_automation_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,350 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_priority_suggestions_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,385 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-council_question_policy_log.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,420 - WARNING - ⚠️ Could not add "GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt": Command '['git', 'add', '"GHST Branch NO SLICER/ghst_checkpoints/2025-09-06-ml_log_addressed_council.txt"']' returned non-zero exit status 128.
+2025-09-06 07:53:58,483 - ERROR - ❌ Commit failed for mixed batch: Command '['git', 'commit', '-m', '📝 Auto-commit: Mixed changes\n\n📊 Batch: 16 files (0.0MB)\n⏰ Time: 07:53:58\n🤖 Auto-committed by GHST daemon']' returned non-zero exit status 1.
+2025-09-06 07:53:58,483 - INFO - 🎯 Successfully committed 1/2 batches
