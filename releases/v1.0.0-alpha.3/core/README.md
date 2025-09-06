@@ -1,35 +1,5 @@
 # GHST: Open Source AI Coding Engine 🧠
 
-**Professional AI coding assistant with expert agent collective**
-
-[![Version](https://img.shields.io/badge/version-1.0.0--alpha.3-blue)](releases/v1.0.0-alpha.3)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)](https://github.com/allanwrench28/GHST)
-
-Welcome to GHST — an open-source AI coding engine designed to bring together a think tank of expert AI agents for coding, debugging, and creative problem solving. Whether you're a developer, researcher, or just curious, GHST is here to help you build smarter, faster, and with a little more fun.
-
-## 🚀 **Quick Start - New Graphical Installer!**
-
-### 🎯 **Easy Installation** (Recommended)
-```bash
-# Clone the repository  
-git clone https://github.com/allanwrench28/GHST.git
-cd GHST
-
-# Run the latest compatibility-fixed installer
-python releases/v1.0.0-alpha.3/ghst_installer.py
-
-# Or use the batch launcher
-releases/v1.0.0-alpha.3/install_ghst.bat
-```
-
-### ⚡ **Direct Launch** (Advanced Users)
-```bash
-# Direct launcher for immediate use
-cd core
-python launcher.py
-```HST: Open Source AI Coding Engine 🧠
-
 Welcome to GHST — an open-source AI coding engine designed to bring together a think tank of expert AI agents for coding, debugging, and creative problem solving. Whether you’re a developer, researcher, or just curious, GHST is here to help you build smarter, faster, and with a little more fun.
 
 ## ✨ What Makes GHST Special

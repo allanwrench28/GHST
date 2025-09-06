@@ -1,0 +1,21 @@
+# GHST Configuration
+# ===================
+
+app:
+  name: "GHST - AI Coding Engine"
+  version: "1.0.0-alpha.1"
+  theme: "ghost_dark"
+  
+syntax_supervisors:
+  enabled: true
+  scan_interval: 30
+  notification_level: "medium"
+  
+expert_collective:
+  max_agents: 8
+  response_timeout: 30
+  
+gui:
+  window_size: [1400, 900]
+  auto_save: true
+  dark_theme: true

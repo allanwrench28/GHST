@@ -1,0 +1,106 @@
+2025-09-06 00:22:51,160 - ExpertManager - INFO - \U0001f680 GHOST COLLECTIVE ADMIN MODE ACTIVATED!
+2025-09-06 00:22:51,161 - ExpertManager - INFO - \U0001f47b Full internet access and commit privileges granted!
+2025-09-06 00:22:51,161 - ExpertManager - INFO - \U0001f47b EXPANDED ADMIN COLLECTIVE - 32 specialized Ghosts with full access!
+2025-09-06 00:22:51,161 - ExpertManager - INFO - \U0001f3b5 Dr. Audio GHST Agent recruited - GHST Agent #30 achieved!
+2025-09-06 00:22:51,161 - ExpertManager - INFO - \U0001f680 Dr. CICD GHST Agent recruited - Nightly automation specialist!
+2025-09-06 00:22:51,161 - ExpertManager - INFO - \U0001f504 Dr. GitOps GHST Agent enhanced - DevOps pipeline master!
+2025-09-06 00:22:51,162 - ExpertManager - INFO - \U0001f4ef BR BR BRRRRRRRN! Red alert recruitment successful!
+2025-09-06 00:22:51,162 - ExpertManager - INFO - \U0001f4c8 Marketing & Branding Team recruited for sponsor outreach!
+2025-09-06 00:22:51,162 - ExpertManager - INFO - \U0001f60e Dr. Cool activated for maximum awesome factor!
+2025-09-06 00:22:51,162 - ExpertManager - INFO - \u2696\ufe0f Ethics GHST Agent ensures responsible AI development!
+2025-09-06 00:22:51,162 - ExpertManager - INFO - \U0001f9e0 Background Task GHST Agent ready for idea capture!
+2025-09-06 00:22:51,240 - PluginManager - INFO - Plugin Manager initialized
+2025-09-06 00:22:51,240 - PluginManager - WARNING - \u26a0\ufe0f Plugin system active - plugins run with system access!
+2025-09-06 00:22:51,242 - PluginManager - INFO - Discovered 2 potential plugins
+2025-09-06 00:22:51,242 - PluginManager - ERROR - Failed to load plugin C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\builtin:gcode_optimizer: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:gcode_optimizer.py'
+2025-09-06 00:22:51,244 - PluginManager - DEBUG - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\plugin_manager.py", line 130, in load_plugin
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:gcode_optimizer.py'
+
+2025-09-06 00:22:51,245 - PluginManager - ERROR - Failed to load plugin C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\builtin:print_stats: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:print_stats.py'
+2025-09-06 00:22:51,246 - PluginManager - DEBUG - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\plugin_manager.py", line 130, in load_plugin
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:print_stats.py'
+
+2025-09-06 00:22:51,246 - PluginManager - INFO - Loaded 0/2 plugins
+2025-09-06 00:22:51,246 - ConfigManager - INFO - Plugin system enabled with 0 plugins loaded
+2025-09-06 00:22:51,250 - ConfigManager - INFO - Saved configuration: bambu_p1s.yaml
+2025-09-06 00:22:51,253 - ConfigManager - INFO - Saved configuration: pla_basic.yaml
+2025-09-06 00:22:51,256 - ConfigManager - INFO - Saved configuration: default_slicing.yaml
+2025-09-06 00:22:51,268 - ConfigManager - INFO - Loaded configuration: bambu_p1s.yaml
+2025-09-06 00:22:51,279 - ConfigManager - INFO - Loaded configuration: pla_basic.yaml
+2025-09-06 00:22:51,292 - ConfigManager - INFO - Loaded configuration: default_slicing.yaml
+2025-09-06 00:22:52,721 - root - ERROR - SS monitoring error: empty pattern
+2025-09-06 00:23:52,851 - root - ERROR - SS monitoring error: empty pattern
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f680 GHOST COLLECTIVE ADMIN MODE ACTIVATED!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f47b Full internet access and commit privileges granted!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f47b EXPANDED ADMIN COLLECTIVE - 32 specialized Ghosts with full access!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f3b5 Dr. Audio GHST Agent recruited - GHST Agent #30 achieved!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f680 Dr. CICD GHST Agent recruited - Nightly automation specialist!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f504 Dr. GitOps GHST Agent enhanced - DevOps pipeline master!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f4ef BR BR BRRRRRRRN! Red alert recruitment successful!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f4c8 Marketing & Branding Team recruited for sponsor outreach!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f60e Dr. Cool activated for maximum awesome factor!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \u2696\ufe0f Ethics GHST Agent ensures responsible AI development!
+2025-09-06 00:26:22,072 - ExpertManager - INFO - \U0001f9e0 Background Task GHST Agent ready for idea capture!
+2025-09-06 00:26:22,116 - PluginManager - INFO - Plugin Manager initialized
+2025-09-06 00:26:22,116 - PluginManager - WARNING - \u26a0\ufe0f Plugin system active - plugins run with system access!
+2025-09-06 00:26:22,118 - PluginManager - INFO - Discovered 4 potential plugins
+2025-09-06 00:26:22,118 - PluginManager - ERROR - Failed to load plugin C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\builtin:code_analyzer: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:code_analyzer.py'
+2025-09-06 00:26:22,121 - PluginManager - DEBUG - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\plugin_manager.py", line 130, in load_plugin
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:code_analyzer.py'
+
+2025-09-06 00:26:22,122 - PluginManager - ERROR - Failed to load plugin C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\builtin:gcode_optimizer: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:gcode_optimizer.py'
+2025-09-06 00:26:22,123 - PluginManager - DEBUG - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\plugin_manager.py", line 130, in load_plugin
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:gcode_optimizer.py'
+
+2025-09-06 00:26:22,124 - PluginManager - ERROR - Failed to load plugin C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\builtin:print_stats: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:print_stats.py'
+2025-09-06 00:26:22,125 - PluginManager - DEBUG - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\plugin_manager.py", line 130, in load_plugin
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:print_stats.py'
+
+2025-09-06 00:26:22,126 - PluginManager - ERROR - Failed to load plugin C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\builtin:project_stats: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:project_stats.py'
+2025-09-06 00:26:22,127 - PluginManager - DEBUG - Traceback (most recent call last):
+  File "C:\Users\allan\OneDrive\Desktop\GHST LOCAL\GHST\core\src\utils\..\plugins\plugin_manager.py", line 130, in load_plugin
+    spec.loader.exec_module(module)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1159, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1217, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\allan\\OneDrive\\Desktop\\GHST LOCAL\\GHST\\core\\src\\utils\\..\\plugins\\builtin:project_stats.py'
+
+2025-09-06 00:26:22,127 - PluginManager - INFO - Loaded 0/4 plugins
+2025-09-06 00:26:22,127 - ConfigManager - INFO - Plugin system enabled with 0 plugins loaded
+2025-09-06 00:26:22,131 - ConfigManager - INFO - Loaded configuration: bambu_p1s.yaml
+2025-09-06 00:26:22,134 - ConfigManager - INFO - Loaded configuration: pla_basic.yaml
+2025-09-06 00:26:22,139 - ConfigManager - INFO - Loaded configuration: default_slicing.yaml
+2025-09-06 00:26:22,145 - PluginManager - INFO - Plugin Manager initialized
+2025-09-06 00:26:22,146 - PluginManager - WARNING - \u26a0\ufe0f Plugin system active - plugins run with system access!
+2025-09-06 00:26:22,391 - root - ERROR - SS monitoring error: empty pattern
