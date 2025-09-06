@@ -1,0 +1,33 @@
+{
+  "repo_path": ".",
+  "check_interval_minutes": 5,
+  "max_batch_size_mb": 10,
+  "auto_push": true,
+  "auto_pull": true,
+  "exclude_patterns": [
+    "*.log",
+    "*.tmp", 
+    "__pycache__",
+    ".git",
+    "node_modules",
+    "*.exe",
+    "*.zip",
+    "*.pkg",
+    "dist/",
+    "build/",
+    "*.pyc",
+    ".vscode/",
+    ".idea/",
+    "*.swp",
+    "*.bak"
+  ],
+  "commit_message_templates": {
+    "code": "🔧 Auto-commit: Code changes",
+    "docs": "📚 Auto-commit: Documentation updates",
+    "config": "⚙️ Auto-commit: Configuration changes", 
+    "features": "✨ Auto-commit: New features",
+    "bugfix": "🐛 Auto-commit: Bug fixes",
+    "cleanup": "🧹 Auto-commit: Code cleanup",
+    "mixed": "📝 Auto-commit: Mixed changes"
+  }
+}
