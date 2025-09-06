@@ -3,7 +3,20 @@ from datetime import datetime
 import threading
 import time
 
-# Simulated log storage for the problem solver daemon
+# --- GHST Council Data ---
+GHSTS = [
+    {'name': 'Dr. TidyCode', 'emoji': '🧭', 'field': 'Refactoring', 'color': '#007AFF'},
+    {'name': 'Dr. Syntax', 'emoji': '🕯️', 'field': 'Syntax', 'color': '#34C759'},
+    {'name': 'Dr. ImportOrder', 'emoji': '🦴', 'field': 'Imports', 'color': '#FF9500'},
+    {'name': 'Dr. Formatter', 'emoji': '🪄', 'field': 'Formatting', 'color': '#AF52DE'},
+    {'name': 'Dr. Archivist', 'emoji': '🧪', 'field': 'Archiving', 'color': '#FF2D55'},
+    {'name': 'Dr. Debugger', 'emoji': '🐛', 'field': 'Debugging', 'color': '#5856D6'},
+    {'name': 'Dr. Data', 'emoji': '📊', 'field': 'Data Science', 'color': '#FFCC00'},
+    {'name': 'Dr. Architect', 'emoji': '🏗️', 'field': 'Architecture', 'color': '#5AC8FA'},
+    {'name': 'Dr. Security', 'emoji': '🔒', 'field': 'Security', 'color': '#FF3B30'},
+    {'name': 'Dr. Test', 'emoji': '🧪', 'field': 'Testing', 'color': '#30B0C7'},
+]
+
 problem_solver_logs = []
 problem_solver_active = True
 internet_access = True
@@ -11,36 +24,29 @@ internet_access = True
 def add_log(message):
     timestamp = datetime.now().strftime('%H:%M:%S')
     problem_solver_logs.append(f'[{timestamp}] {message}')
-    ui.notify(message)
 
-# Simulate the daemon running and logging
-
+# --- Problem Solver Daemon ---
 def problem_solver_daemon():
-    ghsts = [
-        'Dr. TidyCode', 'Dr. Syntax', 'Dr. ImportOrder', 'Dr. Formatter', 'Dr. Archivist',
-        'Dr. Debugger', 'Dr. Data', 'Dr. Architect', 'Dr. Security', 'Dr. Test',
-        'Dr. ML', 'Dr. UI', 'Dr. Infra', 'Dr. GameDev', 'Dr. Slicer',
-        'Dr. Vision', 'Dr. Web', 'Dr. API', 'Dr. Embedded', 'Dr. Quantum'
-    ]
     topics = [
         'Refactoring core logic', 'Optimizing imports', 'Running style checks',
         'Debugging edge cases', 'Improving data pipeline', 'Securing API endpoints',
         'Testing new features', 'Building UI components', 'Automating deployment',
-        'Collaborating on game engine', 'Slicing 3D models', 'Enhancing ML models',
-        'Reviewing quantum algorithms', 'Integrating web services', 'Designing embedded modules'
     ]
     while problem_solver_active:
-        ghst = ghsts[int(time.time()) % len(ghsts)]
+        ghst = GHSTS[int(time.time()) % len(GHSTS)]
         topic = topics[int(time.time() * 1.3) % len(topics)]
-        add_log(f'{ghst} is {topic}...')
+        add_log(f'{ghst["emoji"]} {ghst["name"]} is {topic}...')
         time.sleep(3)
 
-# Start the daemon in a background thread
 daemon_thread = threading.Thread(target=problem_solver_daemon, daemon=True)
 daemon_thread.start()
 
-with ui.header():
-    ui.label('GHST Council Dashboard').style('font-size: 2rem; font-weight: bold; color: #fff;')
+# --- UI ---
+ui.colors(primary='#007AFF', secondary='#F2F2F7', accent='#34C759', positive='#34C759', negative='#FF3B30', background='#F2F2F7', text='#1C1C1E')
+ui.query('body').style('background: #F2F2F7;')
+
+with ui.header().classes('items-center justify-between'):
+    ui.label('GHST Council').style('font-size: 2rem; font-weight: 600; color: #1C1C1E;')
     ui.switch('Internet Access', value=internet_access, on_change=lambda e: set_internet_access(e.value)).style('margin-left: 2rem;')
 
 def set_internet_access(value):
@@ -48,50 +54,30 @@ def set_internet_access(value):
     internet_access = value
     add_log(f'Internet access toggled to {"ON" if value else "OFF"}')
 
-with ui.row():
-    chat_column = ui.column().style('width: 400px; height: 400px; overflow-y: auto; background: #181818; border-radius: 10px; padding: 10px;')
-    log_box = ui.textarea(label='Problem Solver Logs', value='').style('width: 500px; height: 400px; background: #222; color: #fff;')
+with ui.row().classes('w-full items-start'):
+    with ui.card().style('background: #fff; border-radius: 20px; box-shadow: 0 2px 8px #0001; width: 40%; min-width: 350px; padding: 24px;'):
+        ui.label('Council Chat').style('font-size: 1.3rem; font-weight: 500; color: #007AFF; margin-bottom: 12px;')
+        chat_column = ui.column().classes('w-full')
+        council_messages = [
+            f'{g["emoji"]} <b>{g["name"]}</b>: "{g["field"]} is my specialty!"' for g in GHSTS
+        ]
+        def update_chat():
+            chat_column.clear()
+            for msg in council_messages[-10:]:
+                ui.html(f'<div style="color:#1C1C1E;font-size:1.1rem;margin-bottom:8px;">{msg}</div>')
+        update_chat()
+    with ui.card().style('background: #fff; border-radius: 20px; box-shadow: 0 2px 8px #0001; width: 55%; min-width: 350px; padding: 24px;'):
+        ui.label('Problem Solver Logs').style('font-size: 1.3rem; font-weight: 500; color: #007AFF; margin-bottom: 12px;')
+        log_box = ui.textarea(label='', value='').classes('w-full').style('height: 300px; background: #F2F2F7; color: #1C1C1E; border-radius: 12px;')
+        def update_logs():
+            while True:
+                log_box.value = '\n'.join(problem_solver_logs[-30:])
+                time.sleep(2)
+        threading.Thread(target=update_logs, daemon=True).start()
 
-    council_messages = [
-        '**🧭 Dr. TidyCode:** "Refactoring core logic for better maintainability."',
-        '**🕯️ Dr. Syntax:** "Style checks passed. Ready for next module!"',
-        '**🦴 Dr. ImportOrder:** "Optimizing import statements for speed."',
-        '**🪄 Dr. Formatter:** "Auto-formatting completed. Reviewing results."',
-        '**🧪 Dr. Archivist:** "Archiving logs and preparing for next run."',
-        '**Dr. Debugger:** "No critical errors found in last scan."',
-        '**Dr. Data:** "Data pipeline optimized for batch processing."',
-        '**Dr. Architect:** "System architecture review underway."',
-        '**Dr. Security:** "API endpoints secured. Running vulnerability scan."',
-        '**Dr. Test:** "Unit tests coverage at 98%."',
-        '**Dr. ML:** "Model retraining scheduled for midnight."',
-        '**Dr. UI:** "UI components updated for accessibility."',
-        '**Dr. Infra:** "Deployment automation scripts running."',
-        '**Dr. GameDev:** "Game engine refactor in progress."',
-        '**Dr. Slicer:** "3D model slicing completed."',
-        '**Dr. Vision:** "Image recognition accuracy improved."',
-        '**Dr. Web:** "Web service integration successful."',
-        '**Dr. API:** "API documentation auto-generated."',
-        '**Dr. Embedded:** "Embedded module passed hardware tests."',
-        '**Dr. Quantum:** "Quantum algorithm simulation finished."'
-    ]
-
-    def update_chat():
-        chat_column.clear()
-        for msg in council_messages[-10:]:
-            ui.markdown(msg).style('color: #e0e0e0; font-size: 1rem; margin-bottom: 8px;')
-    update_chat()
-
-    def update_logs():
-        while True:
-            log_box.value = '\n'.join(problem_solver_logs[-30:])
-            time.sleep(2)
-
-    threading.Thread(target=update_logs, daemon=True).start()
-
-# Time Estimator Section
-with ui.row():
-    time_estimator = ui.label('Estimated Time for Current Task: Calculating...').style('font-size: 1.2rem; color: #fff; margin-top: 20px;')
-    progress_bar = ui.linear_progress(0).style('width: 600px; height: 20px; margin-top: 10px;')
+with ui.row().classes('w-full items-center'):
+    time_estimator = ui.label('Estimated Time for Current Task: Calculating...').style('font-size: 1.1rem; color: #007AFF; margin-top: 20px;')
+    progress_bar = ui.linear_progress(0).classes('w-full').style('height: 16px; margin-top: 10px;')
 
 def update_time_estimator():
     tasks = [
@@ -104,83 +90,18 @@ def update_time_estimator():
     while True:
         task, est_time = tasks[int(time.time()) % len(tasks)]
         time_estimator.text = f'Estimated Time for {task}: {est_time} minutes'
-        progress_bar.value = (time.time() % 60) / 60 * 100  # Simulate progress
+        progress_bar.value = (time.time() % 60) / 60 * 100
         time.sleep(5)
-
 threading.Thread(target=update_time_estimator, daemon=True).start()
 
-# Hall of Fame Section
 with ui.expansion('🏆 GHST Hall of Fame').classes('w-full'):
-    ui.label('Celebrating Innovations and Excellence in Coding').style('font-size: 1.5rem; color: #fff; margin-bottom: 10px;')
+    ui.label('Celebrating Innovations and Excellence').style('font-size: 1.2rem; color: #007AFF; margin-bottom: 10px;')
     with ui.grid(columns=2):
-        # Dr. TidyCode
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🧭 Dr. TidyCode').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Code Refactoring & Maintenance').style('color: #e0e0e0;')
-            ui.label('Innovation: Automated code hygiene fixes, reducing errors by 90%.').style('color: #e0e0e0;')
-            ui.label('"Clean code is the foundation of innovation."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Syntax
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🕯️ Dr. Syntax').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Syntax Analysis & Debugging').style('color: #e0e0e0;')
-            ui.label('Innovation: Real-time syntax validation for all languages.').style('color: #e0e0e0;')
-            ui.label('"Syntax errors are just opportunities to learn."').style('font-style: italic; color: #bbb;')
-
-        # Dr. ImportOrder
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🦴 Dr. ImportOrder').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Import Optimization & Dependency Management').style('color: #e0e0e0;')
-            ui.label('Innovation: Intelligent import sorting, speeding up load times.').style('color: #e0e0e0;')
-            ui.label('"Order brings clarity to chaos."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Formatter
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🪄 Dr. Formatter').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Code Formatting & Style Enforcement').style('color: #e0e0e0;')
-            ui.label('Innovation: Universal formatter supporting 50+ languages.').style('color: #e0e0e0;')
-            ui.label('"Beauty in code inspires greatness."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Archivist
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🧪 Dr. Archivist').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Data Archiving & Version Control').style('color: #e0e0e0;')
-            ui.label('Innovation: Automated backup and versioning systems.').style('color: #e0e0e0;')
-            ui.label('"Preserve the past to build the future."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Debugger
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🐛 Dr. Debugger').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Debugging & Error Resolution').style('color: #e0e0e0;')
-            ui.label('Innovation: AI-powered bug detection and fixes.').style('color: #e0e0e0;')
-            ui.label('"Every bug is a lesson in perfection."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Data
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('📊 Dr. Data').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Data Science & Analytics').style('color: #e0e0e0;')
-            ui.label('Innovation: Predictive analytics for code performance.').style('color: #e0e0e0;')
-            ui.label('"Data drives decisions, code drives results."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Architect
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🏗️ Dr. Architect').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: System Architecture & Design').style('color: #e0e0e0;')
-            ui.label('Innovation: Scalable architecture templates.').style('color: #e0e0e0;')
-            ui.label('"Build for tomorrow, today."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Security
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🔒 Dr. Security').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Cybersecurity & Vulnerability Management').style('color: #e0e0e0;')
-            ui.label('Innovation: Automated security audits and patches.').style('color: #e0e0e0;')
-            ui.label('"Security is the silent guardian of innovation."').style('font-style: italic; color: #bbb;')
-
-        # Dr. Test
-        with ui.card().style('background: #1a1a1a; border-radius: 10px; padding: 10px; margin: 5px;'):
-            ui.label('🧪 Dr. Test').style('font-size: 1.2rem; color: #4caf50;')
-            ui.label('Field: Testing & Quality Assurance').style('color: #e0e0e0;')
-            ui.label('Innovation: Comprehensive test suites with 99% coverage.').style('color: #e0e0e0;')
-            ui.label('"Test to trust, innovate to excel."').style('font-style: italic; color: #bbb;')
+        for g in GHSTS:
+            with ui.card().style('background: #F2F2F7; border-radius: 16px; padding: 14px; margin: 5px; box-shadow: 0 1px 4px #0001;'):
+                ui.label(f'{g["emoji"]} {g["name"]}').style(f'font-size: 1.1rem; color: {g["color"]}; font-weight: 500;')
+                ui.label(f'Field: {g["field"]}').style('color: #1C1C1E;')
+                ui.label('Innovation: Excellence in automation and collaboration.').style('color: #1C1C1E;')
+                ui.label('"Inspiration for all future coders."').style('font-style: italic; color: #888;')
 
 ui.run()
