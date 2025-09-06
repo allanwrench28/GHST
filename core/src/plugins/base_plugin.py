@@ -1,8 +1,8 @@
 """
-Base Plugin Interface for FANTOM
+Base Plugin Interface for GHST
 
-Defines the core interface that all FANTOM plugins must implement.
-Modeled after the Ghost system architecture for consistency.
+Defines the core interface that all GHST plugins must implement.
+Modeled after the GHST Agent system architecture for consistency.
 
 ⚠️ DISCLAIMER: Plugin execution involves system access - use at your own risk!
 """
@@ -19,7 +19,7 @@ class PluginMetadata:
     version: str
     author: str
     description: str
-    category: str  # "slicer", "ui", "analysis", "export", "import", "utility"
+    category: str  # "coding engine", "ui", "analysis", "export", "import", "utility"
     requires_gui: bool = False
     experimental: bool = False
     safety_notes: List[str] = None
@@ -29,7 +29,7 @@ class PluginMetadata:
             self.safety_notes = []
 
 class BasePlugin(ABC):
-    """Base class for all FANTOM plugins."""
+    """Base class for all GHST plugins."""
     
     def __init__(self, plugin_manager=None):
         """Initialize plugin with reference to plugin manager."""

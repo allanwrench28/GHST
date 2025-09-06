@@ -1,8 +1,8 @@
 """
-Plugin Manager for FANTOM
+Plugin Manager for GHST
 
 Manages plugin discovery, loading, and lifecycle.
-Modeled after the Ghost Manager architecture.
+Modeled after the GHST Agent Manager architecture.
 
 ⚠️ DISCLAIMER: Plugin loading involves code execution - use at your own risk!
 """
@@ -20,7 +20,7 @@ import yaml
 from .base_plugin import BasePlugin, PluginMetadata
 
 class PluginManager:
-    """Manages FANTOM plugins and their lifecycle."""
+    """Manages GHST plugins and their lifecycle."""
     
     def __init__(self, plugin_dirs: List[str] = None):
         """Initialize plugin manager.
@@ -300,8 +300,8 @@ class PluginManager:
                 self.logger.error(f"Error calling {hook_name} on plugin {plugin.metadata.name}: {e}")
     
     def process_mesh_through_plugins(self, mesh_data: Any) -> Any:
-        """Process mesh data through all enabled slicer plugins."""
-        for plugin in self.get_plugins_by_category("slicer"):
+        """Process mesh data through all enabled coding engine plugins."""
+        for plugin in self.get_plugins_by_category("coding engine"):
             try:
                 mesh_data = plugin.process_mesh(mesh_data) or mesh_data
             except Exception as e:
@@ -309,8 +309,8 @@ class PluginManager:
         return mesh_data
     
     def process_gcode_through_plugins(self, gcode_lines: List[str]) -> List[str]:
-        """Process G-code through all enabled slicer plugins."""
-        for plugin in self.get_plugins_by_category("slicer"):
+        """Process G-code through all enabled coding engine plugins."""
+        for plugin in self.get_plugins_by_category("coding engine"):
             try:
                 gcode_lines = plugin.process_gcode(gcode_lines)
             except Exception as e:

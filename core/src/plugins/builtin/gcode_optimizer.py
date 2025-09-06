@@ -38,9 +38,9 @@ class GcodeOptimizerPlugin(BasePlugin):
         return PluginMetadata(
             name="G-code Optimizer",
             version="1.0.0",
-            author="FANTOM Team",
+            author="GHST Team",
             description="Experimental G-code optimizer for improved print quality and reduced print time",
-            category="slicer",
+            category="coding engine",
             requires_gui=False,
             experimental=True,
             safety_notes=[
@@ -75,7 +75,7 @@ class GcodeOptimizerPlugin(BasePlugin):
             line = line.strip()
             
             # Skip empty lines and comments (except important ones)
-            if not line or (line.startswith(';') and 'FANTOM' not in line):
+            if not line or (line.startswith(';') and 'GHST' not in line):
                 continue
             
             # Simple optimization: remove redundant moves
@@ -92,7 +92,7 @@ class GcodeOptimizerPlugin(BasePlugin):
         
         # Add optimization header
         header = [
-            "; FANTOM G-code Optimizer Plugin",
+            "; GHST G-code Optimizer Plugin",
             f"; Optimization #{self.optimization_count}",
             f"; Removed {reduction} lines for efficiency",
             "; ⚠️ EXPERIMENTAL - verify before printing!",

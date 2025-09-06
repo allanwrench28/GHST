@@ -38,7 +38,7 @@ class PrintStatsPlugin(BasePlugin):
         return PluginMetadata(
             name="Print Statistics",
             version="1.0.0",
-            author="FANTOM Team",
+            author="GHST Team",
             description="Calculates detailed print statistics including time, material usage, and cost estimates",
             category="analysis",
             requires_gui=True,

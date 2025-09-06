@@ -1,5 +1,5 @@
 """
-Built-in FANTOM Plugins
+Built-in GHST Plugins
 
-Contains the default plugins that ship with FANTOM Studio.
+Contains the default plugins that ship with GHST Studio.
 """

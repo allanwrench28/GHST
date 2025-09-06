@@ -1,16 +1,16 @@
 """
-Ghost Chat Interface - Conversational AI for FANTOM
+GHST Agent Chat Interface - Conversational AI for GHST
 
 This module provides a chat interface allowing users to directly communicate
-with the Ghost collective for assistance with slicing, troubleshooting,
-theme customization, and 3D printing guidance.
+with the GHST Agent collective for assistance with slicing, troubleshooting,
+theme customization, and AI coding assistance guidance.
 
 Features:
-- Direct chat with PhD-level Ghost specialists
+- Direct chat with PhD-level GHST Agent specialists
 - Auto-slicing recommendations
 - Theme randomization and customization
 - Real-time troubleshooting assistance
-- Educational 3D printing guidance
+- Educational AI coding assistance guidance
 
 ⚠️ DISCLAIMER: AI-generated recommendations. Always verify before use.
 """
@@ -24,10 +24,10 @@ from datetime import datetime
 
 
 class GhostChatInterface:
-    """Conversational interface for interacting with the Ghost collective."""
+    """Conversational interface for interacting with the GHST Agent collective."""
     
-    def __init__(self, ghost_manager):
-        self.ghost_manager = ghost_manager
+    def __init__(self, ghst_manager):
+        self.ghst_manager = ghst_manager
         self.chat_history = []
         self.user_preferences = {}
         self.available_themes = {
@@ -42,7 +42,7 @@ class GhostChatInterface:
         }
         
     def process_user_message(self, message: str) -> str:
-        """Process user message and route to appropriate Ghost specialist."""
+        """Process user message and route to appropriate GHST Agent specialist."""
         message_lower = message.lower()
         
         # Store message in history
@@ -55,7 +55,7 @@ class GhostChatInterface:
         # Check for idea capture keywords first
         if any(word in message_lower for word in ['idea:', 'feature:', 'what if', 'could we', 'suggestion:']):
             response = self._handle_idea_capture(message)
-        # Route message to appropriate Ghost based on keywords
+        # Route message to appropriate GHST Agent based on keywords
         elif any(word in message_lower for word in ['theme', 'color', 'appearance', 'visual']):
             response = self._handle_visual_query(message)
         elif any(word in message_lower for word in ['slice', 'print', 'gcode', 'settings']):
@@ -86,7 +86,7 @@ class GhostChatInterface:
         return f"🎨 **Dr. ColorScience**: I can help with visual customization! Available themes: {', '.join(self.available_themes.values())}. I also optimize color contrast ratios and ensure accessibility compliance. What specific visual aspect would you like to improve?"
     
     def _handle_slicing_query(self, message: str) -> str:
-        """Handle slicing and 3D printing queries."""
+        """Handle slicing and AI coding assistance queries."""
         responses = [
             "⚙️ **Dr. Manufacturing & Dr. Physics**: For optimal slicing, I recommend analyzing your model's geometry first. What's your nozzle diameter and material type?",
             "🔬 **Dr. Materials & Dr. Quality**: I can optimize print settings based on your specific filament. PLA, PETG, or ABS? Each requires different temperature and speed profiles.",
@@ -116,8 +116,8 @@ class GhostChatInterface:
     
     def _handle_general_query(self, message: str) -> str:
         """Handle general queries and provide helpful guidance."""
-        return ("👻 **Ghost Collective**: Hello! Our 25 PhD-level specialists "
-                "are here to help, with Dr. Ethics Ghost ensuring responsible "
+        return ("👻 **GHST Agent Collective**: Hello! Our 25 PhD-level specialists "
+                "are here to help, with Dr. Ethics GHST Agent ensuring responsible "
                 "AI behavior. We cover everything from color science to "
                 "manufacturing optimization. Try asking about 'slicing "
                 "settings', 'theme customization', 'error troubleshooting', "
@@ -129,7 +129,7 @@ class GhostChatInterface:
                 "prioritize human safety and agency. Remember: you maintain "
                 "ultimate authority over all decisions. All AI-generated "
                 "content requires your validation before use. How can I "
-                "help you use FANTOM responsibly?")
+                "help you use GHST responsibly?")
     
     def request_human_approval(self, action_type: str, details: str) -> bool:
         """Request human approval for critical actions."""
@@ -177,7 +177,7 @@ class GhostChatInterface:
     def export_chat_log(self, filename: str = None) -> str:
         """Export chat history to file."""
         if not filename:
-            filename = f"ghost_chat_log_{int(time.time())}.json"
+            filename = f"ghst_chat_log_{int(time.time())}.json"
         
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(self.chat_history, f, indent=2, ensure_ascii=False)
