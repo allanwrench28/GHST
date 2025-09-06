@@ -10,13 +10,11 @@ import sys
 import os
 import re
 import ast
-from pathlib import Path
-from typing import List, Dict, Any, Set
-
+from typing import List, Dict, Any
 
 class AISafetyChecker:
     """AI safety validation system."""
-    
+
     def __init__(self):
         self.safety_violations = {
             'unsafe_ai_operations': [
@@ -54,7 +52,7 @@ class AISafetyChecker:
                 r'emergency.*override',
             ]
         }
-        
+
         self.ai_safety_requirements = [
             'human_approval_required',
             'safety_validation',
@@ -74,14 +72,15 @@ class AISafetyChecker:
                 'error': str(e),
                 'status': 'error'
             }
-        
+
         violations = []
         warnings = []
-        
+
         # Check for safety violations
         for category, patterns in self.safety_violations.items():
             for pattern in patterns:
-                matches = re.finditer(pattern, content, re.IGNORECASE | re.MULTILINE)
+                matches = re.finditer(
+                    pattern, content, re.IGNORECASE | re.MULTILINE)
                 for match in matches:
                     line_num = content[:match.start()].count('\n') + 1
                     violations.append({
@@ -91,7 +90,7 @@ class AISafetyChecker:
                         'severity': 'high',
                         'match': match.group(0)
                     })
-        
+
         # Check for missing safety requirements in AI-related code
         if self._is_ai_code(content):
             missing_requirements = self._check_safety_requirements(content)
@@ -101,12 +100,12 @@ class AISafetyChecker:
                     'requirement': req,
                     'severity': 'medium'
                 })
-        
+
         # Parse AST for deeper analysis (if Python file)
         if filepath.endswith('.py'):
             ast_issues = self._analyze_ast(content, filepath)
             violations.extend(ast_issues)
-        
+
         return {
             'file': filepath,
             'violations': violations,
@@ -130,7 +129,7 @@ class AISafetyChecker:
         """Check for missing AI safety requirements."""
         missing = []
         content_lower = content.lower()
-        
+
         requirement_patterns = {
             'human_approval_required': [
                 'human.*approval', 'user.*confirmation', 'manual.*review'
@@ -148,19 +147,21 @@ class AISafetyChecker:
                 'try.*except', 'error.*handling', 'exception.*handling'
             ]
         }
-        
+
         for requirement, patterns in requirement_patterns.items():
-            if not any(re.search(pattern, content_lower) for pattern in patterns):
+            if not any(re.search(pattern, content_lower)
+                       for pattern in patterns):
                 missing.append(requirement)
-        
+
         return missing
 
-    def _analyze_ast(self, content: str, filepath: str) -> List[Dict[str, Any]]:
+    def _analyze_ast(self, content: str,
+                     filepath: str) -> List[Dict[str, Any]]:
         """Analyze Python AST for security issues."""
         issues = []
         try:
             tree = ast.parse(content)
-            
+
             class SecurityVisitor(ast.NodeVisitor):
                 def visit_Call(self, node):
                     # Check for dangerous function calls
@@ -174,7 +175,7 @@ class AISafetyChecker:
                                 'message': f"Dangerous function {node.func.id} detected"
                             })
                     self.generic_visit(node)
-                
+
                 def visit_Import(self, node):
                     # Check for suspicious imports
                     for alias in node.names:
@@ -187,10 +188,10 @@ class AISafetyChecker:
                                 'message': f"Potentially unsafe module {alias.name} imported"
                             })
                     self.generic_visit(node)
-            
+
             visitor = SecurityVisitor()
             visitor.visit(tree)
-            
+
         except SyntaxError:
             # File has syntax errors, skip AST analysis
             pass
@@ -200,34 +201,42 @@ class AISafetyChecker:
                 'error': str(e),
                 'line': 0,
                 'severity': 'low',
-                'message': f"AST analysis failed: {e}"
+                'message': "AST analysis failed: {e}"
             })
-        
+
         return issues
 
-    def _calculate_safety_score(self, violations: List[Dict], warnings: List[Dict]) -> float:
+    def _calculate_safety_score(
+            self,
+            violations: List[Dict],
+            warnings: List[Dict]) -> float:
         """Calculate safety score (0-100, higher is safer)."""
-        critical_count = len([v for v in violations if v.get('severity') == 'critical'])
-        high_count = len([v for v in violations if v.get('severity') == 'high'])
-        medium_count = len([v for v in violations if v.get('severity') == 'medium']) + len(warnings)
-        
+        critical_count = len(
+            [v for v in violations if v.get('severity') == 'critical'])
+        high_count = len(
+            [v for v in violations if v.get('severity') == 'high'])
+        medium_count = len([v for v in violations if v.get(
+            'severity') == 'medium']) + len(warnings)
+
         # Deduct points for violations
         score = 100.0
         score -= critical_count * 30
         score -= high_count * 15
         score -= medium_count * 5
-        
+
         return max(0.0, score)
 
     def generate_report(self, results: List[Dict[str, Any]]) -> str:
         """Generate safety report."""
         total_files = len(results)
-        files_with_violations = len([r for r in results if r.get('violations')])
+        files_with_violations = len(
+            [r for r in results if r.get('violations')])
         ai_files = len([r for r in results if r.get('is_ai_code')])
-        
-        avg_safety_score = sum(r.get('safety_score', 0) for r in results) / max(1, total_files)
-        
-        report = f"""
+
+        avg_safety_score = sum(r.get('safety_score', 0)
+                               for r in results) / max(1, total_files)
+
+        report = """
 🤖 AI SAFETY CHECK REPORT
 
 📊 Summary:
@@ -237,18 +246,31 @@ class AISafetyChecker:
 - Average safety score: {avg_safety_score:.1f}/100
 
 """
-        
+
         if files_with_violations > 0:
             report += "🚨 SAFETY VIOLATIONS DETECTED:\n\n"
             for result in results:
                 if result.get('violations'):
-                    report += f"File: {result['file']} (Score: {result.get('safety_score', 0):.1f})\n"
+                    report += "File: {
+                        result['file']} (Score: {
+                        result.get(
+                            'safety_score',
+                            0):.1f})\n"
                     for violation in result['violations']:
-                        report += f"  ⚠️ {violation['category']}: {violation.get('message', violation.get('pattern', 'Unknown'))}\n"
+                        report += "  ⚠️ {
+                            violation['category']}: {
+                            violation.get(
+                                'message',
+                                violation.get(
+                                    'pattern',
+                                    'Unknown'))}\n"
                         if 'line' in violation:
-                            report += f"     Line {violation['line']}: {violation.get('match', '')}\n"
+                            report += "     Line {
+                                violation['line']}: {
+                                violation.get(
+                                    'match', '')}\n"
                     report += "\n"
-        
+
         report += "\n🛡️ SAFETY RECOMMENDATIONS:\n"
         if avg_safety_score < 70:
             report += "- CRITICAL: Safety score below threshold - immediate review required\n"
@@ -259,41 +281,46 @@ class AISafetyChecker:
         if ai_files > 0:
             report += "- Ensure human oversight for AI-related operations\n"
             report += "- Implement ethical review processes\n"
-        
-        report += "\n✅ SAFETY FRAMEWORK COMPLIANCE:\n"
-        report += f"- Safety score threshold: {'PASS' if avg_safety_score >= 70 else 'FAIL'}\n"
-        report += f"- Human oversight: {'REQUIRED' if ai_files > 0 else 'RECOMMENDED'}\n"
-        report += f"- Critical violations: {'NONE' if not any(v.get('severity') == 'critical' for r in results for v in r.get('violations', [])) else 'DETECTED'}\n"
-        
-        return report
 
+        report += "\n✅ SAFETY FRAMEWORK COMPLIANCE:\n"
+        report += "- Safety score threshold: {
+            'PASS' if avg_safety_score >= 70 else 'FAIL'}\n"
+        report += "- Human oversight: {
+            'REQUIRED' if ai_files > 0 else 'RECOMMENDED'}\n"
+        report += "- Critical violations: {
+            'NONE' if not any(
+                v.get('severity') == 'critical' for r in results for v in r.get(
+                    'violations', [])) else 'DETECTED'}\n"
+
+        return report
 
 def main():
     """Main safety check function."""
     if len(sys.argv) < 2:
         print("Usage: python ai_safety_check.py <file1> [file2] ...")
         sys.exit(1)
-    
+
     checker = AISafetyChecker()
     results = []
-    
+
     for filepath in sys.argv[1:]:
         if os.path.exists(filepath):
             result = checker.check_file(filepath)
             results.append(result)
-    
+
     # Generate and display report
     report = checker.generate_report(results)
     print(report)
-    
+
     # Exit with error code if critical issues found
     has_critical = any(
-        v.get('severity') == 'critical' 
-        for r in results 
+        v.get('severity') == 'critical'
+        for r in results
         for v in r.get('violations', [])
     )
-    avg_score = sum(r.get('safety_score', 0) for r in results) / max(1, len(results))
-    
+    avg_score = sum(r.get('safety_score', 0)
+                    for r in results) / max(1, len(results))
+
     if has_critical or avg_score < 70:
         print("\n🚨 Safety check failed - critical issues detected")
         sys.exit(1)
@@ -303,7 +330,6 @@ def main():
     else:
         print("\n✅ Safety check passed - no critical issues detected")
         sys.exit(0)
-
 
 if __name__ == '__main__':
     main()

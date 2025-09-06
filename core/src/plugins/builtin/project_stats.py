@@ -1,5 +1,5 @@
 """
-GHST Project Statistics Plugin  
+GHST Project Statistics Plugin
 =============================
 
 Provides project statistics and metrics for the GHST AI engine.
@@ -21,22 +21,21 @@ except ImportError:
             self.version = version
             self.description = description
             self.author = author
-    
+
     class BasePlugin:
         def __init__(self, metadata):
             self.metadata = metadata
             self.logger = None
-        
+
         def activate(self):
             return True
-        
+
         def deactivate(self):
             return True
 
-
 class ProjectStats(BasePlugin):
     """GHST project statistics plugin."""
-    
+
     def __init__(self):
         metadata = PluginMetadata(
             name="Project Stats",
@@ -45,30 +44,30 @@ class ProjectStats(BasePlugin):
             author="GHST Expert Collective"
         )
         super().__init__(metadata)
-    
+
     def activate(self):
         """Activate the project stats plugin."""
         if self.logger:
             self.logger.info("Project Stats activated")
         return True
-    
+
     def deactivate(self):
         """Deactivate the project stats plugin."""
         if self.logger:
             self.logger.info("Project Stats deactivated")
         return True
-    
+
     def get_project_stats(self, project_path: str) -> dict:
         """Get statistics for a project."""
         try:
             project_dir = Path(project_path)
-            
+
             # Count files by type
             python_files = len(list(project_dir.rglob("*.py")))
             md_files = len(list(project_dir.rglob("*.md")))
             json_files = len(list(project_dir.rglob("*.json")))
             total_files = len(list(project_dir.rglob("*.*")))
-            
+
             stats = {
                 'total_files': total_files,
                 'python_files': python_files,
@@ -77,12 +76,11 @@ class ProjectStats(BasePlugin):
                 'project_path': str(project_dir),
                 'analysis_timestamp': 'now'
             }
-            
+
             return stats
-            
+
         except Exception as e:
             return {'error': str(e)}
-
 
 def create_plugin():
     """Create and return plugin instance."""
