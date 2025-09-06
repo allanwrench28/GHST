@@ -14,16 +14,17 @@ import subprocess
 import psutil
 import json
 import logging
+import io
 from pathlib import Path
 
-# Configure logging
+# Configure logging using UTF-8 safe handlers
+_stdout_stream = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+file_handler = logging.FileHandler('auto_commit_startup.log', encoding='utf-8')
+stream_handler = logging.StreamHandler(_stdout_stream)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - STARTUP - %(message)s',
-    handlers=[
-        logging.FileHandler('auto_commit_startup.log'),
-        logging.StreamHandler()
-    ]
+    handlers=[file_handler, stream_handler]
 )
 logger = logging.getLogger(__name__)
 

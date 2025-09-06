@@ -18,20 +18,21 @@ import time
 import json
 import shutil
 import logging
+import io
 import subprocess
 from pathlib import Path
 from datetime import datetime, timedelta
 from typing import Dict, List, Set, Tuple, Optional
 from collections import defaultdict
 
-# Configure logging
+# Configure logging (UTF-8 safe handlers)
+_stdout_stream = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+file_handler = logging.FileHandler('codebase_cleanup_daemon.log', encoding='utf-8')
+stream_handler = logging.StreamHandler(_stdout_stream)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('codebase_cleanup_daemon.log'),
-        logging.StreamHandler()
-    ]
+    handlers=[file_handler, stream_handler]
 )
 logger = logging.getLogger(__name__)
 

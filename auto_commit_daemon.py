@@ -11,20 +11,21 @@ import os
 import sys
 import time
 import logging
+import io
 import subprocess
 import json
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Set
 
-# Configure logging
+# Configure logging using UTF-8 safe handlers (prevents Windows console encoding errors)
+_stdout_stream = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+file_handler = logging.FileHandler('auto_commit_daemon.log', encoding='utf-8')
+stream_handler = logging.StreamHandler(_stdout_stream)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('auto_commit_daemon.log'),
-        logging.StreamHandler()
-    ]
+    handlers=[file_handler, stream_handler]
 )
 logger = logging.getLogger(__name__)
 
@@ -68,17 +69,21 @@ class AutoCommitDaemon:
         
         if os.path.exists(config_file):
             try:
-                with open(config_file, 'r') as f:
+                # Read config using UTF-8 and tolerant errors
+                with open(config_file, 'r', encoding='utf-8', errors='replace') as f:
                     user_config = json.load(f)
                 default_config.update(user_config)
                 logger.info(f"✅ Loaded config from {config_file}")
             except Exception as e:
                 logger.warning(f"⚠️ Could not load config: {e}. Using defaults.")
         else:
-            # Create default config file
-            with open(config_file, 'w') as f:
-                json.dump(default_config, f, indent=2)
-            logger.info(f"📝 Created default config file: {config_file}")
+            # Create default config file using UTF-8
+            try:
+                with open(config_file, 'w', encoding='utf-8') as f:
+                    json.dump(default_config, f, indent=2, ensure_ascii=False)
+                logger.info(f"📝 Created default config file: {config_file}")
+            except Exception as e:
+                logger.warning(f"⚠️ Could not create config file: {e}")
         
         return default_config
     
