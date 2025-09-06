@@ -1,0 +1,42 @@
+{
+  "repo_path": ".",
+  "archive_path": "./archived_code",
+  "check_interval_hours": 24,
+  "obsolete_threshold_days": 30,
+  "min_innovation_score": 30,
+  "min_ml_potential": 25,
+  "preserve_patterns": [
+    "ai_collaboration",
+    "machine_learning",
+    "optimization",
+    "automation",
+    "innovative_algorithms"
+  ],
+  "cleanup_extensions": [
+    ".py",
+    ".js",
+    ".ts",
+    ".java",
+    ".cpp"
+  ],
+  "exclude_directories": [
+    ".git",
+    "__pycache__",
+    "node_modules",
+    "dist",
+    "build",
+    "venv",
+    ".vscode",
+    ".idea",
+    "archived_code"
+  ],
+  "never_delete": [
+    "main.py",
+    "app.py",
+    "server.py",
+    "__init__.py",
+    "config.py",
+    "settings.py",
+    "requirements.txt"
+  ]
+}
