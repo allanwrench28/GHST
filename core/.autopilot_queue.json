@@ -1,0 +1,20 @@
+{
+  "goal": "Make GHST developer friendly and release-ready",
+  "tasks": [
+    {
+      "id": 1,
+      "task": "From expert_4: m(release-ready)",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "task": "2. From expert_5: m(release-ready)",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "task": "3. From expert_0: m(developer)",
+      "status": "pending"
+    }
+  ]
+}

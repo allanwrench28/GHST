@@ -1,0 +1,721 @@
+"""GHST Main Window - AI Coding Engine Interface.
+
+Modern interface for AI-assisted coding, debugging, and problem solving.
+"""
+
+import sys
+
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (
+    QHBoxLayout,
+    QLabel,
+    QListWidget,
+    QMainWindow,
+    QMessageBox,
+    QDialog,
+    QDialogButtonBox,
+    QPushButton,
+    QSplitter,
+    QStatusBar,
+    QTabWidget,
+    QTextEdit,
+    QVBoxLayout,
+    QWidget,
+)
+
+
+class GHSTWindow(QMainWindow):
+    """Main window for the GHST AI Coding Engine.
+
+    Features / API:
+        - create_left_pane(): Builds the sidebar with expert agents and tools.
+        - create_center_pane(): Sets up the main work area with tabs.
+        - create_right_pane(): Provides AI chat and assistance features.
+        - create_menu_bar(): Configures the application menu bar.
+        - create_status_bar(): Sets up the status bar.
+        - add_autocommit_ticker(): Adds a live git commit ticker to the status bar.
+        - apply_styling(): Applies modern styling to the interface.
+        - apply_ghst_theme(): Applies the professional GHST theme.
+        - send_chat_message(): Handles sending messages to AI experts.
+        - update_ss_status(): Updates Syntax Supervisors status display.
+        - add_ss_status_widget(): Adds Syntax Supervisors status to the status bar.
+
+    Attributes:
+        expert_manager: Manages AI expert agents.
+        config_manager: Handles configuration settings.
+        ss_manager: Manages Syntax Supervisors.
+        speedbuild_slider: Controls SPEEDBUILD automation.
+        experts_list: Displays available AI experts.
+        tools_list: Displays available tools.
+        tab_widget: Main tabbed workspace.
+        code_editor: Code editing area.
+        chat_display: AI chat output.
+        chat_input: AI chat input.
+        status_bar: Application status bar.
+        autocommit_label: Displays latest git commit info.
+        ss_status_label: Displays Syntax Supervisors status.
+
+    Usage:
+        Instantiate and show GHSTWindow as the main application window.
+    """
+
+    def apply_styling(self):
+        # Orca / Mainsail inspired dark theme, Qt-compatible (no unsupported CSS props)
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #0b1220;
+                color: #e6eef6;
+                font-family: 'Segoe UI', Arial, sans-serif;
+            }
+            QWidget {
+                background-color: transparent;
+                color: #e6eef6;
+            }
+            QLabel {
+                font-size: 16px;
+                font-weight: 600;
+                color: #e6eef6;
+                padding: 4px;
+            }
+            QListWidget {
+                background-color: #0f1724;
+                border: 1px solid #12202b;
+                border-radius: 8px;
+                padding: 8px;
+                font-size: 14px;
+            }
+            QSlider::groove:horizontal {
+                border: 1px solid #0a3940;
+                height: 10px;
+                background: #0f1724;
+                border-radius: 5px;
+            }
+            QSlider::handle:horizontal {
+                background: #00bcd4;
+                border: 1px solid #083033;
+                width: 18px;
+                height: 18px;
+                margin: -4px 0;
+                border-radius: 9px;
+            }
+            QPushButton {
+                background-color: #00bcd4;
+                color: #042028;
+                border: none;
+                padding: 8px 12px;
+                border-radius: 6px;
+                font-weight: 700;
+            }
+            QPushButton:hover {
+                background-color: #00a9bf;
+            }
+            QTextEdit, QPlainTextEdit {
+                background-color: #07121a;
+                border: 1px solid #12202b;
+                border-radius: 6px;
+                padding: 8px;
+                color: #e6eef6;
+                font-family: 'Consolas', 'Monaco', monospace;
+            }
+            QTabWidget::pane {
+                border: 1px solid #12202b;
+                background-color: #07121a;
+            }
+            QTabBar::tab {
+                background-color: #0f1724;
+                color: #e6eef6;
+                padding: 8px 12px;
+                margin-right: 2px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+            QTabBar::tab:selected {
+                background-color: #00bcd4;
+                color: #042028;
+            }
+        """)
+    def init_ui(self):
+        """Initialize the user interface."""
+        self.setWindowTitle("GHST - AI Coding Engine")
+        self.setGeometry(100, 100, 1400, 900)
+
+        # Apply GHST theme
+        if hasattr(self, 'apply_ghst_theme'):
+            self.apply_ghst_theme()
+
+        # Create central widget
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
+
+        # Create main layout
+        main_layout = QHBoxLayout()
+        central_widget.setLayout(main_layout)
+
+        # Create splitter for resizable panes
+        splitter = QSplitter(Qt.Horizontal)
+        main_layout.addWidget(splitter)
+
+        # Left pane - Professional sidebar
+        left_pane = QWidget()
+        left_layout = QVBoxLayout()
+        left_pane.setLayout(left_layout)
+
+        # Sidebar card
+        sidebar_card = QWidget()
+        # Use Qt-compatible styling (no box-shadow). Keep a translucent card look.
+        sidebar_card.setStyleSheet(
+            "background: rgba(57,62,70,220); border-radius: 12px; padding: 16px;"
+        )
+        card_layout = QVBoxLayout()
+        sidebar_card.setLayout(card_layout)
+
+        # Section header
+        card_layout.addWidget(QLabel("⚡ SPEEDBUILD Control Panel"))
+
+        # Prominent slider
+        from .speedbuild_slider import SpeedbuildSlider
+        self.speedbuild_slider = SpeedbuildSlider()
+        card_layout.addWidget(self.speedbuild_slider)
+
+        # Interactive button for SPEEDBUILD mode
+        from PyQt5.QtWidgets import QPushButton
+        self.speedbuild_btn = QPushButton("Apply SPEEDBUILD Mode")
+        # Mainsail/Orca-like accent button
+        self.speedbuild_btn.setStyleSheet(
+            "background: #00bcd4; color: #042028; font-weight: 700; border-radius: 6px; padding: 8px 12px;"
+        )
+        card_layout.addWidget(self.speedbuild_btn)
+
+        left_layout.addWidget(sidebar_card)
+        left_layout.addStretch()
+        splitter.addWidget(left_pane)
+
+        # Center pane - Main work area
+        if hasattr(self, 'create_center_pane'):
+            center_pane = self.create_center_pane()
+            splitter.addWidget(center_pane)
+
+        # Right pane - AI assistance and chat
+        if hasattr(self, 'create_right_pane'):
+            right_pane = self.create_right_pane()
+            splitter.addWidget(right_pane)
+
+        # Set splitter proportions
+        splitter.setStretchFactor(0, 1)  # Left pane
+        splitter.setStretchFactor(1, 3)  # Center pane (largest)
+        splitter.setStretchFactor(2, 1)  # Right pane
+
+        # Create menu bar
+        if hasattr(self, 'create_menu_bar'):
+            self.create_menu_bar()
+
+        # Create status bar
+        if hasattr(self, 'create_status_bar'):
+            self.create_status_bar()
+
+        # Apply styling
+        if hasattr(self, 'apply_styling'):
+            self.apply_styling()
+
+        # Add autocommit ticker to status bar (after status bar is created)
+        if hasattr(self, 'add_autocommit_ticker'):
+            self.add_autocommit_ticker()
+    """Main window for GHST AI Coding Engine."""
+
+    def __init__(self):
+        super().__init__()
+        self.expert_manager = None
+        self.config_manager = None
+        self.ss_manager = None  # Syntax Supervisors Manager
+        self.init_ui()
+
+    def create_left_pane(self):
+        from .speedbuild_slider import SpeedbuildSlider
+        widget = QWidget()
+        layout = QVBoxLayout()
+        widget.setLayout(layout)
+
+        # SPEEDBUILD slider for branch control
+        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
+        self.speedbuild_slider = SpeedbuildSlider()
+        layout.addWidget(self.speedbuild_slider)
+
+        # Expert agents section
+        layout.addWidget(QLabel("🧠 AI Expert Agents"))
+
+        self.experts_list = QListWidget()
+        self.experts_list.addItems([
+            "🔍 Code Analysis Expert",
+            "🐛 Debugging Expert",
+            "🛠️ Problem Solving Expert",
+            "📚 Research Expert",
+            "⚡ Performance Expert",
+            "🔒 Security Expert",
+            "📝 Documentation Expert",
+            "🧪 Testing Expert",
+            "🏗️ Architecture Expert",
+            "🎨 UI/UX Expert",
+            "🚀 DevOps Expert",
+            "📊 Data Expert"
+        ])
+        layout.addWidget(self.experts_list)
+
+        # Tools section
+        layout.addWidget(QLabel("🔧 Tools"))
+
+        self.tools_list = QListWidget()
+        self.tools_list.addItems([
+            "Plugin Manager",
+            "Configuration",
+            "Project Templates",
+            "Code Snippets"
+        ])
+        layout.addWidget(self.tools_list)
+
+        return widget
+    def create_left_pane(self):
+        """Create left pane with expert agents and tools."""
+        from .speedbuild_slider import SpeedbuildSlider
+        widget = QWidget()
+        layout = QVBoxLayout()
+        widget.setLayout(layout)
+
+        # SPEEDBUILD slider for branch control
+        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
+        self.speedbuild_slider = SpeedbuildSlider()
+        layout.addWidget(self.speedbuild_slider)
+
+        # Expert agents section
+        layout.addWidget(QLabel("🧠 AI Expert Agents"))
+
+        self.experts_list = QListWidget()
+        self.experts_list.addItems([
+            "🔍 Code Analysis Expert",
+            "🐛 Debugging Expert",
+            "🛠️ Problem Solving Expert",
+            "📚 Research Expert",
+            "⚡ Performance Expert",
+            "🔒 Security Expert",
+            "📝 Documentation Expert",
+            "🧪 Testing Expert",
+            "🏗️ Architecture Expert",
+            "🎨 UI/UX Expert",
+            "🚀 DevOps Expert",
+            "📊 Data Expert"
+        ])
+        layout.addWidget(self.experts_list)
+
+        # Tools section
+        layout.addWidget(QLabel("🔧 Tools"))
+
+        self.tools_list = QListWidget()
+        self.tools_list.addItems([
+            "Plugin Manager",
+            "Configuration",
+            "Project Templates",
+            "Code Snippets"
+        ])
+        layout.addWidget(self.tools_list)
+
+        return widget
+
+    def create_center_pane(self):
+        """Create center pane with main work area."""
+        widget = QWidget()
+        layout = QVBoxLayout()
+        widget.setLayout(layout)
+
+        # Tab widget for multiple work areas
+        self.tab_widget = QTabWidget()
+        layout.addWidget(self.tab_widget)
+
+        # Welcome tab
+        welcome_tab = QWidget()
+        welcome_layout = QVBoxLayout()
+        welcome_tab.setLayout(welcome_layout)
+
+        welcome_text = QTextEdit()
+        welcome_text.setHtml("""
+        <h2>🚀 Welcome to GHST - AI Coding Engine</h2>
+        <p>Your open-source AI coding assistant with expert agent think tank.</p>
+
+        <h3>✨ Features:</h3>
+        <ul>
+            <li><strong>AI Collaboration Framework:</strong> Multiple AI experts work together</li>
+            <li><strong>Plugin System:</strong> Extensible tools and workflows</li>
+            <li><strong>Configuration Management:</strong> YAML-based settings</li>
+            <li><strong>Modern UI:</strong> Clean, customizable interface</li>
+            <li><strong>Developer Tools:</strong> Built-in automation and utilities</li>
+        </ul>
+
+        <h3>🎯 Getting Started:</h3>
+        <ol>
+            <li>Select an AI expert from the left panel</li>
+            <li>Open or create a project</li>
+            <li>Get AI assistance with coding, debugging, and problem solving</li>
+        </ol>
+
+        <p><em>Remember: You maintain full control. All AI recommendations require your validation.</em></p>
+        """)
+        welcome_text.setReadOnly(True)
+        welcome_layout.addWidget(welcome_text)
+
+        self.tab_widget.addTab(welcome_tab, "Welcome")
+
+        # Code editor tab (placeholder)
+        code_tab = QWidget()
+        code_layout = QVBoxLayout()
+        code_tab.setLayout(code_layout)
+
+        self.code_editor = QTextEdit()
+        self.code_editor.setPlaceholderText(
+            "// Your code here...\n// AI experts are ready to assist!")
+        code_layout.addWidget(self.code_editor)
+
+        self.tab_widget.addTab(code_tab, "Code Editor")
+
+        return widget
+
+    def create_right_pane(self):
+        """Create right pane with AI assistance and chat."""
+        widget = QWidget()
+        layout = QVBoxLayout()
+        widget.setLayout(layout)
+
+        # AI Chat section
+        layout.addWidget(QLabel("💬 AI Assistant"))
+
+        self.chat_display = QTextEdit()
+        self.chat_display.setReadOnly(True)
+        self.chat_display.append(
+            "🧠 AI Expert Collective: Ready to assist with coding tasks!")
+        self.chat_display.append(
+            "💡 Ask questions, request code reviews, or get debugging help.")
+        layout.addWidget(self.chat_display)
+
+        # Chat input
+        self.chat_input = QTextEdit()
+        self.chat_input.setMaximumHeight(60)
+        self.chat_input.setPlaceholderText("Ask the AI experts anything...")
+        layout.addWidget(self.chat_input)
+
+        # Send button
+        send_button = QPushButton("Send to Experts")
+        send_button.clicked.connect(self.send_chat_message)
+        layout.addWidget(send_button)
+
+        return widget
+
+    def create_menu_bar(self):
+        """Create application menu bar."""
+        menubar = self.menuBar()
+
+        # File menu
+        file_menu = menubar.addMenu('File')
+        file_menu.addAction('New Project', self.new_project)
+        file_menu.addAction('Open Project', self.open_project)
+        file_menu.addSeparator()
+        file_menu.addAction('Exit', self.close)
+
+        # AI menu
+        ai_menu = menubar.addMenu('AI Experts')
+        ai_menu.addAction('Expert Status', self.show_expert_status)
+        ai_menu.addAction('Configure Experts', self.configure_experts)
+
+        # Tools menu
+        tools_menu = menubar.addMenu('Tools')
+        tools_menu.addAction('Plugin Manager', self.open_plugin_manager)
+        tools_menu.addAction('Configuration', self.open_configuration)
+
+        # Help menu
+        help_menu = menubar.addMenu('Help')
+        help_menu.addAction('About GHST', self.show_about)
+
+    def create_status_bar(self):
+        """Create application status bar."""
+        self.status_bar = QStatusBar()
+        self.setStatusBar(self.status_bar)
+        self.status_bar.showMessage("GHST AI Coding Engine - Ready")
+
+    def add_autocommit_ticker(self):
+        """Add live autocommit ticker to the status bar."""
+        from PyQt5.QtCore import QTimer
+        self.autocommit_label = QLabel("🔄 Last autocommit: loading...")
+        self.status_bar.addPermanentWidget(self.autocommit_label)
+        self.autocommit_timer = QTimer(self)
+        self.autocommit_timer.timeout.connect(self.update_autocommit_ticker)
+        self.autocommit_timer.start(10000)  # Refresh every 10 seconds
+        self.update_autocommit_ticker()
+
+    def update_autocommit_ticker(self):
+        """Update the autocommit ticker with latest commit info."""
+        import subprocess
+        try:
+            result = subprocess.run([
+                "git", "log", "-1", "--pretty=format:%h %s (%ci)"
+            ], capture_output=True, text=True, cwd=None)
+            if result.returncode == 0:
+                commit_info = result.stdout.strip()
+                if commit_info:
+                    self.autocommit_label.setText(f"🔄 Last autocommit: {commit_info}")
+                else:
+                    self.autocommit_label.setText("🔄 Last autocommit: No commits found.")
+            else:
+                self.autocommit_label.setText("❌ Autocommit ticker error: git log failed.")
+        except Exception as e:
+            self.autocommit_label.setText(f"❌ Autocommit ticker error: {e}")
+
+    def apply_styling(self):
+        """Apply modern styling to the interface."""
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color: #2b2b2b;
+                color: #ffffff;
+            }
+            QLabel {
+                font-weight: bold;
+                color: #ffffff;
+                padding: 5px;
+            }
+            QListWidget {
+                background-color: #3c3c3c;
+                border: 1px solid #555555;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            QTextEdit {
+                background-color: #3c3c3c;
+                border: 1px solid #555555;
+                border-radius: 5px;
+                padding: 10px;
+                font-family: 'Consolas', 'Monaco', monospace;
+            }
+            QPushButton {
+                background-color: #0d7377;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #14a085;
+            }
+            QTabWidget::pane {
+                border: 1px solid #555555;
+                background-color: #2b2b2b;
+            }
+            QTabBar::tab {
+                background-color: #3c3c3c;
+                color: #ffffff;
+                padding: 8px 16px;
+                margin-right: 2px;
+            }
+            QTabBar::tab:selected {
+                background-color: #0d7377;
+            }
+        """)
+
+    def send_chat_message(self):
+        """Handle sending chat message to AI experts."""
+        message = self.chat_input.toPlainText().strip()
+        if message:
+            self.chat_display.append("👤 You: {message}")
+            self.chat_input.clear()
+
+            # Simulate AI response (replace with actual AI integration)
+            self.chat_display.append(
+                "🧠 AI Expert: I understand your request. Let me analyze this and provide assistance...")
+
+    def new_project(self):
+        """Create a new project."""
+        QMessageBox.information(
+            self,
+            "New Project",
+            "New project functionality coming soon!")
+
+    def open_project(self):
+        """Open an existing project."""
+        QMessageBox.information(
+            self,
+            "Open Project",
+            "Open project functionality coming soon!")
+
+    def show_expert_status(self):
+        """Show AI expert status."""
+        if self.expert_manager:
+            status = self.expert_manager.get_experts_status()
+            msg = f"Active Experts: {status['active_experts']}/{status['total_experts']}"
+            QMessageBox.information(self, "Expert Status", msg)
+        else:
+            QMessageBox.information(self, "Expert Status", "Expert manager not initialized.")
+
+    def configure_experts(self):
+        """Open model selection dialog to choose a registered model."""
+        try:
+            # Lazy import to avoid import-time kernel issues when running headless tests
+            from ..ai_collaboration import model_registry
+        except Exception as e:
+            QMessageBox.critical(self, "Model Registry Error", f"Could not load model registry: {e}")
+            return
+
+        dialog = ModelChooserDialog(self, model_registry)
+        if dialog.exec_() == QDialog.Accepted:
+            selected = dialog.selected_model
+            if selected:
+                QMessageBox.information(self, "Model Saved", f"Selected model: {selected}")
+            else:
+                QMessageBox.information(self, "No Selection", "No model was selected.")
+
+
+class ModelChooserDialog(QDialog):
+    """Dialog listing registered models and persisting the chosen model.
+
+    Writes selection to core/.model_settings.json next to the core folder.
+    """
+
+    def __init__(self, parent, model_registry):
+        super().__init__(parent)
+        self.setWindowTitle("Select AI Model")
+        self.resize(420, 320)
+        self.model_registry = model_registry
+        self.selected_model = None
+
+        layout = QVBoxLayout()
+        self.setLayout(layout)
+
+        layout.addWidget(QLabel("Registered Models:"))
+
+        self.list_widget = QListWidget()
+        self._populate_models()
+        layout.addWidget(self.list_widget)
+
+        # Buttons
+        buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        buttons.accepted.connect(self.on_accept)
+        buttons.rejected.connect(self.reject)
+        layout.addWidget(buttons)
+
+    def _populate_models(self):
+        try:
+            models = self.model_registry.list_models()
+        except Exception:
+            models = {}
+        names = list(models.keys())
+        if not names:
+            names = ["mock"]
+        self.list_widget.addItems(names)
+
+    def on_accept(self):
+        item = self.list_widget.currentItem()
+        if not item:
+            QMessageBox.warning(self, "No Selection", "Please select a model or Cancel.")
+            return
+        name = item.text()
+        # persist selection to core/.model_settings.json
+        try:
+            import json
+            from pathlib import Path
+
+            # core/src/ui_components -> core/src -> core
+            core_dir = Path(__file__).resolve().parents[2]
+            settings_path = core_dir / ".model_settings.json"
+            settings = {"selected_model": name}
+            settings_path.write_text(json.dumps(settings, indent=2), encoding="utf-8")
+            self.selected_model = name
+        except Exception as e:
+            QMessageBox.critical(self, "Save Error", f"Failed to save selection: {e}")
+            return
+        self.accept()
+    def open_plugin_manager(self):
+        """Open plugin manager."""
+        QMessageBox.information(
+            self,
+            "Plugin Manager",
+            "Plugin manager coming soon!")
+
+    def open_configuration(self):
+        """Open configuration."""
+        QMessageBox.information(
+            self,
+            "Configuration",
+            "Configuration panel coming soon!")
+
+    def show_about(self):
+        """Show about dialog."""
+        QMessageBox.about(
+            self,
+            "About GHST",
+            "GHST - Open Source AI Coding Engine\n\n" +
+            "An AI-driven coding assistant with expert agent think tank.\n" +
+            "Designed for coding, debugging, and creative problem solving.\n\n" +
+            "Version: 0.1.0-alpha\n" +
+            "License: MIT")
+
+    def apply_ghst_theme(self):
+        """Apply professional GHST theme with subtle ghost references."""
+        ghost_theme = """
+        QMainWindow {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        QTextEdit {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border: 1px solid #404040;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        QPushButton {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        QPushButton:hover {
+            background-color: #106ebe;
+        }
+        QLabel {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        QListWidget {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border: 1px solid #404040;
+        }
+        QTabWidget::pane {
+            border: 1px solid #404040;
+        }
+        QTabBar::tab {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            padding: 8px 16px;
+            margin-right: 2px;
+        }
+        QTabBar::tab:selected {
+            background-color: #0078d4;
+        }
+        """
+        self.setStyleSheet(ghost_theme)
+
+    def update_ss_status(self, status_info):
+        """Update Syntax Supervisors status display."""
+        if hasattr(self, 'ss_status_label'):
+            status_text = "🔍 SS: {status_info.get('active', 0)} active"
+            self.ss_status_label.setText(status_text)
+
+    def add_ss_status_widget(self):
+        """Add Syntax Supervisors status to the status bar."""
+        if hasattr(self, 'statusBar'):
+            self.ss_status_label = QLabel("🔍 SS: Initializing...")
+            self.statusBar().addPermanentWidget(self.ss_status_label)
+
+if __name__ == "__main__":
+    from PyQt5.QtWidgets import QApplication
+    app = QApplication(sys.argv)
+    window = GHSTWindow()
+    window.show()
+    sys.exit(app.exec_())
