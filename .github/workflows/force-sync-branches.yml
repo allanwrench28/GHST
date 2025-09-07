@@ -1,0 +1,30 @@
+name: Force Sync Branches
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Set up Git user
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: Force push to other branches
+        env:
+          BRANCHES: "dev-branch feature-branch test-branch"
+        run: |
+          for branch in $BRANCHES; do
+            git checkout $branch || git checkout -b $branch
+            git reset --hard main
+            git push origin $branch --force
+          done
