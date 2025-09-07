@@ -1,0 +1,14 @@
+# Example metadata entries — add one per document or centralize
+- title: "Rust By Example (cheatsheet)"
+  filename: "rust-by-example-cheatsheet.pdf"
+  author: "Community"
+  source: "local/collected"
+  license: "CC-BY-SA or check source"
+  tags:
+    - "rust"
+    - "syntax"
+    - "cheatsheet"
+  summary: "Quick syntax and common patterns for Rust programs"
+  added_by: "allanwrench28"
+  added_on: "2025-09-07"
+  notes: "Extracted key sections for quick lookup"

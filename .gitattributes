@@ -1,0 +1,6 @@
+# Hint for large binary files in docs/external_docs — suggest LFS usage.
+# If you use Git LFS, run: git lfs install && git lfs track "docs/external_docs/*.pdf"
+docs/external_docs/*.pdf filter=lfs diff=lfs merge=lfs -text
+docs/external_docs/*.zip filter=lfs diff=lfs merge=lfs -text
+
+# Keep this file tracked; it informs collaborators how to treat large binaries.
