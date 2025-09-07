@@ -25,6 +25,46 @@ from PyQt5.QtWidgets import (
 
 
 class GHSTWindow(QMainWindow):
+    GHSTWindow(QMainWindow)
+    -----------------------
+    Main window class for the GHST AI Coding Engine application.
+    Features:
+        - Modern, customizable UI with professional styling and theming.
+        - Left pane: SPEEDBUILD automation control, AI expert agents list, and tools.
+        - Center pane: Tabbed workspace including welcome and code editor tabs.
+        - Right pane: AI assistant chat interface for expert collaboration.
+        - Menu bar: File, AI Experts, Tools, and Help menus.
+        - Status bar: Displays application status and live autocommit ticker.
+        - Extensible architecture for plugin and expert management.
+    Key Methods:
+        - init_ui(): Initializes the main UI layout and components.
+        - create_left_pane(): Builds the sidebar with expert agents and tools.
+        - create_center_pane(): Sets up the main work area with tabs.
+        - create_right_pane(): Provides AI chat and assistance features.
+        - create_menu_bar(): Configures the application menu bar.
+        - create_status_bar(): Sets up the status bar.
+        - add_autocommit_ticker(): Adds a live git commit ticker to the status bar.
+        - apply_styling(): Applies modern styling to the interface.
+        - apply_ghst_theme(): Applies the professional GHST theme.
+        - send_chat_message(): Handles sending messages to AI experts.
+        - update_ss_status(): Updates Syntax Supervisors status display.
+        - add_ss_status_widget(): Adds Syntax Supervisors status to the status bar.
+    Attributes:
+        - expert_manager: Manages AI expert agents.
+        - config_manager: Handles configuration settings.
+        - ss_manager: Manages Syntax Supervisors.
+        - speedbuild_slider: Controls SPEEDBUILD automation.
+        - experts_list: Displays available AI experts.
+        - tools_list: Displays available tools.
+        - tab_widget: Main tabbed workspace.
+        - code_editor: Code editing area.
+        - chat_display: AI chat output.
+        - chat_input: AI chat input.
+        - status_bar: Application status bar.
+        - autocommit_label: Displays latest git commit info.
+        - ss_status_label: Displays Syntax Supervisors status.
+    Usage:
+        Instantiate and show GHSTWindow as the main application window.
     def apply_styling(self):
         self.setStyleSheet("""
             QMainWindow {
