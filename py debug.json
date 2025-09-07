@@ -1,4 +1,4 @@
-{Select the Python file to debug
+{
   "configurations": [
     {
       "type": "debugpy",
