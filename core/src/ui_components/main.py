@@ -27,9 +27,12 @@ from PyQt5.QtWidgets import (
 
 try:
     from .code_block_widget import CodeBlockWidget
+    from .loading_widget import LoadingSpinner, PulseLoader
 except ImportError:
-    # Fallback if code_block_widget is not available
+    # Fallback if widgets are not available
     CodeBlockWidget = None
+    LoadingSpinner = None
+    PulseLoader = None
 
 
 class GHSTWindow(QMainWindow):
