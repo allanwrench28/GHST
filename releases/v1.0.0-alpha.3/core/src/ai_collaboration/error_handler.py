@@ -108,7 +108,9 @@ class ErrorHandler:
 
             # Log immediately
             self.logger.error(
-                f"Captured {error_data['exception_type']}: {error_data['exception_message']}",
+                "Captured %s: %s",
+                error_data['exception_type'],
+                error_data['exception_message'],
                 extra={'ghst_analysis': 'Queued for analysis'})
 
             if self.ghst_manager:
