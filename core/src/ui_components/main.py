@@ -22,7 +22,14 @@ from PyQt5.QtWidgets import (
     QWidget,
     QScrollArea,
     QFrame,
+    QGraphicsOpacityEffect,
 )
+
+try:
+    from .code_block_widget import CodeBlockWidget
+except ImportError:
+    # Fallback if code_block_widget is not available
+    CodeBlockWidget = None
 
 
 class GHSTWindow(QMainWindow):
@@ -45,6 +52,9 @@ class GHSTWindow(QMainWindow):
         self.config_manager = None
         self.ss_manager = None  # Syntax Supervisors Manager
         self.init_ui()
+        
+        # Add fade-in animation
+        self.fade_in_animation()
 
     def init_ui(self):
         """Initialize the user interface."""
@@ -691,6 +701,34 @@ class GHSTWindow(QMainWindow):
                 <p style="margin: 4px 0 0 0; color: #e6edf3;">I understand your request. Let me analyze this and provide assistance...</p>
             </div>
             """)
+            
+            # Show example code response
+            self.show_code_example()
+            
+            # Show status message
+            self.status_bar.showMessage("💬 Message sent to AI experts", 3000)
+    
+    def show_code_example(self):
+        """Show an example code block in the chat (demo functionality)."""
+        example_code = """def process_code(input_text):
+    \"\"\"Process and analyze code input.\"\"\"
+    # AI expert analysis
+    lines = input_text.split('\\n')
+    analysis = {
+        'lines': len(lines),
+        'complexity': calculate_complexity(lines)
+    }
+    return analysis"""
+        
+        self.chat_display.append(f"""
+        <div style="background: #161b22; padding: 12px; border-radius: 8px; margin: 8px 0; border: 1px solid #30363d;">
+            <div style="background: #1c2128; padding: 8px 12px; border-radius: 6px 6px 0 0; border-bottom: 1px solid #30363d; margin: -12px -12px 8px -12px;">
+                <span style="color: #8b949e; font-size: 11px; font-weight: 600; text-transform: uppercase;">📄 PYTHON</span>
+                <span style="float: right; color: #8b949e; font-size: 11px; cursor: pointer;">📋 Copy</span>
+            </div>
+            <pre style="margin: 0; color: #e6edf3; font-family: 'Consolas', 'Monaco', monospace; font-size: 12px; line-height: 1.5; white-space: pre-wrap;">{example_code}</pre>
+        </div>
+        """)
 
     def new_project(self):
         """Create a new project."""
@@ -758,6 +796,24 @@ class GHSTWindow(QMainWindow):
         if hasattr(self, 'statusBar'):
             self.ss_status_label = QLabel("🔍 SS: Initializing...")
             self.statusBar().addPermanentWidget(self.ss_status_label)
+    
+    def fade_in_animation(self):
+        """Add a smooth fade-in animation when the window appears."""
+        self.opacity_effect = QGraphicsOpacityEffect()
+        self.setGraphicsEffect(self.opacity_effect)
+        
+        self.fade_animation = QPropertyAnimation(self.opacity_effect, b"opacity")
+        self.fade_animation.setDuration(400)  # 400ms
+        self.fade_animation.setStartValue(0.0)
+        self.fade_animation.setEndValue(1.0)
+        self.fade_animation.setEasingCurve(QEasingCurve.OutCubic)
+        self.fade_animation.start()
+    
+    def add_button_hover_animation(self, button):
+        """Add hover animation to a button."""
+        # This would typically be done with CSS animations in the stylesheet
+        # The hover effects are already defined in apply_modern_styling()
+        pass
 
 
 if __name__ == "__main__":
