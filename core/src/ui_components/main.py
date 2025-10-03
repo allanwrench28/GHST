@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 GHST Main Window - AI Coding Engine Interface
 
@@ -6,8 +5,8 @@ Modern interface for AI-assisted coding, debugging, and problem solving.
 """
 
 import sys
-
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QTimer, QPropertyAnimation, QEasingCurve, pyqtProperty
+from PyQt5.QtGui import QFont, QColor, QPalette
 from PyQt5.QtWidgets import (
     QHBoxLayout,
     QLabel,
@@ -21,13 +20,15 @@ from PyQt5.QtWidgets import (
     QTextEdit,
     QVBoxLayout,
     QWidget,
+    QScrollArea,
+    QFrame,
 )
 
 
 class GHSTWindow(QMainWindow):
-    GHSTWindow(QMainWindow)
-    -----------------------
+    """
     Main window class for the GHST AI Coding Engine application.
+    
     Features:
         - Modern, customizable UI with professional styling and theming.
         - Left pane: SPEEDBUILD automation control, AI expert agents list, and tools.
@@ -36,159 +37,7 @@ class GHSTWindow(QMainWindow):
         - Menu bar: File, AI Experts, Tools, and Help menus.
         - Status bar: Displays application status and live autocommit ticker.
         - Extensible architecture for plugin and expert management.
-    Key Methods:
-        - init_ui(): Initializes the main UI layout and components.
-        - create_left_pane(): Builds the sidebar with expert agents and tools.
-        - create_center_pane(): Sets up the main work area with tabs.
-        - create_right_pane(): Provides AI chat and assistance features.
-        - create_menu_bar(): Configures the application menu bar.
-        - create_status_bar(): Sets up the status bar.
-        - add_autocommit_ticker(): Adds a live git commit ticker to the status bar.
-        - apply_styling(): Applies modern styling to the interface.
-        - apply_ghst_theme(): Applies the professional GHST theme.
-        - send_chat_message(): Handles sending messages to AI experts.
-        - update_ss_status(): Updates Syntax Supervisors status display.
-        - add_ss_status_widget(): Adds Syntax Supervisors status to the status bar.
-    Attributes:
-        - expert_manager: Manages AI expert agents.
-        - config_manager: Handles configuration settings.
-        - ss_manager: Manages Syntax Supervisors.
-        - speedbuild_slider: Controls SPEEDBUILD automation.
-        - experts_list: Displays available AI experts.
-        - tools_list: Displays available tools.
-        - tab_widget: Main tabbed workspace.
-        - code_editor: Code editing area.
-        - chat_display: AI chat output.
-        - chat_input: AI chat input.
-        - status_bar: Application status bar.
-        - autocommit_label: Displays latest git commit info.
-        - ss_status_label: Displays Syntax Supervisors status.
-    Usage:
-        Instantiate and show GHSTWindow as the main application window.
-    def apply_styling(self):
-        self.setStyleSheet("""
-            QMainWindow {
-                background-color: #222831;
-            }
-            QWidget {
-                font-family: 'Segoe UI', Arial, sans-serif;
-                color: #f8f8f8;
-                background-color: #222831;
-            }
-            QLabel {
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 14px;
-                color: #00adb5;
-                text-shadow: 1px 1px 2px #222;
-            }
-            QListWidget {
-                background: #393e46;
-                border-radius: 12px;
-                padding: 12px;
-                font-size: 16px;
-                box-shadow: 0 2px 8px #222;
-            }
-            QSlider::groove:horizontal {
-                border: 1px solid #00adb5;
-                height: 10px;
-                background: #393e46;
-                border-radius: 5px;
-            }
-            QSlider::handle:horizontal {
-                background: #00adb5;
-                border: 2px solid #f8f8f8;
-                width: 22px;
-                height: 22px;
-                margin: -7px 0;
-                border-radius: 11px;
-                box-shadow: 0 2px 6px #222;
-            }
-            QSlider {
-                margin: 16px 0 28px 0;
-            }
-        """)
-    def init_ui(self):
-        """Initialize the user interface."""
-        self.setWindowTitle("GHST - AI Coding Engine")
-        self.setGeometry(100, 100, 1400, 900)
-
-        # Apply GHST theme
-        if hasattr(self, 'apply_ghst_theme'):
-            self.apply_ghst_theme()
-
-        # Create central widget
-        central_widget = QWidget()
-        self.setCentralWidget(central_widget)
-
-        # Create main layout
-        main_layout = QHBoxLayout()
-        central_widget.setLayout(main_layout)
-
-        # Create splitter for resizable panes
-        splitter = QSplitter(Qt.Horizontal)
-        main_layout.addWidget(splitter)
-
-        # Left pane - Professional sidebar
-        left_pane = QWidget()
-        left_layout = QVBoxLayout()
-        left_pane.setLayout(left_layout)
-
-        # Sidebar card
-        sidebar_card = QWidget()
-        sidebar_card.setStyleSheet("background: #393e46; border-radius: 16px; box-shadow: 0 2px 12px #222; padding: 18px;")
-        card_layout = QVBoxLayout()
-        sidebar_card.setLayout(card_layout)
-
-        # Section header
-        card_layout.addWidget(QLabel("⚡ SPEEDBUILD Control Panel"))
-
-        # Prominent slider
-        from .speedbuild_slider import SpeedbuildSlider
-        self.speedbuild_slider = SpeedbuildSlider()
-        card_layout.addWidget(self.speedbuild_slider)
-
-        # Interactive button for SPEEDBUILD mode
-        from PyQt5.QtWidgets import QPushButton
-        self.speedbuild_btn = QPushButton("Apply SPEEDBUILD Mode")
-        self.speedbuild_btn.setStyleSheet("background: #00adb5; color: #fff; font-weight: bold; border-radius: 8px; padding: 8px 16px;")
-        card_layout.addWidget(self.speedbuild_btn)
-
-        left_layout.addWidget(sidebar_card)
-        left_layout.addStretch()
-        splitter.addWidget(left_pane)
-
-        # Center pane - Main work area
-        if hasattr(self, 'create_center_pane'):
-            center_pane = self.create_center_pane()
-            splitter.addWidget(center_pane)
-
-        # Right pane - AI assistance and chat
-        if hasattr(self, 'create_right_pane'):
-            right_pane = self.create_right_pane()
-            splitter.addWidget(right_pane)
-
-        # Set splitter proportions
-        splitter.setStretchFactor(0, 1)  # Left pane
-        splitter.setStretchFactor(1, 3)  # Center pane (largest)
-        splitter.setStretchFactor(2, 1)  # Right pane
-
-        # Create menu bar
-        if hasattr(self, 'create_menu_bar'):
-            self.create_menu_bar()
-
-        # Create status bar
-        if hasattr(self, 'create_status_bar'):
-            self.create_status_bar()
-
-        # Apply styling
-        if hasattr(self, 'apply_styling'):
-            self.apply_styling()
-
-        # Add autocommit ticker to status bar (after status bar is created)
-        if hasattr(self, 'add_autocommit_ticker'):
-            self.add_autocommit_ticker()
-    """Main window for GHST AI Coding Engine."""
+    """
 
     def __init__(self):
         super().__init__()
@@ -197,64 +46,73 @@ class GHSTWindow(QMainWindow):
         self.ss_manager = None  # Syntax Supervisors Manager
         self.init_ui()
 
-    def create_left_pane(self):
-        from .speedbuild_slider import SpeedbuildSlider
-        widget = QWidget()
-        layout = QVBoxLayout()
-        widget.setLayout(layout)
+    def init_ui(self):
+        """Initialize the user interface."""
+        self.setWindowTitle("GHST - AI Coding Engine")
+        self.setGeometry(100, 100, 1400, 900)
+        self.setMinimumSize(1000, 600)
 
-        # SPEEDBUILD slider for branch control
-        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
-        self.speedbuild_slider = SpeedbuildSlider()
-        layout.addWidget(self.speedbuild_slider)
+        # Create central widget
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
 
-        # Expert agents section
-        layout.addWidget(QLabel("🧠 AI Expert Agents"))
+        # Create main layout
+        main_layout = QHBoxLayout()
+        central_widget.setLayout(main_layout)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
 
-        self.experts_list = QListWidget()
-        self.experts_list.addItems([
-            "🔍 Code Analysis Expert",
-            "🐛 Debugging Expert",
-            "🛠️ Problem Solving Expert",
-            "📚 Research Expert",
-            "⚡ Performance Expert",
-            "🔒 Security Expert",
-            "📝 Documentation Expert",
-            "🧪 Testing Expert",
-            "🏗️ Architecture Expert",
-            "🎨 UI/UX Expert",
-            "🚀 DevOps Expert",
-            "📊 Data Expert"
-        ])
-        layout.addWidget(self.experts_list)
+        # Create splitter for resizable panes
+        splitter = QSplitter(Qt.Horizontal)
+        main_layout.addWidget(splitter)
 
-        # Tools section
-        layout.addWidget(QLabel("🔧 Tools"))
+        # Create panes
+        left_pane = self.create_left_pane()
+        center_pane = self.create_center_pane()
+        right_pane = self.create_right_pane()
 
-        self.tools_list = QListWidget()
-        self.tools_list.addItems([
-            "Plugin Manager",
-            "Configuration",
-            "Project Templates",
-            "Code Snippets"
-        ])
-        layout.addWidget(self.tools_list)
+        splitter.addWidget(left_pane)
+        splitter.addWidget(center_pane)
+        splitter.addWidget(right_pane)
 
-        return widget
+        # Set splitter proportions
+        splitter.setStretchFactor(0, 1)  # Left pane
+        splitter.setStretchFactor(1, 3)  # Center pane (largest)
+        splitter.setStretchFactor(2, 1)  # Right pane
+
+        # Create menu bar
+        self.create_menu_bar()
+
+        # Create status bar
+        self.create_status_bar()
+
+        # Apply modern styling
+        self.apply_modern_styling()
+
+        # Add autocommit ticker to status bar
+        self.add_autocommit_ticker()
+
     def create_left_pane(self):
         """Create left pane with expert agents and tools."""
         from .speedbuild_slider import SpeedbuildSlider
         widget = QWidget()
         layout = QVBoxLayout()
         widget.setLayout(layout)
+        layout.setContentsMargins(16, 16, 16, 16)
+        layout.setSpacing(16)
 
-        # SPEEDBUILD slider for branch control
-        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
+        # SPEEDBUILD section header
+        speedbuild_label = QLabel("⚡ SPEEDBUILD Control")
+        speedbuild_label.setObjectName("sectionHeader")
+        layout.addWidget(speedbuild_label)
+        
         self.speedbuild_slider = SpeedbuildSlider()
         layout.addWidget(self.speedbuild_slider)
 
         # Expert agents section
-        layout.addWidget(QLabel("🧠 AI Expert Agents"))
+        experts_label = QLabel("🧠 AI Expert Agents")
+        experts_label.setObjectName("sectionHeader")
+        layout.addWidget(experts_label)
 
         self.experts_list = QListWidget()
         self.experts_list.addItems([
@@ -274,7 +132,9 @@ class GHSTWindow(QMainWindow):
         layout.addWidget(self.experts_list)
 
         # Tools section
-        layout.addWidget(QLabel("🔧 Tools"))
+        tools_label = QLabel("🔧 Tools")
+        tools_label.setObjectName("sectionHeader")
+        layout.addWidget(tools_label)
 
         self.tools_list = QListWidget()
         self.tools_list.addItems([
@@ -292,84 +152,189 @@ class GHSTWindow(QMainWindow):
         widget = QWidget()
         layout = QVBoxLayout()
         widget.setLayout(layout)
+        layout.setContentsMargins(8, 8, 8, 8)
+        layout.setSpacing(8)
 
         # Tab widget for multiple work areas
         self.tab_widget = QTabWidget()
+        self.tab_widget.setDocumentMode(True)
         layout.addWidget(self.tab_widget)
 
         # Welcome tab
-        welcome_tab = QWidget()
-        welcome_layout = QVBoxLayout()
-        welcome_tab.setLayout(welcome_layout)
+        welcome_tab = self.create_welcome_tab()
+        self.tab_widget.addTab(welcome_tab, "🏠 Welcome")
+
+        # Code editor tab
+        code_tab = self.create_code_editor_tab()
+        self.tab_widget.addTab(code_tab, "📝 Code Editor")
+
+        # Documentation panel tab
+        docs_tab = self.create_docs_panel_tab()
+        self.tab_widget.addTab(docs_tab, "📚 Documentation")
+
+        return widget
+
+    def create_welcome_tab(self):
+        """Create the welcome tab with modern styling."""
+        tab = QWidget()
+        layout = QVBoxLayout()
+        tab.setLayout(layout)
+        layout.setContentsMargins(24, 24, 24, 24)
+        layout.setSpacing(16)
+
+        # Scroll area for content
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)
+        scroll.setFrameShape(QFrame.NoFrame)
+        
+        content = QWidget()
+        content_layout = QVBoxLayout()
+        content.setLayout(content_layout)
+        content_layout.setSpacing(20)
 
         welcome_text = QTextEdit()
         welcome_text.setHtml("""
-        <h2>🚀 Welcome to GHST - AI Coding Engine</h2>
-        <p>Your open-source AI coding assistant with expert agent think tank.</p>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+            <h1 style="color: #00d4ff; margin-bottom: 16px;">🚀 Welcome to GHST</h1>
+            <p style="font-size: 16px; color: #b4b4b4; margin-bottom: 24px;">
+                Your open-source AI coding assistant with expert agent think tank.
+            </p>
 
-        <h3>✨ Features:</h3>
-        <ul>
-            <li><strong>AI Collaboration Framework:</strong> Multiple AI experts work together</li>
-            <li><strong>Plugin System:</strong> Extensible tools and workflows</li>
-            <li><strong>Configuration Management:</strong> YAML-based settings</li>
-            <li><strong>Modern UI:</strong> Clean, customizable interface</li>
-            <li><strong>Developer Tools:</strong> Built-in automation and utilities</li>
-        </ul>
+            <h2 style="color: #00adb5; margin-top: 24px; margin-bottom: 12px;">✨ Features</h2>
+            <ul style="font-size: 15px; line-height: 1.8; color: #d4d4d4;">
+                <li><strong style="color: #00d4ff;">AI Collaboration Framework:</strong> Multiple AI experts work together</li>
+                <li><strong style="color: #00d4ff;">Plugin System:</strong> Extensible tools and workflows</li>
+                <li><strong style="color: #00d4ff;">Configuration Management:</strong> YAML-based settings</li>
+                <li><strong style="color: #00d4ff;">Modern UI:</strong> Clean, customizable interface</li>
+                <li><strong style="color: #00d4ff;">Developer Tools:</strong> Built-in automation and utilities</li>
+            </ul>
 
-        <h3>🎯 Getting Started:</h3>
-        <ol>
-            <li>Select an AI expert from the left panel</li>
-            <li>Open or create a project</li>
-            <li>Get AI assistance with coding, debugging, and problem solving</li>
-        </ol>
+            <h2 style="color: #00adb5; margin-top: 24px; margin-bottom: 12px;">🎯 Getting Started</h2>
+            <ol style="font-size: 15px; line-height: 1.8; color: #d4d4d4;">
+                <li>Select an AI expert from the left panel</li>
+                <li>Open or create a project using File menu</li>
+                <li>Get AI assistance with coding, debugging, and problem solving</li>
+            </ol>
 
-        <p><em>Remember: You maintain full control. All AI recommendations require your validation.</em></p>
+            <p style="font-size: 14px; color: #888; margin-top: 24px; font-style: italic;">
+                Remember: You maintain full control. All AI recommendations require your validation.
+            </p>
+        </div>
         """)
         welcome_text.setReadOnly(True)
-        welcome_layout.addWidget(welcome_text)
+        content_layout.addWidget(welcome_text)
+        content_layout.addStretch()
 
-        self.tab_widget.addTab(welcome_tab, "Welcome")
+        scroll.setWidget(content)
+        layout.addWidget(scroll)
 
-        # Code editor tab (placeholder)
-        code_tab = QWidget()
-        code_layout = QVBoxLayout()
-        code_tab.setLayout(code_layout)
+        return tab
+
+    def create_code_editor_tab(self):
+        """Create the code editor tab."""
+        tab = QWidget()
+        layout = QVBoxLayout()
+        tab.setLayout(layout)
+        layout.setContentsMargins(8, 8, 8, 8)
 
         self.code_editor = QTextEdit()
         self.code_editor.setPlaceholderText(
             "// Your code here...\n// AI experts are ready to assist!")
-        code_layout.addWidget(self.code_editor)
+        self.code_editor.setFont(QFont("Consolas", 11))
+        layout.addWidget(self.code_editor)
 
-        self.tab_widget.addTab(code_tab, "Code Editor")
+        return tab
 
-        return widget
+    def create_docs_panel_tab(self):
+        """Create documentation panel tab for markdown/code display."""
+        tab = QWidget()
+        layout = QVBoxLayout()
+        tab.setLayout(layout)
+        layout.setContentsMargins(8, 8, 8, 8)
+
+        # Toolbar for docs panel
+        toolbar = QWidget()
+        toolbar_layout = QHBoxLayout()
+        toolbar.setLayout(toolbar_layout)
+        toolbar_layout.setContentsMargins(0, 0, 0, 8)
+        
+        toolbar_label = QLabel("📄 Documentation Viewer")
+        toolbar_label.setObjectName("sectionHeader")
+        toolbar_layout.addWidget(toolbar_label)
+        toolbar_layout.addStretch()
+        
+        # Copy button
+        self.docs_copy_btn = QPushButton("📋 Copy")
+        self.docs_copy_btn.setObjectName("modernButton")
+        self.docs_copy_btn.clicked.connect(self.copy_docs_content)
+        toolbar_layout.addWidget(self.docs_copy_btn)
+        
+        layout.addWidget(toolbar)
+
+        # Documentation display
+        self.docs_display = QTextEdit()
+        self.docs_display.setReadOnly(True)
+        self.docs_display.setFont(QFont("Consolas", 10))
+        self.docs_display.setPlaceholderText(
+            "Documentation and code snippets will appear here...\n\n" +
+            "You can view markdown files, code examples, and API documentation.")
+        layout.addWidget(self.docs_display)
+
+        return tab
+
+    def copy_docs_content(self):
+        """Copy documentation content to clipboard."""
+        from PyQt5.QtWidgets import QApplication
+        clipboard = QApplication.clipboard()
+        clipboard.setText(self.docs_display.toPlainText())
+        self.status_bar.showMessage("📋 Content copied to clipboard!", 3000)
 
     def create_right_pane(self):
         """Create right pane with AI assistance and chat."""
         widget = QWidget()
         layout = QVBoxLayout()
         widget.setLayout(layout)
+        layout.setContentsMargins(16, 16, 16, 16)
+        layout.setSpacing(12)
 
-        # AI Chat section
-        layout.addWidget(QLabel("💬 AI Assistant"))
+        # AI Chat header
+        chat_header = QLabel("💬 AI Assistant Chat")
+        chat_header.setObjectName("sectionHeader")
+        layout.addWidget(chat_header)
 
+        # Chat display area with scroll
         self.chat_display = QTextEdit()
         self.chat_display.setReadOnly(True)
-        self.chat_display.append(
-            "🧠 AI Expert Collective: Ready to assist with coding tasks!")
-        self.chat_display.append(
-            "💡 Ask questions, request code reviews, or get debugging help.")
+        self.chat_display.setHtml("""
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 12px;">
+            <div style="background: #1e3a4c; padding: 12px; border-radius: 8px; margin-bottom: 8px;">
+                <p style="margin: 0; color: #00d4ff;"><strong>🧠 AI Expert Collective</strong></p>
+                <p style="margin: 4px 0 0 0; color: #d4d4d4;">Ready to assist with coding tasks!</p>
+            </div>
+            <div style="background: #1e3a4c; padding: 12px; border-radius: 8px;">
+                <p style="margin: 0; color: #00d4ff;"><strong>💡 Tips</strong></p>
+                <p style="margin: 4px 0 0 0; color: #d4d4d4;">Ask questions, request code reviews, or get debugging help.</p>
+            </div>
+        </div>
+        """)
         layout.addWidget(self.chat_display)
 
-        # Chat input
+        # Chat input with label
+        input_label = QLabel("Your Message:")
+        input_label.setStyleSheet("color: #b4b4b4; font-size: 12px;")
+        layout.addWidget(input_label)
+
         self.chat_input = QTextEdit()
-        self.chat_input.setMaximumHeight(60)
+        self.chat_input.setMaximumHeight(80)
         self.chat_input.setPlaceholderText("Ask the AI experts anything...")
+        self.chat_input.setFont(QFont("Segoe UI", 10))
         layout.addWidget(self.chat_input)
 
-        # Send button
-        send_button = QPushButton("Send to Experts")
+        # Send button with modern styling
+        send_button = QPushButton("📤 Send to Experts")
+        send_button.setObjectName("primaryButton")
         send_button.clicked.connect(self.send_chat_message)
+        send_button.setMinimumHeight(40)
         layout.addWidget(send_button)
 
         return widget
@@ -433,67 +398,299 @@ class GHSTWindow(QMainWindow):
         except Exception as e:
             self.autocommit_label.setText(f"❌ Autocommit ticker error: {e}")
 
-    def apply_styling(self):
-        """Apply modern styling to the interface."""
+    def apply_modern_styling(self):
+        """Apply modern iOS-inspired styling to the interface."""
         self.setStyleSheet("""
+            /* Main Window - Dark theme with modern palette */
             QMainWindow {
-                background-color: #2b2b2b;
-                color: #ffffff;
+                background-color: #0d1117;
+                color: #e6edf3;
             }
-            QLabel {
-                font-weight: bold;
-                color: #ffffff;
-                padding: 5px;
+            
+            /* Modern Widget styling */
+            QWidget {
+                background-color: #0d1117;
+                color: #e6edf3;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+                font-size: 13px;
             }
-            QListWidget {
-                background-color: #3c3c3c;
-                border: 1px solid #555555;
-                border-radius: 5px;
-                padding: 5px;
-            }
-            QTextEdit {
-                background-color: #3c3c3c;
-                border: 1px solid #555555;
-                border-radius: 5px;
-                padding: 10px;
-                font-family: 'Consolas', 'Monaco', monospace;
-            }
-            QPushButton {
-                background-color: #0d7377;
-                color: white;
+            
+            /* Section Headers */
+            QLabel#sectionHeader {
+                color: #00d4ff;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 8px 0 4px 0;
                 border: none;
-                padding: 8px 16px;
-                border-radius: 5px;
-                font-weight: bold;
             }
-            QPushButton:hover {
-                background-color: #14a085;
+            
+            /* Standard Labels */
+            QLabel {
+                color: #e6edf3;
+                padding: 2px;
             }
-            QTabWidget::pane {
-                border: 1px solid #555555;
-                background-color: #2b2b2b;
+            
+            /* List Widgets - Modern cards */
+            QListWidget {
+                background-color: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 8px;
+                padding: 8px;
+                outline: none;
+                font-size: 13px;
             }
-            QTabBar::tab {
-                background-color: #3c3c3c;
+            
+            QListWidget::item {
+                padding: 10px;
+                border-radius: 6px;
+                margin: 2px 0;
+            }
+            
+            QListWidget::item:hover {
+                background-color: #1c2128;
+            }
+            
+            QListWidget::item:selected {
+                background-color: #1f6feb;
                 color: #ffffff;
-                padding: 8px 16px;
-                margin-right: 2px;
             }
+            
+            /* Text Edit - Code editor style */
+            QTextEdit {
+                background-color: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 8px;
+                padding: 12px;
+                color: #e6edf3;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 13px;
+                selection-background-color: #1f6feb;
+                selection-color: #ffffff;
+            }
+            
+            QTextEdit:focus {
+                border: 1px solid #1f6feb;
+            }
+            
+            /* Scroll Areas */
+            QScrollArea {
+                background-color: transparent;
+                border: none;
+            }
+            
+            /* Scroll Bars - Modern thin style */
+            QScrollBar:vertical {
+                background-color: #0d1117;
+                width: 12px;
+                border-radius: 6px;
+            }
+            
+            QScrollBar::handle:vertical {
+                background-color: #30363d;
+                border-radius: 6px;
+                min-height: 30px;
+            }
+            
+            QScrollBar::handle:vertical:hover {
+                background-color: #484f58;
+            }
+            
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0px;
+            }
+            
+            QScrollBar:horizontal {
+                background-color: #0d1117;
+                height: 12px;
+                border-radius: 6px;
+            }
+            
+            QScrollBar::handle:horizontal {
+                background-color: #30363d;
+                border-radius: 6px;
+                min-width: 30px;
+            }
+            
+            QScrollBar::handle:horizontal:hover {
+                background-color: #484f58;
+            }
+            
+            QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+                width: 0px;
+            }
+            
+            /* Primary Buttons - Vibrant style */
+            QPushButton#primaryButton {
+                background-color: #1f6feb;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 13px;
+            }
+            
+            QPushButton#primaryButton:hover {
+                background-color: #388bfd;
+            }
+            
+            QPushButton#primaryButton:pressed {
+                background-color: #1a5fdc;
+            }
+            
+            /* Modern Buttons */
+            QPushButton#modernButton {
+                background-color: #21262d;
+                color: #e6edf3;
+                border: 1px solid #30363d;
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-weight: 500;
+                font-size: 12px;
+            }
+            
+            QPushButton#modernButton:hover {
+                background-color: #30363d;
+                border-color: #484f58;
+            }
+            
+            QPushButton#modernButton:pressed {
+                background-color: #161b22;
+            }
+            
+            /* Standard Buttons */
+            QPushButton {
+                background-color: #21262d;
+                color: #e6edf3;
+                border: 1px solid #30363d;
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-weight: 500;
+            }
+            
+            QPushButton:hover {
+                background-color: #30363d;
+                border-color: #484f58;
+            }
+            
+            QPushButton:pressed {
+                background-color: #161b22;
+            }
+            
+            /* Tab Widget - Clean modern tabs */
+            QTabWidget::pane {
+                border: 1px solid #30363d;
+                border-radius: 8px;
+                background-color: #0d1117;
+                top: -1px;
+            }
+            
+            QTabBar::tab {
+                background-color: #161b22;
+                color: #8b949e;
+                padding: 10px 20px;
+                margin-right: 4px;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                border: 1px solid #30363d;
+                border-bottom: none;
+                min-width: 100px;
+            }
+            
+            QTabBar::tab:hover {
+                background-color: #1c2128;
+                color: #e6edf3;
+            }
+            
             QTabBar::tab:selected {
-                background-color: #0d7377;
+                background-color: #0d1117;
+                color: #00d4ff;
+                border-bottom: 2px solid #1f6feb;
+                font-weight: 600;
+            }
+            
+            /* Splitter Handle - Subtle dividers */
+            QSplitter::handle {
+                background-color: #21262d;
+                width: 1px;
+                height: 1px;
+            }
+            
+            QSplitter::handle:hover {
+                background-color: #30363d;
+            }
+            
+            /* Menu Bar - Clean modern style */
+            QMenuBar {
+                background-color: #161b22;
+                color: #e6edf3;
+                padding: 4px;
+                border-bottom: 1px solid #30363d;
+            }
+            
+            QMenuBar::item {
+                background-color: transparent;
+                padding: 6px 12px;
+                border-radius: 4px;
+            }
+            
+            QMenuBar::item:selected {
+                background-color: #1c2128;
+            }
+            
+            QMenuBar::item:pressed {
+                background-color: #30363d;
+            }
+            
+            /* Menu - Modern dropdown */
+            QMenu {
+                background-color: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 8px;
+                padding: 4px;
+            }
+            
+            QMenu::item {
+                padding: 8px 24px;
+                border-radius: 4px;
+            }
+            
+            QMenu::item:selected {
+                background-color: #1c2128;
+            }
+            
+            /* Status Bar */
+            QStatusBar {
+                background-color: #161b22;
+                color: #8b949e;
+                border-top: 1px solid #30363d;
+            }
+            
+            QStatusBar::item {
+                border: none;
             }
         """)
 
     def send_chat_message(self):
-        """Handle sending chat message to AI experts."""
+        """Handle sending chat message to AI experts with modern formatting."""
         message = self.chat_input.toPlainText().strip()
         if message:
-            self.chat_display.append("👤 You: {message}")
+            # Add user message with modern styling
+            self.chat_display.append(f"""
+            <div style="background: #1c2128; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 3px solid #1f6feb;">
+                <p style="margin: 0; color: #00d4ff; font-weight: 600;">👤 You</p>
+                <p style="margin: 4px 0 0 0; color: #e6edf3;">{message}</p>
+            </div>
+            """)
             self.chat_input.clear()
 
-            # Simulate AI response (replace with actual AI integration)
-            self.chat_display.append(
-                "🧠 AI Expert: I understand your request. Let me analyze this and provide assistance...")
+            # Simulate AI response with code block example
+            self.chat_display.append(f"""
+            <div style="background: #1e3a4c; padding: 12px; border-radius: 8px; margin: 8px 0; border-left: 3px solid #00d4ff;">
+                <p style="margin: 0; color: #00d4ff; font-weight: 600;">🧠 AI Expert Collective</p>
+                <p style="margin: 4px 0 0 0; color: #e6edf3;">I understand your request. Let me analyze this and provide assistance...</p>
+            </div>
+            """)
 
     def new_project(self):
         """Create a new project."""
@@ -550,59 +747,10 @@ class GHSTWindow(QMainWindow):
             "Version: 0.1.0-alpha\n" +
             "License: MIT")
 
-    def apply_ghst_theme(self):
-        """Apply professional GHST theme with subtle ghost references."""
-        ghost_theme = """
-        QMainWindow {
-            background-color: #1e1e1e;
-            color: #ffffff;
-        }
-        QTextEdit {
-            background-color: #2d2d2d;
-            color: #ffffff;
-            border: 1px solid #404040;
-            border-radius: 4px;
-            font-family: 'Consolas', 'Monaco', monospace;
-        }
-        QPushButton {
-            background-color: #0078d4;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        QPushButton:hover {
-            background-color: #106ebe;
-        }
-        QLabel {
-            color: #ffffff;
-            font-weight: bold;
-        }
-        QListWidget {
-            background-color: #2d2d2d;
-            color: #ffffff;
-            border: 1px solid #404040;
-        }
-        QTabWidget::pane {
-            border: 1px solid #404040;
-        }
-        QTabBar::tab {
-            background-color: #2d2d2d;
-            color: #ffffff;
-            padding: 8px 16px;
-            margin-right: 2px;
-        }
-        QTabBar::tab:selected {
-            background-color: #0078d4;
-        }
-        """
-        self.setStyleSheet(ghost_theme)
-
     def update_ss_status(self, status_info):
         """Update Syntax Supervisors status display."""
         if hasattr(self, 'ss_status_label'):
-            status_text = "🔍 SS: {status_info.get('active', 0)} active"
+            status_text = f"🔍 SS: {status_info.get('active', 0)} active"
             self.ss_status_label.setText(status_text)
 
     def add_ss_status_widget(self):
@@ -611,11 +759,11 @@ class GHSTWindow(QMainWindow):
             self.ss_status_label = QLabel("🔍 SS: Initializing...")
             self.statusBar().addPermanentWidget(self.ss_status_label)
 
+
 if __name__ == "__main__":
     from PyQt5.QtWidgets import QApplication
     app = QApplication(sys.argv)
+    app.setStyle('Fusion')  # Use Fusion style for consistent cross-platform look
     window = GHSTWindow()
     window.show()
     sys.exit(app.exec_())
-=======
->>>>>>> e5d859f2d87d98897ba379404835c6c543a0ff8a
