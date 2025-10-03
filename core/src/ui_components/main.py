@@ -566,10 +566,9 @@ if __name__ == "__main__":
 
     def open_configuration(self):
         """Open configuration."""
-        QMessageBox.information(
-            self,
-            "Configuration",
-            "Configuration panel coming soon!")
+        from .settings_dialog import SettingsDialog
+        dialog = SettingsDialog(self)
+        dialog.exec_()
 
     def show_about(self):
         """Show about dialog."""
