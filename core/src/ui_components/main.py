@@ -27,9 +27,9 @@ from PyQt5.QtWidgets import (
 
 
 class GHSTWindow(QMainWindow):
-    GHSTWindow(QMainWindow)
-    -----------------------
+    """
     Main window class for the GHST AI Coding Engine application.
+    
     Features:
         - Modern, customizable UI with professional styling and theming.
         - Left pane: SPEEDBUILD automation control, AI expert agents list, and tools.
@@ -38,78 +38,15 @@ class GHSTWindow(QMainWindow):
         - Menu bar: File, AI Experts, Tools, and Help menus.
         - Status bar: Displays application status and live autocommit ticker.
         - Extensible architecture for plugin and expert management.
-    Key Methods:
-        - init_ui(): Initializes the main UI layout and components.
-        - create_left_pane(): Builds the sidebar with expert agents and tools.
-        - create_center_pane(): Sets up the main work area with tabs.
-        - create_right_pane(): Provides AI chat and assistance features.
-        - create_menu_bar(): Configures the application menu bar.
-        - create_status_bar(): Sets up the status bar.
-        - add_autocommit_ticker(): Adds a live git commit ticker to the status bar.
-        - apply_styling(): Applies modern styling to the interface.
-        - apply_ghst_theme(): Applies the professional GHST theme.
-        - send_chat_message(): Handles sending messages to AI experts.
-        - update_ss_status(): Updates Syntax Supervisors status display.
-        - add_ss_status_widget(): Adds Syntax Supervisors status to the status bar.
-    Attributes:
-        - expert_manager: Manages AI expert agents.
-        - config_manager: Handles configuration settings.
-        - ss_manager: Manages Syntax Supervisors.
-        - speedbuild_slider: Controls SPEEDBUILD automation.
-        - experts_list: Displays available AI experts.
-        - tools_list: Displays available tools.
-        - tab_widget: Main tabbed workspace.
-        - code_editor: Code editing area.
-        - chat_display: AI chat output.
-        - chat_input: AI chat input.
-        - status_bar: Application status bar.
-        - autocommit_label: Displays latest git commit info.
-        - ss_status_label: Displays Syntax Supervisors status.
-    Usage:
-        Instantiate and show GHSTWindow as the main application window.
-    def apply_styling(self):
-        self.setStyleSheet("""
-            QMainWindow {
-                background-color: #222831;
-            }
-            QWidget {
-                font-family: 'Segoe UI', Arial, sans-serif;
-                color: #f8f8f8;
-                background-color: #222831;
-            }
-            QLabel {
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 14px;
-                color: #00adb5;
-                text-shadow: 1px 1px 2px #222;
-            }
-            QListWidget {
-                background: #393e46;
-                border-radius: 12px;
-                padding: 12px;
-                font-size: 16px;
-                box-shadow: 0 2px 8px #222;
-            }
-            QSlider::groove:horizontal {
-                border: 1px solid #00adb5;
-                height: 10px;
-                background: #393e46;
-                border-radius: 5px;
-            }
-            QSlider::handle:horizontal {
-                background: #00adb5;
-                border: 2px solid #f8f8f8;
-                width: 22px;
-                height: 22px;
-                margin: -7px 0;
-                border-radius: 11px;
-                box-shadow: 0 2px 6px #222;
-            }
-            QSlider {
-                margin: 16px 0 28px 0;
-            }
-        """)
+    """
+    
+    def __init__(self):
+        super().__init__()
+        self.expert_manager = None
+        self.config_manager = None
+        self.ss_manager = None  # Syntax Supervisors Manager
+        self.init_ui()
+
     def init_ui(self):
         """Initialize the user interface."""
         self.setWindowTitle("GHST - AI Coding Engine")
@@ -203,50 +140,6 @@ hello_ghst()
         self.ss_manager = None  # Syntax Supervisors Manager
         self.init_ui()
 
-    def create_left_pane(self):
-        from .speedbuild_slider import SpeedbuildSlider
-        widget = QWidget()
-        layout = QVBoxLayout()
-        widget.setLayout(layout)
-
-        # SPEEDBUILD slider for branch control
-        layout.addWidget(QLabel("⚙️ SPEEDBUILD Automation Control"))
-        self.speedbuild_slider = SpeedbuildSlider()
-        layout.addWidget(self.speedbuild_slider)
-
-        # Expert agents section
-        layout.addWidget(QLabel("🧠 AI Expert Agents"))
-
-        self.experts_list = QListWidget()
-        self.experts_list.addItems([
-            "🔍 Code Analysis Expert",
-            "🐛 Debugging Expert",
-            "🛠️ Problem Solving Expert",
-            "📚 Research Expert",
-            "⚡ Performance Expert",
-            "🔒 Security Expert",
-            "📝 Documentation Expert",
-            "🧪 Testing Expert",
-            "🏗️ Architecture Expert",
-            "🎨 UI/UX Expert",
-            "🚀 DevOps Expert",
-            "📊 Data Expert"
-        ])
-        layout.addWidget(self.experts_list)
-
-        # Tools section
-        layout.addWidget(QLabel("🔧 Tools"))
-
-        self.tools_list = QListWidget()
-        self.tools_list.addItems([
-            "Plugin Manager",
-            "Configuration",
-            "Project Templates",
-            "Code Snippets"
-        ])
-        layout.addWidget(self.tools_list)
-
-        return widget
     def create_left_pane(self):
         """Create left pane with expert agents and tools."""
         from .speedbuild_slider import SpeedbuildSlider
