@@ -1,0 +1,59 @@
+{
+  "expert_id": "music_theory_ghost",
+  "name": "Music Theory Ghost",
+  "domain": "music_theory",
+  "expertise": "Music theory and composition",
+  "specialization": "Harmony, melody, and musical structure analysis",
+  "keywords": [
+    "music",
+    "theory",
+    "harmony",
+    "melody",
+    "composition",
+    "chord",
+    "scale",
+    "key"
+  ],
+  "enabled": true,
+  "version": "1.0.0",
+  "description": "PhD-level expert in music theory specializing in harmonic analysis, melodic construction, and compositional techniques. Provides assistance with chord progressions, scale selection, key modulation, and musical structure.",
+  "fragments_path": "experts/music_theory/music_theory_ghost/fragments/",
+  "model_path": null,
+  "dependencies": [
+    "music21>=7.0.0"
+  ],
+  "author": "Example Author",
+  "created": "2025-01-01",
+  "last_updated": "2025-01-01",
+  "capabilities": [
+    "Chord progression analysis",
+    "Scale and mode recommendations",
+    "Key modulation suggestions",
+    "Harmonic analysis",
+    "Voice leading optimization",
+    "Melodic development",
+    "Form and structure analysis"
+  ],
+  "usage_examples": [
+    {
+      "query": "What chord progression would work well for a melancholic piece in A minor?",
+      "response_type": "Chord progression suggestions with theory explanation"
+    },
+    {
+      "query": "How can I modulate from C major to E minor smoothly?",
+      "response_type": "Modulation techniques and pivot chord suggestions"
+    }
+  ],
+  "references": [
+    {
+      "title": "The Study of Counterpoint",
+      "author": "Johann Joseph Fux",
+      "type": "book"
+    },
+    {
+      "title": "Harmony",
+      "author": "Walter Piston",
+      "type": "textbook"
+    }
+  ]
+}

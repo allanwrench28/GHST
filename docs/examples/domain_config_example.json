@@ -1,0 +1,54 @@
+{
+  "domain": "music_theory",
+  "display_name": "Music Theory & Audio",
+  "description": "Experts specializing in music theory, audio processing, and sound design",
+  "version": "1.0.0",
+  "experts": [
+    "music_theory_ghost",
+    "audio_processing_ghost",
+    "sound_design_ghost",
+    "composition_ghost"
+  ],
+  "maintainers": [
+    {
+      "name": "Example Maintainer",
+      "github": "username",
+      "email": "maintainer@example.com"
+    }
+  ],
+  "dependencies": [
+    "librosa>=0.9.0",
+    "music21>=7.0.0",
+    "scipy>=1.7.0",
+    "numpy>=1.21.0"
+  ],
+  "keywords": [
+    "music",
+    "audio",
+    "sound",
+    "composition",
+    "theory",
+    "harmony",
+    "melody",
+    "rhythm"
+  ],
+  "status": "active",
+  "last_updated": "2025-01-01",
+  "resources": {
+    "documentation": "docs/domains/music_theory/README.md",
+    "examples": "examples/music_theory/",
+    "fragments": "experts/music_theory/fragments/"
+  },
+  "features": [
+    "Music theory analysis",
+    "Audio signal processing",
+    "Sound design recommendations",
+    "Composition assistance",
+    "Harmony analysis",
+    "Rhythm pattern recognition"
+  ],
+  "compatibility": {
+    "min_core_version": "1.0.0",
+    "python_version": ">=3.8"
+  }
+}
