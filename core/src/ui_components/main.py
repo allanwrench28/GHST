@@ -22,7 +22,6 @@ from PyQt5.QtWidgets import (
     QVBoxLayout,
     QWidget,
     QFrame,
-    QScrollArea,
 )
 
 
