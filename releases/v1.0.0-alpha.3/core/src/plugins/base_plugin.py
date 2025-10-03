@@ -44,8 +44,7 @@ class BasePlugin(ABC):
         # Safety check for experimental plugins
         if self.metadata.experimental:
             self.logger.warning(
-                "⚠️ EXPERIMENTAL plugin '{
-                    self.metadata.name}' loaded - Use at your own risk!")
+                f"⚠️ EXPERIMENTAL plugin '{self.metadata.name}' loaded - Use at your own risk!")
 
     @abstractmethod
     def get_metadata(self) -> PluginMetadata:

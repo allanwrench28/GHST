@@ -294,16 +294,15 @@ caused by this code. Please review carefully before merging.
             if response.status_code == 200:
                 results = response.json().get('items', [])
                 self.log_activity(
-                    "🔍 Found {len(results)} FOSS solutions for: {query[:30]}...")
+                    f"🔍 Found {len(results)} FOSS solutions for: {query[:30]}...")
                 return results
             else:
                 self.log_activity(
-                    "⚠️ GitHub search failed: {
-                        response.status_code}")
+                    f"⚠️ GitHub search failed: {response.status_code}")
                 return []
 
         except requests.RequestException as e:
-            self.log_activity("❌ Internet query failed: {e}")
+            self.log_activity(f"❌ Internet query failed: {e}")
             return []
 
     def analyze_with_ai(self, problem: str,
@@ -438,9 +437,7 @@ class OptimizationGhost(BaseGhost):
                     "AI coding assistance optimization algorithm")
                 if foss_results:
                     self.manager.log_activity(
-                        "📚 {
-                            self.ghst_id}: Found {
-                            len(foss_results)} optimization references")
+                        f"📚 {self.ghst_id}: Found {len(foss_results)} optimization references")
 
 class ErrorGhost(BaseGhost):
     """GHST Agent specialized in error detection and correction."""
@@ -486,9 +483,7 @@ class ResearchGhost(BaseGhost):
             results = self.manager.query_foss_resources(topic)
             if results:
                 self.manager.log_activity(
-                    "🎯 {
-                        self.ghst_id}: Found {
-                        len(results)} relevant FOSS projects")
+                    f"🎯 {self.ghst_id}: Found {len(results)} relevant FOSS projects")
 
 class PhysicsGhost(BaseGhost):
     """PhD-level GHST Agent specialized in mechanical engineering and fluid dynamics."""

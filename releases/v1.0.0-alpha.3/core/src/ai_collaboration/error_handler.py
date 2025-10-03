@@ -108,19 +108,16 @@ class ErrorHandler:
 
             # Log immediately
             self.logger.error(
-                f"Captured {
-                    error_data['exception_type']}: {
-                    error_data['exception_message']}", extra={
-                    'ghst_analysis': 'Queued for analysis'})
+                f"Captured {error_data['exception_type']}: {error_data['exception_message']}",
+                extra={'ghst_analysis': 'Queued for analysis'})
 
             if self.ghst_manager:
                 self.ghst_manager.log_activity(
-                    "🚨 Error captured: {
-                        error_data['exception_type']} - GHST Agent analysis queued")
+                    f"🚨 Error captured: {error_data['exception_type']} - GHST Agent analysis queued")
 
         except Exception as e:
             # Fallback logging - don't let error handler crash
-            print("Error handler failed to capture exception: {e}")
+            print(f"Error handler failed to capture exception: {e}")
 
     def capture_custom_error(self,
                              error_code: str,
@@ -217,22 +214,17 @@ class ErrorHandler:
     def _prepare_analysis_context(self, error_data: Dict[str, Any]) -> str:
         """Prepare context for GHST Agent analysis."""
         context_parts = [
-            "Error Type: {
-                error_data.get(
-                    'exception_type', error_data.get(
-                        'error_code', 'Unknown'))}", "Category: {
-                    error_data.get(
-                        'category', 'Unknown')}", "Severity: {
-                            error_data.get(
-                                'severity', 'Unknown')}", "Context: {
-                                    error_data.get(
-                                        'context', 'Not provided')}", ]
+            f"Error Type: {error_data.get('exception_type', error_data.get('error_code', 'Unknown'))}",
+            f"Category: {error_data.get('category', 'Unknown')}",
+            f"Severity: {error_data.get('severity', 'Unknown')}",
+            f"Context: {error_data.get('context', 'Not provided')}",
+        ]
 
         if 'function_name' in error_data:
-            context_parts.append("Function: {error_data['function_name']}")
+            context_parts.append(f"Function: {error_data['function_name']}")
 
         if 'file_path' in error_data:
-            context_parts.append("File: {error_data['file_path']}")
+            context_parts.append(f"File: {error_data['file_path']}")
 
         if 'traceback' in error_data:
             # Include last few lines of traceback
@@ -240,8 +232,7 @@ class ErrorHandler:
             relevant_lines = traceback_lines[-5:] if len(
                 traceback_lines) > 5 else traceback_lines
             context_parts.append(
-                "Traceback excerpt: {
-                    ' | '.join(relevant_lines)}")
+                f"Traceback excerpt: {' | '.join(relevant_lines)}")
 
         return '\n'.join(context_parts)
 
@@ -286,19 +277,15 @@ class ErrorHandler:
 
             if success:
                 self.ghst_manager.log_activity(
-                    "📝 GHST Agent fix submitted for {
-                        error_data.get(
-                            'error_id', 'unknown')}")
+                    f"📝 GHST Agent fix submitted for {error_data.get('error_id', 'unknown')}")
             else:
                 self.ghst_manager.log_activity(
-                    "❌ GHST Agent fix submission failed for {
-                        error_data.get(
-                            'error_id', 'unknown')}")
+                    f"❌ GHST Agent fix submission failed for {error_data.get('error_id', 'unknown')}")
 
         except Exception as e:
             if self.ghst_manager:
                 self.ghst_manager.log_activity(
-                    "❌ GHST Agent fix submission error: {e}")
+                    f"❌ GHST Agent fix submission error: {e}")
 
     def _generate_fix_description(self, error_data: Dict[str, Any],
                                   analysis: Dict[str, Any]) -> str:
@@ -494,9 +481,7 @@ class SafetyChecker:
 
     def _classify_error(self, exception: Exception, context: str) -> str:
         """Classify error by type."""
-        error_text = "{
-            type(exception).__name__} {
-            str(exception)} {context}".lower()
+        error_text = f"{type(exception).__name__} {str(exception)} {context}".lower()
 
         for category, keywords in self.error_patterns.items():
             if any(keyword in error_text for keyword in keywords):
