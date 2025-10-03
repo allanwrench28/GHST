@@ -90,8 +90,7 @@ class GcodeOptimizerPlugin(BasePlugin):
         reduction = len(gcode_lines) - len(optimized_lines)
 
         self.logger.info(
-            "G-code optimization complete: removed {reduction} lines ({
-                reduction / len(gcode_lines) * 100:.1f}%)")
+            f"G-code optimization complete: removed {reduction} lines ({reduction / len(gcode_lines) * 100:.1f}%)")
 
         # Add optimization header
         header = [

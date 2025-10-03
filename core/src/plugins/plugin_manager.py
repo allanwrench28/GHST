@@ -162,8 +162,7 @@ class PluginManager:
                 # Try to fix the inheritance by updating the base class
                 if BasePlugin not in plugin_class.__bases__:
                     self.logger.debug(
-                        "Fixing inheritance for {
-                            plugin_class.__name__}")
+                        f"Fixing inheritance for {plugin_class.__name__}")
                     # Create a new class with the correct base
                     new_class = type(
                         plugin_class.__name__, (BasePlugin,), dict(
@@ -175,8 +174,7 @@ class PluginManager:
                 # Check compatibility
                 if not plugin_instance.is_compatible():
                     self.logger.warning(
-                        "Plugin {
-                            plugin_instance.metadata.name} is not compatible")
+                        f"Plugin {plugin_instance.metadata.name} is not compatible")
                     return False
 
                 # Initialize the plugin
@@ -185,21 +183,17 @@ class PluginManager:
                     self.plugin_enabled[plugin_instance.metadata.name] = True
 
                     self.logger.info(
-                        "✅ Loaded plugin: {
-                            plugin_instance.metadata.name} v{
-                            plugin_instance.metadata.version}")
+                        f"✅ Loaded plugin: {plugin_instance.metadata.name} v{plugin_instance.metadata.version}")
 
                     # Show safety warning for experimental plugins
                     if plugin_instance.metadata.experimental:
                         self.logger.warning(
-                            "⚠️ EXPERIMENTAL plugin loaded: {
-                                plugin_instance.metadata.name}")
+                            f"⚠️ EXPERIMENTAL plugin loaded: {plugin_instance.metadata.name}")
 
                     return True
                 else:
                     self.logger.error(
-                        "Failed to initialize plugin: {
-                            plugin_instance.metadata.name}")
+                        f"Failed to initialize plugin: {plugin_instance.metadata.name}")
                     return False
 
             finally:
@@ -320,8 +314,7 @@ class PluginManager:
                     method(*args, **kwargs)
             except Exception as e:
                 self.logger.error(
-                    "Error calling {hook_name} on plugin {
-                        plugin.metadata.name}: {e}")
+                    f"Error calling {hook_name} on plugin {plugin.metadata.name}: {e}")
 
     def process_mesh_through_plugins(self, mesh_data: Any) -> Any:
         """Process mesh data through all enabled coding engine plugins."""
@@ -330,8 +323,7 @@ class PluginManager:
                 mesh_data = plugin.process_mesh(mesh_data) or mesh_data
             except Exception as e:
                 self.logger.error(
-                    "Error processing mesh with plugin {
-                        plugin.metadata.name}: {e}")
+                    f"Error processing mesh with plugin {plugin.metadata.name}: {e}")
         return mesh_data
 
     def process_gcode_through_plugins(
@@ -356,8 +348,7 @@ class PluginManager:
                     actions.append(action)
             except Exception as e:
                 self.logger.error(
-                    "Error getting menu actions from plugin {
-                        plugin.metadata.name}: {e}")
+                    f"Error getting menu actions from plugin {plugin.metadata.name}: {e}")
         return actions
 
     def cleanup_all_plugins(self):

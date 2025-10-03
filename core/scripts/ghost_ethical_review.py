@@ -114,12 +114,9 @@ class GhostEthicalReviewer:
             report += "🚨 ETHICAL CONCERNS DETECTED:\n\n"
             for result in results:
                 if result.get('issues'):
-                    report += "File: {result['file']}\n"
+                    report += f"File: {result['file']}\n"
                     for issue in result['issues']:
-                        report += "  ⚠️ {
-                            issue['category']}: {
-                            issue['pattern']} ({
-                            issue['severity']})\n"
+                        report += f"  ⚠️ {issue['category']}: {issue['pattern']} ({issue['severity']})\n"
                     report += "\n"
 
         if ai_related_files > 0:
