@@ -2,6 +2,9 @@
 GHST Main Window - AI Coding Engine Interface
 
 Modern interface for AI-assisted coding, debugging, and problem solving.
+
+This module provides backward compatibility with the legacy GHSTWindow class
+while also exposing the new ModernMainWindow for enhanced functionality.
 """
 
 import sys
@@ -23,6 +26,9 @@ from PyQt5.QtWidgets import (
     QWidget,
     QFrame,
 )
+
+# Import the new modern main window
+from .modern_main_window import ModernMainWindow
 
 
 class GHSTWindow(QMainWindow):
@@ -804,7 +810,12 @@ if __name__ == "__main__":
 
 if __name__ == "__main__":
     from PyQt5.QtWidgets import QApplication
+    
     app = QApplication(sys.argv)
-    window = GHSTWindow()
+    
+    # Use the new modern window by default
+    # To use legacy window, change to: window = GHSTWindow()
+    window = ModernMainWindow()
     window.show()
+    
     sys.exit(app.exec_())
