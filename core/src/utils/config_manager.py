@@ -524,16 +524,12 @@ class ConfigManager:
             if hasattr(self.current_material, 'temp_hotend'):
                 if self.current_material.temp_hotend > self.current_printer.max_temp_hotend:
                     warnings.append(
-                        "⚠️  Material hotend temp ({
-                            self.current_material.temp_hotend}°C) exceeds printer max ({
-                            self.current_printer.max_temp_hotend}°C)")
+                        f"⚠️  Material hotend temp ({self.current_material.temp_hotend}°C) exceeds printer max ({self.current_printer.max_temp_hotend}°C)")
 
             if hasattr(self.current_material, 'temp_bed'):
                 if self.current_material.temp_bed > self.current_printer.max_temp_bed:
                     warnings.append(
-                        "⚠️  Material bed temp ({
-                            self.current_material.temp_bed}°C) exceeds printer max ({
-                            self.current_printer.max_temp_bed}°C)")
+                        f"⚠️  Material bed temp ({self.current_material.temp_bed}°C) exceeds printer max ({self.current_printer.max_temp_bed}°C)")
 
         if self.current_slicing:
             # Check for experimental features
@@ -542,9 +538,9 @@ class ConfigManager:
                 enabled in self.current_slicing.experimental_features.items() if enabled]
 
             if enabled_experimental:
+                features_list = ', '.join(enabled_experimental)
                 warnings.append(
-                    "⚠️  Experimental features enabled: {
-                        ', '.join(enabled_experimental)}")
+                    f"⚠️  Experimental features enabled: {features_list}")
 
             # Check for non-planar slicing
             if self.current_slicing.experimental_features.get(
@@ -583,39 +579,29 @@ class ConfigManager:
         summary = ["📊 Current SlicerGPT Configuration:\n"]
 
         if self.current_printer:
-            summary.append("🖨️  Printer: {self.current_printer.name}")
+            summary.append(f"🖨️  Printer: {self.current_printer.name}")
+            bed_info = f"{self.current_printer.bed_size_x}×{self.current_printer.bed_size_y}×{self.current_printer.bed_size_z}mm"
+            summary.append(f"   Bed: {bed_info}")
             summary.append(
-                "   Bed: {
-                    self.current_printer.bed_size_x}×{
-                    self.current_printer.bed_size_y}×{
-                    self.current_printer.bed_size_z}mm")
-            summary.append(
-                "   Nozzle: {
-                    self.current_printer.nozzle_diameter}mm\n")
+                f"   Nozzle: {self.current_printer.nozzle_diameter}mm\n")
 
         if self.current_material:
             summary.append(
-                "🧱 Material: {
-                    self.current_material.name} ({
-                    self.current_material.type})")
+                f"🧱 Material: {self.current_material.name} ({self.current_material.type})")
             summary.append(
-                "   Hotend: {
-                    self.current_material.temp_hotend}°C, Bed: {
-                    self.current_material.temp_bed}°C\n")
+                f"   Hotend: {self.current_material.temp_hotend}°C, Bed: {self.current_material.temp_bed}°C\n")
 
         if self.current_slicing:
             summary.append(
-                "⚡ Slicing: {
-                    self.current_slicing.layer_height}mm layers, {
-                    self.current_slicing.infill_percentage}% infill")
+                f"⚡ Slicing: {self.current_slicing.layer_height}mm layers, {self.current_slicing.infill_percentage}% infill")
 
             enabled_experimental = [
                 feature for feature,
                 enabled in self.current_slicing.experimental_features.items() if enabled]
             if enabled_experimental:
+                features_str = ', '.join(enabled_experimental)
                 summary.append(
-                    "🧪 Experimental: {
-                        ', '.join(enabled_experimental)}")
+                    f"🧪 Experimental: {features_str}")
 
         # Add safety warnings
         warnings = self.validate_config_safety()

@@ -86,12 +86,10 @@ class GhostChatInterface:
         """Handle visual/theme related queries."""
         if 'random' in message.lower() or 'surprise' in message.lower():
             theme = random.choice(list(self.available_themes.keys()))
-            return "🎨 **Dr. ColorScience & Dr. UXDesign**: I've randomly selected the '{
-                self.available_themes[theme]}' for you! This theme offers excellent visual balance and modern aesthetics. Would you like me to apply it?"
+            return f"🎨 **Dr. ColorScience & Dr. UXDesign**: I've randomly selected the '{self.available_themes[theme]}' for you! This theme offers excellent visual balance and modern aesthetics. Would you like me to apply it?"
 
-        return "🎨 **Dr. ColorScience**: I can help with visual customization! Available themes: {
-            ', '.join(
-                self.available_themes.values())}. I also optimize color contrast ratios and ensure accessibility compliance. What specific visual aspect would you like to improve?"
+        themes_list = ', '.join(self.available_themes.values())
+        return f"🎨 **Dr. ColorScience**: I can help with visual customization! Available themes: {themes_list}. I also optimize color contrast ratios and ensure accessibility compliance. What specific visual aspect would you like to improve?"
 
     def _handle_slicing_query(self, message: str) -> str:
         """Handle slicing and AI coding assistance queries."""
@@ -116,8 +114,7 @@ class GhostChatInterface:
         """Handle randomization requests."""
         if 'theme' in message.lower():
             theme = random.choice(list(self.available_themes.keys()))
-            return "🎲 **Dr. Innovation**: Surprise! I've selected '{
-                self.available_themes[theme]}' - it'll give your interface a fresh new look!"
+            return f"🎲 **Dr. Innovation**: Surprise! I've selected '{self.available_themes[theme]}' - it'll give your interface a fresh new look!"
         else:
             return "🎲 **Dr. Innovation**: I love creative randomization! I can randomize themes, suggest experimental print settings, or generate novel infill patterns. What would you like me to surprise you with?"
 

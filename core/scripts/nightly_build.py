@@ -19,7 +19,7 @@ from datetime import datetime
 def print_banner(message):
     """Print a formatted banner message."""
     print("\n" + "=" * 60)
-    print("🚀 {message}")
+    print(f"🚀 {message}")
     print("=" * 60)
 
 
@@ -37,7 +37,7 @@ def print_disclaimer():
 
 def run_command(cmd, description, check=True):
     """Run a command with logging."""
-    print("\n🔄 {description}...")
+    print(f"\n🔄 {description}...")
     try:
         result = subprocess.run(
             cmd,
@@ -48,14 +48,14 @@ def run_command(cmd, description, check=True):
         if result.stdout:
             print(result.stdout)
         if result.stderr and result.returncode != 0:
-            print("⚠️ Warning: {result.stderr}")
+            print(f"⚠️ Warning: {result.stderr}")
         return result.returncode == 0
     except subprocess.CalledProcessError as e:
-        print("❌ Error: {e}")
+        print(f"❌ Error: {e}")
         if e.stdout:
-            print("Output: {e.stdout}")
+            print(f"Output: {e.stdout}")
         if e.stderr:
-            print("Error: {e.stderr}")
+            print(f"Error: {e.stderr}")
         return False
 
 
@@ -90,26 +90,27 @@ def ghst_analysis():
                             if 'TODO' in content or 'FIXME' in content:
                                 issues_found += 1
                                 print(
-                                    "📝 GHST Agent found TODO/FIXME in {filepath}")
+                                    f"📝 GHST Agent found TODO/FIXME in {filepath}")
                     except Exception as e:
                         print(
-                            "⚠️ GHST Agent could not analyze {filepath}: {e}")
+                            f"⚠️ GHST Agent could not analyze {filepath}: {e}")
 
-        print("✅ GHST Agent analysis complete: {issues_found} issues found")
+        print(f"✅ GHST Agent analysis complete: {issues_found} issues found")
         return issues_found, fixes_generated
 
     except Exception as e:
-        print("❌ GHST Agent analysis failed: {e}")
+        print(f"❌ GHST Agent analysis failed: {e}")
         return 0, 0
 
 
 def create_version_info():
     """Create version info file for PyInstaller."""
-    version_info = """  # UTF-8
+    build_num = int(time.time()) % 10000
+    version_info = f"""# UTF-8
 VSVersionInfo(
   ffi=FixedFileInfo(
-    filevers=(1, 0, 0, {int(time.time()) % 10000}),
-    prodvers=(1, 0, 0, {int(time.time()) % 10000}),
+    filevers=(1, 0, 0, {build_num}),
+    prodvers=(1, 0, 0, {build_num}),
     mask=0x3f,
     flags=0x0,
     OS=0x40004,
@@ -123,12 +124,12 @@ VSVersionInfo(
         u'040904B0',
         [StringStruct(u'CompanyName', u'GHST Open Source'),
          StringStruct(u'FileDescription', u'AI-Driven 3D Printing Slicer'),
-         StringStruct(u'FileVersion', u'1.0.0.{int(time.time()) % 10000}'),
+         StringStruct(u'FileVersion', u'1.0.0.{build_num}'),
          StringStruct(u'InternalName', u'GHST'),
          StringStruct(u'LegalCopyright', u'MIT License - No Liability Assumed'),
          StringStruct(u'OriginalFilename', u'GHST.exe'),
          StringStruct(u'ProductName', u'GHST Slicer'),
-         StringStruct(u'ProductVersion', u'1.0.0.{int(time.time()) % 10000}')])
+         StringStruct(u'ProductVersion', u'1.0.0.{build_num}')])
     ]),
     VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
   ]
@@ -169,7 +170,7 @@ def build_executable():
         for item in os.listdir('dist'):
             filepath = os.path.join('dist', item)
             size = os.path.getsize(filepath) / 1024 / 1024  # MB
-            print("📦 Built: {item} ({size:.2f} MB)")
+            print(f"📦 Built: {item} ({size:.2f} MB)")
 
         return True
     else:
@@ -186,10 +187,10 @@ def run_tests():
 
     for test_file in test_files:
         if os.path.exists(test_file):
-            print("\n🧪 Running {test_file}...")
+            print(f"\n🧪 Running {test_file}...")
             # Run tests non-interactively
             cmd = f'echo "n" | python {test_file}'
-            run_command(cmd, "Testing {test_file}", check=False)
+            run_command(cmd, f"Testing {test_file}", check=False)
 
     print("✅ Test suite completed")
 
@@ -199,35 +200,37 @@ def create_build_report():
     print_banner("CREATING BUILD REPORT")
 
     build_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
+    build_num = int(time.time()) % 10000
+    git_commit = subprocess.getoutput('git rev-parse --short HEAD')
 
-    report = """
+    report = f"""
 # GHST Nightly Build Report
 
 **Build Date:** {build_time}
-**Build Number:** {int(time.time()) % 10000}
-**Git Commit:** {subprocess.getoutput('git rev-parse --short HEAD')}
+**Build Number:** {build_num}
+**Git Commit:** {git_commit}
 
-#  # GHST Agent Collective Analysis
+## GHST Agent Collective Analysis
 - Issues scanned and analyzed by AI collective
 - Automated fixes prepared for human review
 - Ethics GHST Agent approval: ✅ APPROVED
 
-#  # Build Status
+## Build Status
 - Executable compilation: ✅ SUCCESS
 - Test suite: ✅ COMPLETED
 - Security scan: ✅ APPROVED
 
-#  # Files Generated
+## Files Generated
 """
 
     if os.path.exists('dist'):
         for item in os.listdir('dist'):
             filepath = os.path.join('dist', item)
             size = os.path.getsize(filepath) / 1024 / 1024  # MB
-            report += "- {item} ({size:.2f} MB)\n"
+            report += f"- {item} ({size:.2f} MB)\n"
 
     report += """
-#  # ⚠️ IMPORTANT DISCLAIMERS
+## ⚠️ IMPORTANT DISCLAIMERS
 - This build assumes NO LIABILITY
 - Use at your own risk
 - AI features are experimental
@@ -266,10 +269,10 @@ def main():
         duration = end_time - start_time
 
         print_banner("BUILD COMPLETE")
-        print("⏱️ Build duration: {duration:.2f} seconds")
-        print("🔍 Issues found: {issues_found}")
-        print("🔧 Fixes generated: {fixes_generated}")
-        print("📦 Executable: {'✅ SUCCESS' if build_success else '❌ FAILED'}")
+        print(f"⏱️ Build duration: {duration:.2f} seconds")
+        print(f"🔍 Issues found: {issues_found}")
+        print(f"🔧 Fixes generated: {fixes_generated}")
+        print(f"📦 Executable: {'✅ SUCCESS' if build_success else '❌ FAILED'}")
         print("\n⚠️ Remember: Always review AI-generated code before use!")
         print("⚠️ GHST assumes no liability for any issues!")
 
@@ -279,7 +282,7 @@ def main():
         print("\n⚠️ Build interrupted by user")
         return 1
     except Exception as e:
-        print("\n❌ Build failed: {e}")
+        print(f"\n❌ Build failed: {e}")
         return 1
 
 

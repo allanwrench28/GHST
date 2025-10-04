@@ -88,10 +88,10 @@ class GcodeOptimizerPlugin(BasePlugin):
 
         self.optimization_count += 1
         reduction = len(gcode_lines) - len(optimized_lines)
+        percent_reduction = reduction / len(gcode_lines) * 100
 
         self.logger.info(
-            "G-code optimization complete: removed {reduction} lines ({
-                reduction / len(gcode_lines) * 100:.1f}%)")
+            f"G-code optimization complete: removed {reduction} lines ({percent_reduction:.1f}%)")
 
         # Add optimization header
         header = [
