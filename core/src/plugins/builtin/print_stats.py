@@ -119,18 +119,12 @@ class PrintStatsPlugin(BasePlugin):
         print("\n" + "=" * 50)
         print("PRINT STATISTICS")
         print("=" * 50)
-        print("Total G-code lines: {self.stats['total_lines']}")
-        print(
-            "Estimated print time: {
-                self.stats['estimated_time_minutes']:.1f} minutes")
-        print("Layer count: {self.stats['layer_count']}")
-        print(
-            "Estimated filament: {
-                self.stats['estimated_filament_length']:.1f} mm")
-        print(
-            "Estimated weight: {
-                self.stats['estimated_filament_weight']:.2f} g")
-        print("Estimated cost: ${self.stats['estimated_cost']:.2f}")
+        print(f"Total G-code lines: {self.stats['total_lines']}")
+        print(f"Estimated print time: {self.stats['estimated_time_minutes']:.1f} minutes")
+        print(f"Layer count: {self.stats['layer_count']}")
+        print(f"Estimated filament: {self.stats['estimated_filament_length']:.1f} mm")
+        print(f"Estimated weight: {self.stats['estimated_filament_weight']:.2f} g")
+        print(f"Estimated cost: ${self.stats['estimated_cost']:.2f}")
         print("=" * 50)
 
         self.logger.info("Displayed print statistics")

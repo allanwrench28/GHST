@@ -955,7 +955,7 @@ class TypographyGhost(BaseGhost):
         ]
         
         check = typography_checks[int(time.time()) % len(typography_checks)]
-        self.manager.log_activity(f"🌈 Dr. ColorHarmony: {optimization}")
+        self.manager.log_activity(f"📝 Dr. Typography: {check}")
 
 
 class TypeDesignGhost(BaseGhost):

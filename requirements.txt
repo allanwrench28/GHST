@@ -3,4 +3,12 @@
 # GUI Framework
 PyQt5>=5.15.0
 
+# Core Dependencies
+PyYAML>=6.0
+requests>=2.31.0
+
+# Development and Testing
+pytest>=7.4.0
+flake8>=6.0.0
+
 # Add your project dependencies here
