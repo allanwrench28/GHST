@@ -47,3 +47,8 @@ ENV/
 tmp/
 temp/
 *.tmp
+
+# GHST Data directories
+data/plugin_cache/
+data/conversation_memory/
+logs/

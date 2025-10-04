@@ -1,0 +1,91 @@
+# Expertise Branch Manifest
+# This file describes the capabilities and metadata of this expertise branch
+
+# Branch metadata
+metadata:
+  name: "example-expertise"
+  version: "1.0.0"
+  description: "Example expertise module demonstrating structure"
+  author: "Your Name"
+  license: "MIT"
+  created: "2024-01-01"
+  updated: "2024-01-01"
+
+# Expertise domain
+domain:
+  primary: "Example Domain"
+  secondary:
+    - "Related Topic 1"
+    - "Related Topic 2"
+  keywords:
+    - "keyword1"
+    - "keyword2"
+    - "keyword3"
+
+# Expert ghosts provided by this branch
+experts:
+  - id: "example_expert_1"
+    name: "Example Expert 1"
+    specialization: "Specific area 1"
+    file: "expert_ghosts/example_expert_1.py"
+    
+  - id: "example_expert_2"
+    name: "Example Expert 2"
+    specialization: "Specific area 2"
+    file: "expert_ghosts/example_expert_2.py"
+
+# Knowledge fragments
+knowledge:
+  categories:
+    - name: "fundamentals"
+      description: "Basic concepts and principles"
+      fragment_count: 50
+      
+    - name: "advanced"
+      description: "Advanced techniques and methods"
+      fragment_count: 100
+      
+    - name: "troubleshooting"
+      description: "Common problems and solutions"
+      fragment_count: 75
+
+# Tools and utilities provided
+tools:
+  - name: "example_analyzer"
+    description: "Analyzes example data"
+    file: "tools/example_analyzer.py"
+    
+  - name: "example_optimizer"
+    description: "Optimizes example processes"
+    file: "tools/example_optimizer.py"
+
+# Dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    - "numpy>=1.20.0"
+    - "pyyaml>=5.4.0"
+
+# Compatibility
+compatibility:
+  ghst_version: ">=0.1.0"
+  requires_gpu: false
+  requires_internet: false
+
+# Performance hints
+performance:
+  estimated_memory_mb: 128
+  estimated_load_time_sec: 5
+  supports_parallel: true
+
+# Auto-update configuration
+auto_update:
+  enabled: false
+  source: "github"
+  interval: 86400  # seconds (24 hours)
+  
+# Validation
+validation:
+  test_coverage: 85
+  quality_checks: true
+  peer_reviewed: false

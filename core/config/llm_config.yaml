@@ -1,0 +1,56 @@
+# GHST LLM Engine Configuration
+# Configuration for the offline LLM system
+
+llm:
+  # LLM backend settings
+  backend: "ollama"  # Options: ollama, lm_studio, llamacpp
+  
+  # Model selection (will be expanded per tier)
+  model:
+    name: "mistral"
+    version: "7b-instruct-v0.2"
+    quantization: "q4_0"
+  
+  # Context window settings
+  context:
+    max_tokens: 4096
+    keep_tokens: 512  # Tokens to keep when context is full
+    
+  # Generation parameters
+  generation:
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 40
+    repeat_penalty: 1.1
+    
+  # Offline mode settings
+  offline:
+    enabled: true
+    cache_responses: true
+    cache_path: "data/conversation_memory"
+    
+# Ghost system configuration
+ghosts:
+  # Core ghosts (always loaded)
+  core:
+    - ghost_id: "core_ghost"
+      enabled: true
+    - ghost_id: "system_ghost"
+      enabled: true
+      
+  # Expert coordination
+  coordination:
+    enable_multi_expert: true
+    max_concurrent_experts: 3
+    
+# Performance settings
+performance:
+  batch_size: 1
+  num_threads: 4
+  gpu_layers: 0  # 0 = CPU only, >0 = number of layers on GPU
+  
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/llm_engine.log"
+  console: true

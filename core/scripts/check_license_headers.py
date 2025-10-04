@@ -207,11 +207,7 @@ GHST assumes no liability for AI-generated code or suggestions.
             report += "⚠️ FILES WITH ERRORS:\n\n"
             for result in results:
                 if result['status'] == 'error':
-                    report += "  ❌ {
-                        result['file']}: {
-                        result.get(
-                            'error',
-                            'Unknown error')}\n"
+                    report += f"  ❌ {result['file']}: {result.get('error', 'Unknown error')}\n"
             report += "\n"
 
         report += "📋 LICENSE COMPLIANCE:\n"
@@ -233,9 +229,7 @@ GHST assumes no liability for AI-generated code or suggestions.
                     file_types[ft]['missing'] += 1
 
         for ft, counts in file_types.items():
-            report += "  {ft}: {
-                counts['total']} files, {
-                counts['missing']} missing license\n"
+            report += f"  {ft}: {counts['total']} files, {counts['missing']} missing license\n"
 
         return report
 

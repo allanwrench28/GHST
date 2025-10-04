@@ -1,0 +1,70 @@
+# GHST Plugin Configuration
+# Configuration for expertise branch plugins
+
+# Plugin system settings
+plugin_system:
+  # Auto-discovery
+  auto_discover: true
+  scan_interval: 3600  # seconds
+  
+  # Plugin cache
+  cache_path: "data/plugin_cache"
+  auto_cache: true
+  max_cache_size_mb: 1024
+  
+  # Plugin loading
+  auto_load_on_startup: []  # List of plugin names to auto-load
+  lazy_loading: true  # Load plugins on-demand
+  
+# Available expertise branches (discovered from repository)
+# This section is populated automatically by branch scanner
+available_branches: []
+
+# Loaded plugins tracking
+# This section tracks currently loaded plugins
+loaded_plugins: []
+
+# Plugin validation
+validation:
+  require_manifest: true
+  require_expertise_dir: true
+  validate_ghosts: true
+  validate_knowledge: false  # Set to true for stricter validation
+  
+# Plugin security
+security:
+  sandbox_plugins: false  # TODO: Implement plugin sandboxing
+  verify_signatures: false  # TODO: Implement signature verification
+  
+# Knowledge management
+knowledge:
+  # Fragment storage
+  fragment_storage: "data/plugin_cache"
+  index_fragments: true
+  
+  # Search settings
+  search:
+    enable_semantic_search: false  # TODO: Implement semantic search
+    enable_keyword_search: true
+    max_results: 10
+    
+# Branch synchronization
+sync:
+  # Git settings for branch syncing
+  auto_sync: false  # Auto-sync branches from remote
+  sync_interval: 86400  # seconds (24 hours)
+  remote: "origin"
+  
+# Performance
+performance:
+  # Plugin loading
+  parallel_load: false
+  load_timeout: 30  # seconds
+  
+  # Memory limits
+  max_memory_per_plugin_mb: 256
+  
+# Logging
+logging:
+  log_plugin_activity: true
+  log_level: "INFO"
