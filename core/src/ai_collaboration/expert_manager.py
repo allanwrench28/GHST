@@ -25,6 +25,7 @@ AI Expert Collective:
 """
 
 import logging
+import requests
 import threading
 import time
 from datetime import datetime
