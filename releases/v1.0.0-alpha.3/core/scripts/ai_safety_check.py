@@ -251,24 +251,17 @@ class AISafetyChecker:
             report += "🚨 SAFETY VIOLATIONS DETECTED:\n\n"
             for result in results:
                 if result.get('violations'):
-                    report += "File: {
-                        result['file']} (Score: {
-                        result.get(
-                            'safety_score',
-                            0):.1f})\n"
+                    file_name = result['file']
+                    safety_score = result.get('safety_score', 0)
+                    report += f"File: {file_name} (Score: {safety_score:.1f})\n"
                     for violation in result['violations']:
-                        report += "  ⚠️ {
-                            violation['category']}: {
-                            violation.get(
-                                'message',
-                                violation.get(
-                                    'pattern',
-                                    'Unknown'))}\n"
+                        category = violation['category']
+                        message = violation.get('message', violation.get('pattern', 'Unknown'))
+                        report += f"  ⚠️ {category}: {message}\n"
                         if 'line' in violation:
-                            report += "     Line {
-                                violation['line']}: {
-                                violation.get(
-                                    'match', '')}\n"
+                            line = violation['line']
+                            match = violation.get('match', '')
+                            report += f"     Line {line}: {match}\n"
                     report += "\n"
 
         report += "\n🛡️ SAFETY RECOMMENDATIONS:\n"
@@ -283,14 +276,13 @@ class AISafetyChecker:
             report += "- Implement ethical review processes\n"
 
         report += "\n✅ SAFETY FRAMEWORK COMPLIANCE:\n"
-        report += "- Safety score threshold: {
-            'PASS' if avg_safety_score >= 70 else 'FAIL'}\n"
-        report += "- Human oversight: {
-            'REQUIRED' if ai_files > 0 else 'RECOMMENDED'}\n"
-        report += "- Critical violations: {
-            'NONE' if not any(
-                v.get('severity') == 'critical' for r in results for v in r.get(
-                    'violations', [])) else 'DETECTED'}\n"
+        threshold_status = 'PASS' if avg_safety_score >= 70 else 'FAIL'
+        report += f"- Safety score threshold: {threshold_status}\n"
+        oversight_level = 'REQUIRED' if ai_files > 0 else 'RECOMMENDED'
+        report += f"- Human oversight: {oversight_level}\n"
+        has_critical = any(v.get('severity') == 'critical' for r in results for v in r.get('violations', []))
+        critical_status = 'NONE' if not has_critical else 'DETECTED'
+        report += f"- Critical violations: {critical_status}\n"
 
         return report
 
