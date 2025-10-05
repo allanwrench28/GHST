@@ -3,4 +3,7 @@
 # GUI Framework
 PyQt5>=5.15.0
 
+# HTTP Library
+requests>=2.25.0
+
 # Add your project dependencies here

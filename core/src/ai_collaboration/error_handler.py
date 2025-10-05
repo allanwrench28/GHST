@@ -168,7 +168,7 @@ class ErrorHandler:
 
         if self.ghst_manager:
             self.ghst_manager.log_activity(
-                "🔍 Custom error logged: {error_code} - {message[:50]}..."
+                f"🔍 Custom error logged: {error_code} - {message[:50]}..."
             )
 
     def _process_errors(self):
@@ -191,7 +191,7 @@ class ErrorHandler:
             except queue.Empty:
                 continue
             except Exception as e:
-                print("Error processing failed: {e}")
+                print(f"Error processing failed: {e}")
 
     def _analyze_with_ghosts(self, error_data: Dict[str, Any]):
         """Analyze error with GHST Agent collective."""
@@ -212,10 +212,9 @@ class ErrorHandler:
                 error_data['ghst_analysis'] = analysis
 
                 # Log analysis results
+                error_id = error_data.get('error_id', 'unknown')
                 self.ghst_manager.log_activity(
-                    f"🧠 GHST Agent analysis complete for {
-                        error_data.get(
-                            'error_id', 'unknown')}")
+                    f"🧠 GHST Agent analysis complete for {error_id}")
 
                 # Check if fix should be submitted
                 if self._should_submit_fix(analysis):
